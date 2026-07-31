@@ -3,8 +3,8 @@ import { StorySection } from './sections/Story';
 import { NatureSection } from './sections/Nature';
 import { PotentialsSection } from './sections/Potentials';
 import { TimelineSection } from './sections/Timeline';
-/* 
 import { GallerySection } from './sections/Gallery';
+/* 
 import { TransparencySection } from './sections/Transparency';
 import { CTASection } from './sections/CTA';
 */
@@ -17,9 +17,9 @@ export function HomeComposition() {
       <NatureSection />
       <PotentialsSection />
       <TimelineSection />
+      <GallerySection />
       {/* 
         Placeholder for future sections:
-        <GallerySection />
         <TransparencySection />
         <CTASection />
       */}
