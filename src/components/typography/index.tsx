@@ -9,6 +9,14 @@ export function Heading({ className, as: Component = 'h2', children, ...props }:
   return <Component className={cn('font-heading text-3xl md:text-4xl lg:text-5xl font-semibold text-brand-primary', className)} {...props}>{children}</Component>;
 }
 
+export function Subheading({ className, as: Component = 'h3', children, ...props }: HTMLAttributes<HTMLHeadingElement> & { as?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' }) {
+  return <Component className={cn('font-heading text-xl md:text-2xl font-medium text-brand-primary', className)} {...props}>{children}</Component>;
+}
+
+export function Overline({ className, children, ...props }: HTMLAttributes<HTMLSpanElement>) {
+  return <span className={cn('font-body text-xs md:text-sm font-bold uppercase tracking-widest text-brand-accent', className)} {...props}>{children}</span>;
+}
+
 export function Lead({ className, children, ...props }: HTMLAttributes<HTMLParagraphElement>) {
   return <p className={cn('font-body text-xl md:text-2xl text-muted font-light leading-relaxed', className)} {...props}>{children}</p>;
 }

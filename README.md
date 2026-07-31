@@ -6,6 +6,12 @@ This project is built from scratch following a strict **Senior Frontend Architec
 - **Architecture First:** Scalability and maintainability over premature visual polish.
 - **The Figma Philosophy:** The provided Google Stitch designs were used strictly as visual references, identical to Figma screenshots. No generated HTML/CSS was copied or referenced.
 
+## Design Philosophy
+- **Editorial:** Typography-first design inspired by National Geographic and museum exhibitions.
+- **No Glassmorphism:** We avoid trendy SaaS aesthetics like heavy shadows or glassmorphism to maintain a timeless, calm, and grounded feel.
+- **Photography First:** Large, stunning photography is the hero. The UI steps back to let the content shine.
+- **Storytelling:** The website acts as a visual and textual journey through Desa Air Putih, not just an information directory.
+
 ## Tech Stack
 - **Framework:** React 19 + Vite + TypeScript
 - **Package Manager:** `pnpm`
