@@ -14,10 +14,9 @@ export function GalleryCard({ image, span }: GalleryImageItem) {
   return (
     <div className={`${spanClasses[span]} overflow-hidden bg-stone-100 rounded-lg group`}>
       <EditorialImage 
-        src={image.src} 
-        alt={image.alt} 
+        image={image} 
         preset={preset} 
-        className="group-hover:scale-105 transition-transform duration-700 ease-out"
+        className="transition-transform duration-700 ease-out group-hover:scale-105"
       />
     </div>
   );

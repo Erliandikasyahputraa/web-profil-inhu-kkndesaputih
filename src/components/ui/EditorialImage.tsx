@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
+import type { ImageMetadata } from '@/types/content';
+import { IMAGE_SIZES } from '@/constants/images';
 
 export type ImagePreset = 
   | 'hero' 
@@ -17,8 +19,16 @@ export type ImagePreset =
 export type ImageVariant = 'default' | 'rounded' | 'edge' | 'soft';
 export type ImageOverlay = 'none' | 'dark' | 'cinematic' | 'light';
 
-interface EditorialImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
-  alt: string;
+export interface EditorialImagePresetConfig {
+  aspectClasses: string; 
+  objectFit: string;
+  loading: 'lazy' | 'eager';
+  fetchPriority: 'high' | 'auto' | 'low';
+  sizes?: string;
+}
+
+interface EditorialImageProps extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'src' | 'alt'> {
+  image: ImageMetadata;
   preset?: ImagePreset;
   variant?: ImageVariant;
   aspectRatio?: string; // Escape hatch
@@ -27,8 +37,7 @@ interface EditorialImageProps extends React.ImgHTMLAttributes<HTMLImageElement> 
 }
 
 export function EditorialImage({
-  src,
-  alt,
+  image,
   className,
   preset = 'custom',
   variant = 'default',
@@ -42,82 +51,76 @@ export function EditorialImage({
   const [isLoaded, setIsLoaded] = useState(false);
 
   // Configuration for each preset
-  const presetConfig: Record<ImagePreset, { 
-    aspectClasses: string; 
-    objectFit: string;
-    loading: 'lazy' | 'eager';
-    fetchPriority: 'high' | 'auto' | 'low';
-    sizes?: string;
-  }> = {
+  const presetConfig: Record<ImagePreset, EditorialImagePresetConfig> = {
     hero: {
       aspectClasses: 'w-full h-full', // Handled by wrapper
       objectFit: 'object-cover',
       loading: 'eager',
       fetchPriority: 'high',
-      sizes: '100vw',
+      sizes: IMAGE_SIZES.hero,
     },
     story: {
       aspectClasses: 'w-full min-h-[400px] lg:min-h-[700px]',
       objectFit: 'object-cover',
       loading: 'lazy',
       fetchPriority: 'auto',
-      sizes: '(min-width: 1024px) 50vw, 100vw',
+      sizes: IMAGE_SIZES.story,
     },
     landscape: {
       aspectClasses: 'w-full aspect-[16/9]',
       objectFit: 'object-cover',
       loading: 'lazy',
       fetchPriority: 'auto',
-      sizes: '(min-width: 1024px) 50vw, 100vw',
+      sizes: IMAGE_SIZES.landscape,
     },
     portrait: {
       aspectClasses: 'w-full aspect-[3/4]',
       objectFit: 'object-cover',
       loading: 'lazy',
       fetchPriority: 'auto',
-      sizes: '(min-width: 1024px) 33vw, 100vw',
+      sizes: IMAGE_SIZES.portrait,
     },
     'gallery-feature': {
       aspectClasses: 'w-full aspect-[21/9]',
       objectFit: 'object-cover',
       loading: 'lazy',
       fetchPriority: 'auto',
-      sizes: '100vw',
+      sizes: IMAGE_SIZES.galleryFeature,
     },
     'gallery-square': {
       aspectClasses: 'w-full aspect-square',
       objectFit: 'object-cover',
       loading: 'lazy',
       fetchPriority: 'auto',
-      sizes: '(min-width: 768px) 50vw, 100vw',
+      sizes: IMAGE_SIZES.gallerySquare,
     },
     'gallery-portrait': {
       aspectClasses: 'w-full aspect-[3/4]',
       objectFit: 'object-cover',
       loading: 'lazy',
       fetchPriority: 'auto',
-      sizes: '(min-width: 768px) 33vw, 100vw',
+      sizes: IMAGE_SIZES.galleryPortrait,
     },
     cta: {
       aspectClasses: 'w-full aspect-[4/3] md:aspect-[21/9] lg:aspect-[3/1]',
       objectFit: 'object-cover',
       loading: 'lazy',
       fetchPriority: 'auto',
-      sizes: '100vw',
+      sizes: IMAGE_SIZES.cta,
     },
     thumbnail: {
       aspectClasses: 'w-full aspect-square',
       objectFit: 'object-cover',
       loading: 'lazy',
       fetchPriority: 'auto',
-      sizes: '25vw',
+      sizes: IMAGE_SIZES.thumbnail,
     },
     narrative: {
       aspectClasses: 'w-full aspect-[4/5]',
       objectFit: 'object-cover',
       loading: 'lazy',
       fetchPriority: 'auto',
-      sizes: '(min-width: 1024px) 50vw, 100vw',
+      sizes: IMAGE_SIZES.narrative,
     },
     custom: {
       aspectClasses: 'w-full h-full',
@@ -126,6 +129,7 @@ export function EditorialImage({
       fetchPriority: 'auto',
     }
   };
+
 
   const variantClasses: Record<ImageVariant, string> = {
     default: 'rounded-none',
@@ -149,8 +153,8 @@ export function EditorialImage({
   return (
     <div className={cn('relative overflow-hidden bg-stone-100', variantClasses[variant], className)}>
       <img
-        src={src}
-        alt={alt}
+        src={image.src}
+        alt={image.alt}
         width={width}
         height={height}
         loading={finalLoading}

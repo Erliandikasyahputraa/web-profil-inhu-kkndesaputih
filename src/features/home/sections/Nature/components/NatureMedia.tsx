@@ -5,8 +5,7 @@ export function NatureMedia({ image }: NatureMediaProps) {
   return (
     <div className="w-screen relative left-1/2 -translate-x-1/2">
       <EditorialImage 
-        src={image.src} 
-        alt={image.alt} 
+        image={image} 
         preset="landscape" 
       />
     </div>

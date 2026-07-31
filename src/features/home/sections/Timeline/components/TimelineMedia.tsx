@@ -5,8 +5,7 @@ export function TimelineMedia({ image }: TimelineMediaProps) {
   return (
     <div className="w-full">
       <EditorialImage 
-        src={image.src} 
-        alt={image.alt} 
+        image={image} 
         preset="story" 
         variant="rounded"
       />

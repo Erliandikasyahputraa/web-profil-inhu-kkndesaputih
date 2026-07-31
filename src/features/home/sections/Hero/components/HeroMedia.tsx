@@ -5,8 +5,7 @@ export function HeroMedia({ image }: HeroMediaProps) {
   return (
     <div className="absolute inset-0 z-0">
       <EditorialImage 
-        src={image.src} 
-        alt="Desa Air Putih Aerial View" 
+        image={image} 
         priority 
         preset="hero" 
         overlay="cinematic"

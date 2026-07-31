@@ -6,9 +6,9 @@ export function TransparencyNarrative({ image, description, cta }: TransparencyN
   return (
     <div className="flex flex-col space-y-12 h-full">
       <EditorialImage 
-        src={image.src} 
-        alt={image.alt} 
+        image={image} 
         preset="narrative" 
+        variant="soft" 
       />
       <div className="flex flex-col md:flex-row gap-8 justify-between items-start">
         <Body className="text-stone-600 max-w-md text-lg leading-relaxed">
