@@ -15,12 +15,12 @@ export function HomeComposition() {
       <NatureSection />
       {/* 
         Placeholder for future sections:
+        <PotentialsSection />
+        <TimelineSection />
+        <GallerySection />
+        <TransparencySection />
+        <CTASection />
       */}
-      <PotentialsSection />
-      <TimelineSection />
-      <GallerySection />
-      <TransparencySection />
-      <CTASection />
     </>
   );
 }
