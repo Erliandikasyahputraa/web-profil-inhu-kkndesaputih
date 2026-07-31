@@ -11,8 +11,8 @@ function Placeholder({ title }: { title: string }) {
   );
 }
 
-// We will import HomePage once built in Phase 3
-import { HomePage } from '../features/home';
+// We will import HomePage from pages
+import { HomePage } from '../pages/HomePage';
 
 export function AppRouter() {
   return (
