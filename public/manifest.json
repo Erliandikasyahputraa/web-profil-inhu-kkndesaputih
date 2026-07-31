@@ -1,0 +1,10 @@
+{
+  "name": "Desa Air Putih Digital Experience",
+  "short_name": "Desa Air Putih",
+  "description": "A premium editorial website introducing Desa Air Putih.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF9F6",
+  "theme_color": "#1A1A1A",
+  "icons": []
+}

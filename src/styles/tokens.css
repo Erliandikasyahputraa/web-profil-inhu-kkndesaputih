@@ -1,0 +1,17 @@
+@theme {
+  --font-heading: "Libre Baskerville", serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-background: #FAF9F6; /* Warm off-white */
+  --color-foreground: #1A1A1A; /* Deep charcoal */
+  --color-brand-primary: #2C3E2D; /* Forest green */
+  --color-brand-accent: #8C7A6B; /* Warm earth */
+  --color-muted: #6B7280;
+  
+  --spacing-section: 6rem;
+  --spacing-container: 2rem;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+}
