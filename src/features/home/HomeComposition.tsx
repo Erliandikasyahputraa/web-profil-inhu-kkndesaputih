@@ -13,6 +13,9 @@ export function HomeComposition() {
       <HeroSection />
       <StorySection />
       <NatureSection />
+      {/* 
+        Placeholder for future sections:
+      */}
       <PotentialsSection />
       <TimelineSection />
       <GallerySection />
