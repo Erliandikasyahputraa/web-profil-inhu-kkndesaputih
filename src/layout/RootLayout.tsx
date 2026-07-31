@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { Navbar } from '../components/navigation/Navbar';
+import { Footer } from '../components/layout/Footer';
 
 /**
  * RootLayout provides the base structure for the entire application.
@@ -10,9 +11,12 @@ export function RootLayout() {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground selection:bg-brand-accent/30 selection:text-brand-primary">
       <Navbar />
-      <Suspense fallback={<div className="min-h-screen bg-background animate-pulse" />}>
-        <Outlet />
+      <Suspense fallback={<div className="flex-1 bg-background animate-pulse" />}>
+        <main className="flex-1 flex flex-col">
+          <Outlet />
+        </main>
       </Suspense>
+      <Footer />
     </div>
   );
 }
