@@ -2,7 +2,7 @@ import { Overline, Heading } from '@/components/typography';
 
 export interface StatItem {
   id: string;
-  value: string;
+  value: string | number;
   label: string;
 }
 

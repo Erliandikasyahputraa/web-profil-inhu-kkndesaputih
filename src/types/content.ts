@@ -1,4 +1,5 @@
 export interface ImageMetadata {
+  id?: string;
   src: string;
   alt: string;
   caption?: string;
@@ -6,33 +7,54 @@ export interface ImageMetadata {
   photographer?: string;
   date?: string;
   credit?: string;
+  width?: number;
+  height?: number;
 }
 
 export interface LinkMetadata {
+  id?: string;
   label: string;
   href: string;
   external?: boolean;
 }
 
+export interface CTA extends LinkMetadata {
+  variant?: 'primary' | 'secondary' | 'ghost';
+  icon?: string;
+}
+
 export interface Quote {
+  id?: string;
   text: string;
   author?: string;
   source?: string;
 }
 
 export interface Statistic {
+  id?: string;
   label: string;
-  value: string;
+  value: string | number;
   description?: string;
 }
 
 export interface Person {
+  id?: string;
   name: string;
   role: string;
   image?: ImageMetadata;
 }
 
 export interface Organization {
+  id?: string;
   name: string;
   members: Person[];
+}
+
+export interface SeoMetadata {
+  title: string;
+  description: string;
+  canonical?: string;
+  image?: ImageMetadata;
+  keywords?: string[];
+  noIndex?: boolean;
 }
