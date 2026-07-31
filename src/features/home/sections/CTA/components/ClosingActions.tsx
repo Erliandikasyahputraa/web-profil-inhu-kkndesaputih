@@ -1,8 +1,9 @@
+import { Cluster } from '@/components/layout';
 import type { ClosingActionsProps } from '../CTA.types';
 
 export function ClosingActions({ actions }: ClosingActionsProps) {
   return (
-    <div className="flex flex-col sm:flex-row gap-6 items-center justify-center">
+    <Cluster justify="center" spacing="content" className="flex-col sm:flex-row">
       {actions.map((action) => (
         <a 
           key={action.label} 
@@ -16,6 +17,6 @@ export function ClosingActions({ actions }: ClosingActionsProps) {
           {action.label}
         </a>
       ))}
-    </div>
+    </Cluster>
   );
 }

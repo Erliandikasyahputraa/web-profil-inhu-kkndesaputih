@@ -6,7 +6,7 @@ import { footerContent } from '@/content/layout/footer';
 
 export function Footer() {
   return (
-    <footer className="w-full bg-stone-50 border-t border-stone-200 mt-auto">
+    <footer className="w-full bg-[var(--color-background)] border-t border-[var(--color-border)] mt-auto">
       <Container size="default">
         <FooterQuote quote={{ text: footerContent.quote }} />
         <FooterNavigation 

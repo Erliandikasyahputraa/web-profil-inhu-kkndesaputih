@@ -1,6 +1,5 @@
-import { Section } from '@/components/ui';
-import { Container } from '@/components/ui';
-import { SectionHeader } from '@/components/ui';
+import { Section, Container, SectionHeader } from '@/components/ui';
+import { Split } from '@/components/layout';
 import { FadeIn, Reveal } from '@/components/motion';
 import { StoryContent } from './components/StoryContent';
 import { StoryImage } from './components/StoryImage';
@@ -16,8 +15,8 @@ export function Story() {
         />
         
         {/* Editorial Layout Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-16 lg:gap-x-12 xl:gap-x-20 items-start">
-          <div className="col-span-1 lg:col-span-5 order-2 lg:order-1">
+        <Split ratio="content" className="items-start">
+          <div className="order-2 lg:order-1">
             <FadeIn stagger="editorial" delay={0.2}>
               <StoryContent 
                 title={storyContent.title} 
@@ -26,12 +25,12 @@ export function Story() {
               />
             </FadeIn>
           </div>
-          <div className="col-span-1 lg:col-span-7 order-1 lg:order-2">
+          <div className="order-1 lg:order-2">
             <Reveal stagger="hero">
               <StoryImage image={storyContent.image} />
             </Reveal>
           </div>
-        </div>
+        </Split>
       </Container>
     </Section>
   );

@@ -1,17 +1,18 @@
+import { Stack, Cluster } from '@/components/layout';
 import { EditorialImage } from '@/components/ui';
 import { Body } from '@/components/typography';
 import type { TransparencyNarrativeProps } from '../Transparency.types';
 
 export function TransparencyNarrative({ image, description, cta }: TransparencyNarrativeProps) {
   return (
-    <div className="flex flex-col space-y-12 h-full">
+    <Stack spacing="section" className="h-full">
       <EditorialImage 
         image={image} 
         preset="narrative" 
         variant="soft" 
       />
-      <div className="flex flex-col md:flex-row gap-8 justify-between items-start">
-        <Body className="text-stone-600 max-w-md text-lg leading-relaxed">
+      <Cluster spacing="content" align="start" justify="between" className="flex-col md:flex-row">
+        <Body tone="muted" measure="narrow" className="text-lg">
           {description}
         </Body>
         <a 
@@ -20,7 +21,7 @@ export function TransparencyNarrative({ image, description, cta }: TransparencyN
         >
           {cta.label}
         </a>
-      </div>
-    </div>
+      </Cluster>
+    </Stack>
   );
 }

@@ -5,6 +5,7 @@ export type SpacingScale = 'none' | 'tight' | 'inline' | 'cluster' | 'paragraph'
 
 export interface StackProps extends HTMLAttributes<HTMLDivElement> {
   spacing?: SpacingScale;
+  as?: React.ElementType;
 }
 
 const spacingMap: Record<SpacingScale, string> = {
@@ -18,10 +19,10 @@ const spacingMap: Record<SpacingScale, string> = {
   section: 'gap-[var(--spacing-section)]',
 };
 
-export function Stack({ spacing = 'content', className, children, ...props }: StackProps) {
+export function Stack({ spacing = 'content', as: Component = 'div', className, children, ...props }: StackProps) {
   return (
-    <div className={cn('flex flex-col', spacingMap[spacing], className)} {...props}>
+    <Component className={cn('flex flex-col', spacingMap[spacing], className)} {...props}>
       {children}
-    </div>
+    </Component>
   );
 }

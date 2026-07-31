@@ -1,6 +1,5 @@
-import { Section } from '@/components/ui';
-import { Container } from '@/components/ui';
-import { SectionHeader } from '@/components/ui';
+import { Section, Container, SectionHeader } from '@/components/ui';
+import { Split, Stack } from '@/components/layout';
 import { FadeIn, Reveal, Parallax } from '@/components/motion';
 import { NatureMedia } from './components/NatureMedia';
 import { NatureContent } from './components/NatureContent';
@@ -17,7 +16,7 @@ export function Nature() {
           title={natureContent.kicker} 
         />
         
-        <div className="flex flex-col space-y-24 lg:space-y-32 mt-12">
+        <Stack spacing="section" className="mt-12">
           
           {/* Full-width Cinematic Image */}
           <Reveal>
@@ -33,21 +32,21 @@ export function Nature() {
           </Parallax>
 
           {/* Editorial Grid: Text + Stats */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-16 lg:gap-x-24 items-start">
-            <div className="col-span-1 lg:col-span-7 xl:col-span-8">
+          <Split ratio="sidebar" className="items-start">
+            <div>
               <FadeIn stagger="editorial">
                 <NatureContent paragraphs={natureContent.paragraphs} />
               </FadeIn>
             </div>
             
-            <div className="col-span-1 lg:col-span-5 xl:col-span-4">
+            <div>
               <FadeIn stagger="editorial" delay={0.2}>
                 <EditorialStats stats={natureContent.stats} />
               </FadeIn>
             </div>
-          </div>
+          </Split>
 
-        </div>
+        </Stack>
       </Container>
     </Section>
   );

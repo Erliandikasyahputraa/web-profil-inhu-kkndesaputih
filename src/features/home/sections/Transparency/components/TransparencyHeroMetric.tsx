@@ -1,20 +1,21 @@
+import { Stack } from '@/components/layout';
 import { Display, Heading, Body } from '@/components/typography';
 import type { TransparencyHeroMetricProps } from '../Transparency.types';
 
 export function TransparencyHeroMetric({ value, label, description }: TransparencyHeroMetricProps) {
   return (
-    <div className="flex flex-col space-y-6">
-      <Display className="text-6xl md:text-8xl lg:text-[120px] text-stone-900 tracking-tighter font-bold leading-none">
+    <Stack spacing="content">
+      <Display tone="default" className="opacity-90">
         {value}
       </Display>
-      <div className="flex flex-col space-y-3">
+      <Stack spacing="tight">
         <Heading level={4} variant="editorial">
           {label}
         </Heading>
-        <Body className="text-stone-600 max-w-sm leading-relaxed">
+        <Body tone="muted" measure="narrow">
           {description}
         </Body>
-      </div>
-    </div>
+      </Stack>
+    </Stack>
   );
 }

@@ -6,6 +6,7 @@ export interface ClusterProps extends HTMLAttributes<HTMLDivElement> {
   spacing?: SpacingScale;
   align?: 'start' | 'center' | 'end' | 'stretch';
   justify?: 'start' | 'center' | 'between' | 'end';
+  wrap?: boolean;
 }
 
 const spacingMap: Record<SpacingScale, string> = {
@@ -37,6 +38,7 @@ export function Cluster({
   spacing = 'inline', 
   align = 'center', 
   justify = 'start', 
+  wrap = true,
   className, 
   children, 
   ...props 
@@ -44,7 +46,8 @@ export function Cluster({
   return (
     <div 
       className={cn(
-        'flex flex-row flex-wrap', 
+        'flex flex-row', 
+        wrap ? 'flex-wrap' : 'flex-nowrap',
         spacingMap[spacing], 
         alignMap[align], 
         justifyMap[justify], 

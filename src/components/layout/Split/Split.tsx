@@ -7,9 +7,9 @@ export interface SplitProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const ratioMap = {
-  balanced: 'grid-cols-1 md:grid-cols-2',
-  sidebar: 'grid-cols-1 lg:grid-cols-12 [&>*:first-child]:lg:col-span-8 [&>*:last-child]:lg:col-span-4',
-  content: 'grid-cols-1 lg:grid-cols-12 [&>*:first-child]:lg:col-span-5 [&>*:last-child]:lg:col-span-7',
+  balanced: 'grid-cols-1 md:grid-cols-2', // 6-6
+  sidebar: 'grid-cols-1 lg:grid-cols-12 [&>*:first-child]:lg:col-span-8 [&>*:last-child]:lg:col-span-4', // 8-4
+  content: 'grid-cols-1 lg:grid-cols-12 [&>*:first-child]:lg:col-span-5 [&>*:last-child]:lg:col-span-7', // 5-7
 };
 
 const spacingMap = {

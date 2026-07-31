@@ -1,11 +1,14 @@
-import { Overline } from '@/components/typography';
+import { Stack } from '@/components/layout';
+import { Caption } from '@/components/typography';
 import type { StoryMetaProps } from '../Story.types';
 
 export function StoryMeta({ label, value }: StoryMetaProps) {
   return (
-    <div className="border-l border-brand-accent pl-5 py-1 mt-8 mb-4">
-      <Overline className="text-stone-400 block text-[10px] md:text-xs mb-1">{label}</Overline>
-      <span className="font-body text-xs md:text-sm font-bold text-stone-800 uppercase tracking-widest">{value}</span>
-    </div>
+    <Stack spacing="tight" className="border-l border-brand-accent pl-5 py-1">
+      <span className="font-sans text-sm font-medium tracking-wide text-brand-primary">{label}</span>
+      <Caption uppercase tracking="widest" tone="default" className="font-bold">
+        {value}
+      </Caption>
+    </Stack>
   );
 }

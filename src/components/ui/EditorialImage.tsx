@@ -159,9 +159,7 @@ export function EditorialImage({
         height={height}
         loading={finalLoading}
         decoding="async"
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        fetchpriority={finalFetchPriority}
+        fetchPriority={finalFetchPriority}
         sizes={config.sizes}
         onLoad={() => setIsLoaded(true)}
         className={cn(

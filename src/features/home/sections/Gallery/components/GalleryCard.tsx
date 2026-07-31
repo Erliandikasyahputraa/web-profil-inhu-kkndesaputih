@@ -12,7 +12,7 @@ export function GalleryCard({ image, span }: GalleryImageItem) {
   const preset = span === 'full' ? 'gallery-feature' : span === 'small' ? 'gallery-square' : span === 'landscape' ? 'landscape' : 'gallery-portrait';
 
   return (
-    <div className={`${spanClasses[span]} overflow-hidden bg-stone-100 rounded-lg group`}>
+    <div className={`${spanClasses[span]} overflow-hidden bg-[var(--color-surface)] rounded-lg group`}>
       <EditorialImage 
         image={image} 
         preset={preset} 

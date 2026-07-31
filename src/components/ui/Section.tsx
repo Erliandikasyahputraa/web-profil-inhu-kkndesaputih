@@ -2,7 +2,7 @@ import { forwardRef, type HTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
 
 interface SectionProps extends HTMLAttributes<HTMLElement> {
-  spacing?: 'none' | 'default' | 'tight';
+  spacing?: 'none' | 'default' | 'tight' | 'compact';
   background?: 'transparent' | 'primary' | 'muted' | 'accent' | 'dark';
   variant?: 'default' | 'hero' | 'editorial';
 }
@@ -13,6 +13,7 @@ export const Section = forwardRef<HTMLElement, SectionProps>(
     const spacingClasses = {
       none: '',
       tight: 'py-[var(--spacing-content)]',
+      compact: 'py-[var(--spacing-grid)]',
       default: 'py-[var(--spacing-section)]',
     };
 

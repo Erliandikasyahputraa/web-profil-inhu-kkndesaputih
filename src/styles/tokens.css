@@ -9,6 +9,8 @@
   --color-brand-accent: #8C7A6B; /* Warm earth */
   --color-muted: #6B7280;
   --color-subtle: #9CA3AF;
+  --color-surface: #F5F5F4;
+  --color-border: #E5E7EB;
 
   /* Semantic Spacing (Fluid) */
   --spacing-section: clamp(4rem, 8vw, 8rem);     /* py-16 to py-32 */

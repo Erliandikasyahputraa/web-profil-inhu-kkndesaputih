@@ -1,7 +1,5 @@
-import { Section } from '@/components/ui';
-import { Container } from '@/components/ui';
-import { SectionHeader } from '@/components/ui';
-import { Button } from '@/components/ui';
+import { Section, Container, SectionHeader, Button } from '@/components/ui';
+import { Stack, Cluster } from '@/components/layout';
 import { FadeIn } from '@/components/motion';
 import { PotentialBlock } from './components/PotentialBlock';
 import { potentialsContent } from '@/content/homepage/potentials';
@@ -16,22 +14,22 @@ export function Potentials() {
           description={potentialsContent.description}
         />
         
-        <div className="flex flex-col space-y-32 mt-16">
+        <Stack spacing="section" className="mt-16">
           {potentialsContent.items.map((item) => (
             <PotentialBlock 
               key={item.id}
               {...item}
             />
           ))}
-        </div>
+        </Stack>
 
-        <div className="mt-32 pt-16 border-t border-stone-200 flex justify-center">
+        <Cluster justify="center" className="mt-32 pt-16 border-t border-[var(--color-border)]">
           <FadeIn>
             <Button variant="outline" size="lg" className="border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white transition-colors duration-300">
               {potentialsContent.cta.label}
             </Button>
           </FadeIn>
-        </div>
+        </Cluster>
       </Container>
     </Section>
   );

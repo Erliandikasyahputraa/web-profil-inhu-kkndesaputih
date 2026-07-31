@@ -1,49 +1,51 @@
+import { Grid, Stack } from '@/components/layout';
+import { Heading, Body } from '@/components/typography';
 import type { FooterNavigationProps } from '../Footer.types';
 
 export function FooterNavigation({ about, navigation, contact, socials }: FooterNavigationProps) {
   return (
-    <div className="py-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-8">
+    <Grid variant="gallery" spacing="grid" className="py-24">
       {/* About */}
-      <div className="lg:col-span-4 flex flex-col space-y-6 lg:pr-12">
-        <h3 className="font-heading text-xl text-stone-900 tracking-wide font-medium">{about.title}</h3>
-        <p className="font-sans text-stone-600 leading-relaxed lg:max-w-sm">{about.description}</p>
-      </div>
+      <Stack spacing="content" className="lg:col-span-4 lg:pr-12">
+        <Heading level={4} variant="standard">{about.title}</Heading>
+        <Body tone="muted">{about.description}</Body>
+      </Stack>
       
       {/* Navigation */}
-      <div className="lg:col-span-2 flex flex-col space-y-6">
-        <h3 className="font-heading text-xl text-stone-900 tracking-wide font-medium">{navigation.title}</h3>
-        <ul className="flex flex-col space-y-4">
+      <Stack spacing="content" className="lg:col-span-2">
+        <Heading level={4} variant="standard">{navigation.title}</Heading>
+        <Stack spacing="paragraph" as="ul">
           {navigation.links.map((link) => (
             <li key={link.label}>
-              <a href={link.href} className="font-sans text-stone-600 hover:text-stone-900 transition-colors">
+              <a href={link.href} className="font-sans text-[var(--color-muted)] hover:text-[var(--color-foreground)] transition-colors">
                 {link.label}
               </a>
             </li>
           ))}
-        </ul>
-      </div>
+        </Stack>
+      </Stack>
 
       {/* Contact */}
-      <div className="lg:col-span-4 flex flex-col space-y-6">
-        <h3 className="font-heading text-xl text-stone-900 tracking-wide font-medium">{contact.title}</h3>
-        <ul className="flex flex-col space-y-2">
+      <Stack spacing="content" className="lg:col-span-4">
+        <Heading level={4} variant="standard">{contact.title}</Heading>
+        <Stack spacing="inline" as="ul">
           {contact.details.map((detail) => (
-            <li key={detail} className="font-sans text-stone-600">
+            <li key={detail} className="font-sans text-[var(--color-muted)]">
               {detail}
             </li>
           ))}
-        </ul>
-      </div>
+        </Stack>
+      </Stack>
 
       {/* Socials */}
-      <div className="lg:col-span-2 flex flex-col space-y-6">
-        <h3 className="font-heading text-xl text-stone-900 tracking-wide font-medium">{socials.title}</h3>
-        <ul className="flex flex-col space-y-4">
+      <Stack spacing="content" className="lg:col-span-2">
+        <Heading level={4} variant="standard">{socials.title}</Heading>
+        <Stack spacing="paragraph" as="ul">
           {socials.links.map((link) => (
             <li key={link.label}>
               <a 
                 href={link.href} 
-                className="font-sans text-stone-600 hover:text-stone-900 transition-colors" 
+                className="font-sans text-[var(--color-muted)] hover:text-[var(--color-foreground)] transition-colors" 
                 target="_blank" 
                 rel="noopener noreferrer"
               >
@@ -51,8 +53,8 @@ export function FooterNavigation({ about, navigation, contact, socials }: Footer
               </a>
             </li>
           ))}
-        </ul>
-      </div>
-    </div>
+        </Stack>
+      </Stack>
+    </Grid>
   );
 }

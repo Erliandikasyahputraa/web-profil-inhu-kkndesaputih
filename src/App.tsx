@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ROUTES } from './constants/routes';
 import { RootLayout } from './layout/RootLayout';
+import { HomePage } from './pages/HomePage';
 
 // Temporary placeholder for features until we build them in Phase 3 & 4
 function Placeholder({ title }: { title: string }) {
@@ -16,7 +17,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<RootLayout />}>
-          <Route path={ROUTES.HOME} element={<Placeholder title="Beranda (Home)" />} />
+          <Route path={ROUTES.HOME} element={<HomePage />} />
           <Route path={ROUTES.SEJARAH} element={<Placeholder title="Sejarah" />} />
           <Route path={ROUTES.GALERI} element={<Placeholder title="Galeri" />} />
           <Route path={ROUTES.POTENSI} element={<Placeholder title="Potensi Desa" />} />
