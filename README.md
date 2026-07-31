@@ -2,6 +2,7 @@
 
 ## Architecture & Philosophy
 This project is built from scratch following a strict **Senior Frontend Architect** directive:
+- **System Over Page Optimization:** Optimizes for the entire system ecosystem, not individual screenshots.
 - **Architecture First:** Scalability and maintainability over premature visual polish.
 - **The Figma Philosophy:** The provided Google Stitch designs were used strictly as visual references, identical to Figma screenshots. No generated HTML/CSS was copied or referenced.
 
@@ -9,16 +10,24 @@ This project is built from scratch following a strict **Senior Frontend Architec
 - **Framework:** React 19 + Vite + TypeScript
 - **Package Manager:** `pnpm`
 - **Styling:** Tailwind CSS v4, `clsx`, `tailwind-merge`
-- **Animation:** Motion (`framer-motion`), `react-intersection-observer`
+- **Animation:** Motion (`framer-motion`), `react-intersection-observer` (Opt-in only)
 - **Icons & UI:** `lucide-react`, `embla-carousel-react`
-- **Fonts:** Libre Baskerville (Heading), Inter (Body)
+- **Fonts:** Libre Baskerville Variable, Inter Variable
+
+## Architecture Decision Records (ADR)
+- **React 19 + Vite:** Chosen for fast static builds, modern capabilities, and seamless integration with static hosts like Vercel and Netlify.
+- **Tailwind CSS v4:** Chosen for rapid, design-system constrained utility styling. Strictly abstracted behind primitive UI components (`<Container>`, `<Section>`) to avoid inline spaghetti.
+- **Feature Architecture:** `src/features/*` encapsulates modular logic (components, sections, hooks, types) to prevent monolithic application bloat.
+- **Static Content Architecture:** `src/content/*` separates all text and configuration from the UI, preparing the system for a future Headless CMS integration.
 
 ## Folder Structure
-- `public/`: Static assets, structured image folders, fonts, SEO base.
-- `src/features/`: Feature-based architecture containing self-contained pages/sections.
-- `src/components/`: Reusable UI abstractions (`Container`, `Section`, `EditorialImage`, etc).
-- `src/design/`: Design system token definitions.
-- `src/content/`: Static content and section configurations (No magic strings).
+- `public/`: Static assets, structured image folders (`hero/`, `gallery/`, etc.), fonts, SEO base.
+- `src/features/`: Feature-based modular architecture.
+- `src/components/`: Reusable UI abstractions.
+- `src/layout/`: Root and editorial layout wrappers.
+- `src/design/`: Design system token definitions (`colors`, `elevation`, `theme`).
+- `src/constants/`: App constants and modular metadata (`home.ts`, `history.ts`).
+- `src/content/`: Static content exports.
 
 ## Getting Started
 1. Clone the repository.
@@ -34,6 +43,9 @@ This project is built from scratch following a strict **Senior Frontend Architec
 - Accessible (ARIA, alt text).
 - Reusable UI abstractions.
 
-## Future Roadmap
-- Integration with Headless CMS (content layer replacement).
-- Digital Twin expanded interactive 3D capabilities.
+## Future Ready Roadmap
+- **CMS Ready:** Content layer already isolated.
+- **i18n Ready:** Texts extracted to variables, allowing easy dictionary swaps.
+- **PWA Ready:** Base manifest initialized.
+- **Blog Ready:** Component architecture supports generic markdown rendering layouts.
+- **API Ready:** Environment variables stubbed out for backend expansion.

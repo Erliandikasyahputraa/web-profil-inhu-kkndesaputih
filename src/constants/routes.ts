@@ -3,6 +3,7 @@ export const ROUTES = {
   SEJARAH: '/sejarah',
   GALERI: '/galeri',
   POTENSI: '/potensi',
+  ORGANISASI: '/organisasi',
   DIGITAL_TWIN: '/digital-twin',
   TENTANG: '/tentang',
   KONTAK: '/kontak',
