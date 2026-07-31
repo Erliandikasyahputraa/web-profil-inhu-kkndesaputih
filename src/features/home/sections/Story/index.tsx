@@ -1,6 +1,6 @@
-import { Container } from '../../../components/ui/Container';
-import { Section } from '../../../components/ui/Section';
-import { Heading } from '../../../components/typography';
+import { Container } from '../../../../components/ui/Container';
+import { Section } from '../../../../components/ui/Section';
+import { Heading } from '../../../../components/typography';
 
 export function StorySection() {
   return (

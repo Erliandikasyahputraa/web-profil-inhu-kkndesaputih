@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 
 interface ProvidersProps {

@@ -1,5 +1,6 @@
-import { HTMLMotionProps, motion } from 'framer-motion';
-import { ReactNode } from 'react';
+import { motion } from 'framer-motion';
+import type { HTMLMotionProps } from 'framer-motion';
+import type { ReactNode } from 'react';
 import { cn } from '../../lib/utils';
 
 interface RevealProps extends HTMLMotionProps<'div'> {
