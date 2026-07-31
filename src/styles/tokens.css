@@ -4,10 +4,12 @@
 
   --color-background: #FAF9F6; /* Warm off-white */
   --color-foreground: #1A1A1A; /* Deep charcoal */
+  --color-inverse: #FFFFFF;
   --color-brand-primary: #2C3E2D; /* Forest green */
   --color-brand-accent: #8C7A6B; /* Warm earth */
   --color-muted: #6B7280;
-  
+  --color-subtle: #9CA3AF;
+
   --spacing-section: 6rem;
   --spacing-container: 2rem;
 
@@ -46,6 +48,4 @@
   --tracking-body: 0em;
   --tracking-caption: 0.05em;
 
-  /* Typography Semantic Colors */
-  --color-subtle: #9CA3AF;
 }
