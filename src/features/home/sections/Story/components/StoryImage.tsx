@@ -1,14 +1,14 @@
 import { EditorialImage } from '../../../../../components/ui/EditorialImage';
+import { Caption } from '../../../../../components/typography';
 import type { StoryImageProps } from '../Story.types';
 
-export function StoryImage({ imageSrc, imageAlt }: StoryImageProps) {
+export function StoryImage({ imageSrc, imageAlt, caption }: StoryImageProps) {
   return (
-    <div className="w-full h-full min-h-[400px] lg:min-h-[600px] rounded-lg overflow-hidden">
-      <EditorialImage 
-        src={imageSrc} 
-        alt={imageAlt}
-        preset="portrait"
-      />
+    <div className="flex flex-col space-y-4 w-full h-full">
+      <div className="w-full overflow-hidden">
+        <EditorialImage src={imageSrc} alt={imageAlt} preset="story" />
+      </div>
+      {caption && <Caption className="text-right italic border-t border-stone-200 pt-2">{caption}</Caption>}
     </div>
   );
 }

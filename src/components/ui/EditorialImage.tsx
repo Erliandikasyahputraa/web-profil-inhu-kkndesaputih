@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { cn } from '../../lib/utils';
 
-export type ImagePreset = 'hero' | 'portrait' | 'gallery' | 'thumbnail' | 'custom';
+export type ImagePreset = 'hero' | 'story' | 'portrait' | 'gallery' | 'thumbnail' | 'custom';
 export type ImageOverlay = 'none' | 'dark' | 'cinematic' | 'light';
 
 interface EditorialImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
@@ -28,6 +28,7 @@ export function EditorialImage({
 
   const presetClasses = {
     hero: 'w-full h-full object-cover',
+    story: 'w-full h-full object-cover min-h-[400px] lg:min-h-[700px] rounded-lg',
     portrait: 'w-full object-cover aspect-[3/4]',
     gallery: 'w-full h-full object-cover hover:scale-105 transition-transform duration-700',
     thumbnail: 'w-full object-cover aspect-square rounded-md',
