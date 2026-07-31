@@ -3,9 +3,9 @@ import { Container } from '../../../../components/ui/Container';
 import { SectionHeader } from '../../../../components/ui/SectionHeader';
 import { FadeIn, Reveal, Parallax } from '../../../../components/motion';
 import { NatureMedia } from './components/NatureMedia';
-import { NatureQuote } from './components/NatureQuote';
 import { NatureContent } from './components/NatureContent';
-import { NatureStats } from './components/NatureStats';
+import { PullQuote } from '../../../../components/ui/PullQuote';
+import { EditorialStats } from '../../../../components/ui/EditorialStats';
 import { natureContent } from '../../../../content/homepage/nature';
 
 export function Nature() {
@@ -29,7 +29,7 @@ export function Nature() {
 
           {/* Large Pull Quote */}
           <Parallax offset={20}>
-            <NatureQuote 
+            <PullQuote 
               text={natureContent.quote} 
               author={natureContent.quoteAuthor} 
             />
@@ -45,7 +45,7 @@ export function Nature() {
             
             <div className="col-span-1 lg:col-span-5 xl:col-span-4">
               <FadeIn stagger="editorial" delay={0.2}>
-                <NatureStats stats={natureContent.stats} />
+                <EditorialStats stats={natureContent.stats} />
               </FadeIn>
             </div>
           </div>

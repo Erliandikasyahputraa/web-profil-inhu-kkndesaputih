@@ -1,7 +1,11 @@
-import { Display } from '../../../../../components/typography';
-import type { NatureQuoteProps } from '../Nature.types';
+import { Display } from '../typography';
 
-export function NatureQuote({ text, author }: NatureQuoteProps) {
+interface PullQuoteProps {
+  text: string;
+  author?: string;
+}
+
+export function PullQuote({ text, author }: PullQuoteProps) {
   return (
     <div className="max-w-4xl mx-auto text-center px-4">
       <Display className="text-3xl md:text-5xl lg:text-6xl text-brand-primary leading-tight font-medium mb-8">
