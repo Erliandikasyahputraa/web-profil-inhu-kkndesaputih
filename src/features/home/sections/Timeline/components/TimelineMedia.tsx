@@ -8,6 +8,7 @@ export function TimelineMedia({ image }: TimelineMediaProps) {
         src={image.src} 
         alt={image.alt} 
         preset="story" 
+        variant="rounded"
       />
     </div>
   );

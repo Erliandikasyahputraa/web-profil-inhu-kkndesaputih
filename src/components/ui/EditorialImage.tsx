@@ -1,14 +1,28 @@
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
-export type ImagePreset = 'hero' | 'story' | 'landscape' | 'portrait' | 'gallery' | 'thumbnail' | 'custom';
+export type ImagePreset = 
+  | 'hero' 
+  | 'story' 
+  | 'portrait' 
+  | 'landscape' 
+  | 'gallery-feature' 
+  | 'gallery-square' 
+  | 'gallery-portrait' 
+  | 'cta' 
+  | 'thumbnail' 
+  | 'narrative' 
+  | 'custom';
+
+export type ImageVariant = 'default' | 'rounded' | 'edge' | 'soft';
 export type ImageOverlay = 'none' | 'dark' | 'cinematic' | 'light';
 
 interface EditorialImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   alt: string;
   preset?: ImagePreset;
-  aspectRatio?: 'aspect-auto' | 'aspect-square' | 'aspect-video' | 'aspect-[4/3]' | 'aspect-[3/4]' | 'aspect-[21/9]' | 'aspect-[16/9]';
-  priority?: boolean;
+  variant?: ImageVariant;
+  aspectRatio?: string; // Escape hatch
+  priority?: boolean; // Override if needed
   overlay?: ImageOverlay;
 }
 
@@ -17,8 +31,9 @@ export function EditorialImage({
   alt,
   className,
   preset = 'custom',
-  aspectRatio = 'aspect-auto',
-  priority = false,
+  variant = 'default',
+  aspectRatio,
+  priority,
   overlay = 'none',
   width,
   height,
@@ -26,14 +41,97 @@ export function EditorialImage({
 }: EditorialImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const presetClasses = {
-    hero: 'w-full h-full object-cover',
-    story: 'w-full h-full object-cover min-h-[400px] lg:min-h-[700px] rounded-lg',
-    landscape: 'w-full object-cover aspect-video md:aspect-[21/9] lg:aspect-[3/1] rounded-none',
-    portrait: 'w-full object-cover aspect-[3/4]',
-    gallery: 'w-full h-full object-cover hover:scale-105 transition-transform duration-700',
-    thumbnail: 'w-full object-cover aspect-square rounded-md',
-    custom: 'w-full h-full object-cover',
+  // Configuration for each preset
+  const presetConfig: Record<ImagePreset, { 
+    aspectClasses: string; 
+    objectFit: string;
+    loading: 'lazy' | 'eager';
+    fetchPriority: 'high' | 'auto' | 'low';
+    sizes?: string;
+  }> = {
+    hero: {
+      aspectClasses: 'w-full h-full', // Handled by wrapper
+      objectFit: 'object-cover',
+      loading: 'eager',
+      fetchPriority: 'high',
+      sizes: '100vw',
+    },
+    story: {
+      aspectClasses: 'w-full min-h-[400px] lg:min-h-[700px]',
+      objectFit: 'object-cover',
+      loading: 'lazy',
+      fetchPriority: 'auto',
+      sizes: '(min-width: 1024px) 50vw, 100vw',
+    },
+    landscape: {
+      aspectClasses: 'w-full aspect-[16/9]',
+      objectFit: 'object-cover',
+      loading: 'lazy',
+      fetchPriority: 'auto',
+      sizes: '(min-width: 1024px) 50vw, 100vw',
+    },
+    portrait: {
+      aspectClasses: 'w-full aspect-[3/4]',
+      objectFit: 'object-cover',
+      loading: 'lazy',
+      fetchPriority: 'auto',
+      sizes: '(min-width: 1024px) 33vw, 100vw',
+    },
+    'gallery-feature': {
+      aspectClasses: 'w-full aspect-[21/9]',
+      objectFit: 'object-cover',
+      loading: 'lazy',
+      fetchPriority: 'auto',
+      sizes: '100vw',
+    },
+    'gallery-square': {
+      aspectClasses: 'w-full aspect-square',
+      objectFit: 'object-cover',
+      loading: 'lazy',
+      fetchPriority: 'auto',
+      sizes: '(min-width: 768px) 50vw, 100vw',
+    },
+    'gallery-portrait': {
+      aspectClasses: 'w-full aspect-[3/4]',
+      objectFit: 'object-cover',
+      loading: 'lazy',
+      fetchPriority: 'auto',
+      sizes: '(min-width: 768px) 33vw, 100vw',
+    },
+    cta: {
+      aspectClasses: 'w-full aspect-[4/3] md:aspect-[21/9] lg:aspect-[3/1]',
+      objectFit: 'object-cover',
+      loading: 'lazy',
+      fetchPriority: 'auto',
+      sizes: '100vw',
+    },
+    thumbnail: {
+      aspectClasses: 'w-full aspect-square',
+      objectFit: 'object-cover',
+      loading: 'lazy',
+      fetchPriority: 'auto',
+      sizes: '25vw',
+    },
+    narrative: {
+      aspectClasses: 'w-full aspect-[4/5]',
+      objectFit: 'object-cover',
+      loading: 'lazy',
+      fetchPriority: 'auto',
+      sizes: '(min-width: 1024px) 50vw, 100vw',
+    },
+    custom: {
+      aspectClasses: 'w-full h-full',
+      objectFit: 'object-cover',
+      loading: 'lazy',
+      fetchPriority: 'auto',
+    }
+  };
+
+  const variantClasses: Record<ImageVariant, string> = {
+    default: 'rounded-none',
+    rounded: 'rounded-2xl',
+    edge: 'rounded-none',
+    soft: 'rounded-lg',
   };
 
   const overlayClasses = {
@@ -43,29 +141,36 @@ export function EditorialImage({
     light: 'absolute inset-0 bg-white/10',
   };
 
+  const config = presetConfig[preset];
+  const finalAspectRatio = aspectRatio ? aspectRatio : config.aspectClasses;
+  const finalLoading = priority !== undefined ? (priority ? 'eager' : 'lazy') : config.loading;
+  const finalFetchPriority = priority !== undefined ? (priority ? 'high' : 'auto') : config.fetchPriority;
+
   return (
-    <div className={cn('relative overflow-hidden bg-stone-100', preset !== 'portrait' && preset !== 'thumbnail' ? aspectRatio : '', className)}>
+    <div className={cn('relative overflow-hidden bg-stone-100', variantClasses[variant], className)}>
       <img
         src={src}
         alt={alt}
         width={width}
         height={height}
-        loading={priority ? 'eager' : 'lazy'}
+        loading={finalLoading}
         decoding="async"
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
-        fetchpriority={priority ? 'high' : 'auto'}
+        fetchpriority={finalFetchPriority}
+        sizes={config.sizes}
         onLoad={() => setIsLoaded(true)}
         className={cn(
-          presetClasses[preset],
+          finalAspectRatio,
+          config.objectFit,
           'transition-opacity duration-700 ease-in-out',
-          isLoaded ? 'opacity-100' : 'opacity-0',
+          isLoaded ? 'opacity-100' : 'opacity-0'
         )}
         {...props}
       />
-      {overlay !== 'none' && <div className={cn(overlayClasses[overlay])} />}
+      {overlay !== 'none' && <div className={cn(overlayClasses[overlay], 'pointer-events-none')} />}
       {!isLoaded && (
-        <div className="absolute inset-0 animate-pulse bg-stone-200" aria-hidden="true" />
+        <div className="absolute inset-0 animate-pulse bg-stone-200 pointer-events-none" aria-hidden="true" />
       )}
     </div>
   );

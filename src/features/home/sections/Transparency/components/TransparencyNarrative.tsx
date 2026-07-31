@@ -8,8 +8,7 @@ export function TransparencyNarrative({ image, description, cta }: TransparencyN
       <EditorialImage 
         src={image.src} 
         alt={image.alt} 
-        preset="portrait"
-        className="w-full object-cover lg:aspect-[4/5] rounded-none"
+        preset="narrative" 
       />
       <div className="flex flex-col md:flex-row gap-8 justify-between items-start">
         <Body className="text-stone-600 max-w-md text-lg leading-relaxed">

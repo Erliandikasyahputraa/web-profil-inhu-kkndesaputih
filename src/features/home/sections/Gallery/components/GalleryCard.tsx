@@ -9,20 +9,15 @@ export function GalleryCard({ image, span }: GalleryImageItem) {
     small: 'col-span-1 md:col-span-2 lg:col-span-3'
   };
 
-  const aspectClasses = {
-    full: 'aspect-video lg:aspect-[21/9]',
-    portrait: 'aspect-[3/4]',
-    landscape: 'aspect-video lg:aspect-[4/3]',
-    small: 'aspect-square'
-  };
+  const preset = span === 'full' ? 'gallery-feature' : span === 'small' ? 'gallery-square' : span === 'landscape' ? 'landscape' : 'gallery-portrait';
 
   return (
     <div className={`${spanClasses[span]} overflow-hidden bg-stone-100 rounded-lg group`}>
       <EditorialImage 
         src={image.src} 
         alt={image.alt} 
-        preset="custom" 
-        className={`w-full h-full object-cover ${aspectClasses[span]} group-hover:scale-105 transition-transform duration-700 ease-out`}
+        preset={preset} 
+        className="group-hover:scale-105 transition-transform duration-700 ease-out"
       />
     </div>
   );
