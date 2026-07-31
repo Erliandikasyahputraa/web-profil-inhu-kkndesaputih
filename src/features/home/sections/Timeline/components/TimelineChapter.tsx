@@ -8,7 +8,7 @@ export function TimelineChapter({ chapter }: TimelineChapterProps) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-24 border-t border-stone-200 pt-16 lg:pt-32 pb-16 lg:pb-32">
       <div className="col-span-1 lg:col-span-4">
-        <FadeIn direction="up" distance={40}>
+        <FadeIn>
           <TimelineYear year={chapter.year} />
         </FadeIn>
       </div>
