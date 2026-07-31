@@ -6,21 +6,28 @@ type TypographyVariant = 'editorial' | 'standard' | 'muted';
 type TypographyTone = 'default' | 'muted' | 'inverse' | 'subtle' | 'brand';
 type TypographyMeasure = 'narrow' | 'comfortable' | 'wide' | 'full';
 
+interface DisplayProps extends HTMLAttributes<HTMLHeadingElement> {
+  tone?: TypographyTone;
+}
+
 interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
   level?: HeadingLevel;
   variant?: TypographyVariant;
   tone?: TypographyTone;
+  align?: 'left' | 'center' | 'right';
 }
 
 interface BodyProps extends HTMLAttributes<HTMLParagraphElement> {
   tone?: TypographyTone;
   measure?: TypographyMeasure;
+  prose?: boolean;
 }
 
 interface CaptionProps extends HTMLAttributes<HTMLParagraphElement> {
   tone?: TypographyTone;
   uppercase?: boolean;
   tracking?: 'normal' | 'wide' | 'widest';
+  size?: 'sm' | 'md';
 }
 
 const toneClasses: Record<TypographyTone, string> = {
@@ -38,7 +45,15 @@ const measureClasses: Record<TypographyMeasure, string> = {
   full: 'max-w-full',
 };
 
-export function Display({ className, children, ...props }: HTMLAttributes<HTMLHeadingElement>) {
+const alignClasses = {
+  left: 'text-left',
+  center: 'text-center',
+  right: 'text-right',
+};
+
+const proseClasses = 'prose prose-stone prose-p:leading-relaxed prose-a:text-brand-primary prose-a:underline hover:prose-a:text-brand-accent prose-strong:font-bold prose-headings:font-heading prose-blockquote:border-l-brand-accent prose-blockquote:italic';
+
+export function Display({ tone = 'brand', className, children, ...props }: DisplayProps) {
   return (
     <h1 
       className={cn(
@@ -46,7 +61,7 @@ export function Display({ className, children, ...props }: HTMLAttributes<HTMLHe
         'font-[var(--font-weight-display)]',
         'leading-[var(--leading-display)]',
         'tracking-[var(--tracking-display)]',
-        toneClasses.brand,
+        toneClasses[tone],
         className
       )} 
       {...props}
@@ -56,7 +71,7 @@ export function Display({ className, children, ...props }: HTMLAttributes<HTMLHe
   );
 }
 
-export function Heading({ level = 2, variant = 'editorial', tone, className, children, ...props }: HeadingProps) {
+export function Heading({ level = 2, variant = 'editorial', tone, align = 'left', className, children, ...props }: HeadingProps) {
   const Component = `h${level}` as const;
   
   const variantStyles = {
@@ -82,6 +97,7 @@ export function Heading({ level = 2, variant = 'editorial', tone, className, chi
         variantStyles[variant], 
         sizeClasses[level], 
         toneClasses[tone || defaultTone],
+        alignClasses[align],
         className
       )} 
       {...props}
@@ -91,7 +107,7 @@ export function Heading({ level = 2, variant = 'editorial', tone, className, chi
   );
 }
 
-export function Lead({ className, tone = 'muted', measure = 'comfortable', children, ...props }: BodyProps) {
+export function Lead({ className, tone = 'muted', measure = 'comfortable', prose = false, children, ...props }: BodyProps) {
   return (
     <p 
       className={cn(
@@ -101,6 +117,7 @@ export function Lead({ className, tone = 'muted', measure = 'comfortable', child
         'tracking-[var(--tracking-lead)]',
         measureClasses[measure],
         toneClasses[tone],
+        prose && proseClasses,
         className
       )} 
       {...props}
@@ -110,9 +127,9 @@ export function Lead({ className, tone = 'muted', measure = 'comfortable', child
   );
 }
 
-export function Body({ className, tone = 'default', measure = 'comfortable', children, ...props }: BodyProps) {
+export function Body({ className, tone = 'default', measure = 'comfortable', prose = false, children, ...props }: BodyProps) {
   return (
-    <p 
+    <div 
       className={cn(
         'font-body text-[length:var(--text-body)]',
         'font-[var(--font-weight-body)]',
@@ -120,26 +137,33 @@ export function Body({ className, tone = 'default', measure = 'comfortable', chi
         'tracking-[var(--tracking-body)]',
         measureClasses[measure],
         toneClasses[tone],
+        prose && proseClasses,
         className
       )} 
       {...props}
     >
       {children}
-    </p>
+    </div>
   );
 }
 
-export function Caption({ className, tone = 'subtle', uppercase = false, tracking = 'normal', children, ...props }: CaptionProps) {
+export function Caption({ className, tone = 'subtle', size = 'sm', uppercase = false, tracking = 'normal', children, ...props }: CaptionProps) {
   const trackingClasses = {
     normal: 'tracking-[var(--tracking-caption)]',
     wide: 'tracking-wide',
     widest: 'tracking-widest',
   };
+  
+  const sizeMap = {
+    sm: 'text-[length:var(--text-caption)]',
+    md: 'text-[length:var(--text-body)]',
+  };
 
   return (
     <p 
       className={cn(
-        'font-body text-[length:var(--text-caption)]',
+        'font-body',
+        sizeMap[size],
         'font-[var(--font-weight-caption)]',
         'leading-[var(--leading-caption)]',
         trackingClasses[tracking],

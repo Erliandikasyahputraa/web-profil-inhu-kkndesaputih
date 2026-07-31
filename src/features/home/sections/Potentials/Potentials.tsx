@@ -8,7 +8,7 @@ import { potentialsContent } from '@/content/homepage/potentials';
 
 export function Potentials() {
   return (
-    <Section spacing="xl" background="muted" variant="editorial">
+    <Section spacing="default" background="muted" variant="editorial">
       <Container size="default">
         <SectionHeader 
           number={potentialsContent.sectionNumber} 

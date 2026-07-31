@@ -8,7 +8,7 @@ import { storyContent } from '@/content/homepage/story';
 
 export function Story() {
   return (
-    <Section spacing="lg" background="primary" variant="editorial">
+    <Section spacing="default" background="primary" variant="editorial">
       <Container size="default">
         <SectionHeader 
           number={storyContent.sectionNumber} 

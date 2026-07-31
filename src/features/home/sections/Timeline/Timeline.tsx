@@ -8,7 +8,7 @@ import { timelineContent } from '@/content/homepage/timeline';
 
 export function Timeline() {
   return (
-    <Section spacing="xl" background="primary" variant="editorial">
+    <Section spacing="default" background="primary" variant="editorial">
       <Container size="default">
         <SectionHeader 
           number={timelineContent.sectionNumber} 

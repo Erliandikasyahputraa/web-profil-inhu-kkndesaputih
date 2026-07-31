@@ -9,7 +9,7 @@ import { galleryContent } from '@/content/homepage/gallery';
 
 export function Gallery() {
   return (
-    <Section spacing="xl" background="muted" variant="editorial">
+    <Section spacing="default" background="muted" variant="editorial">
       <Container size="default">
         <SectionHeader 
           number={galleryContent.sectionNumber} 

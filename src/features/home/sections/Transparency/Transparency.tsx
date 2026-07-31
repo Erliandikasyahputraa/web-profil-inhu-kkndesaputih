@@ -9,7 +9,7 @@ import { transparencyContent } from '@/content/homepage/transparency';
 
 export function Transparency() {
   return (
-    <Section spacing="xl" background="primary" variant="editorial">
+    <Section spacing="default" background="primary" variant="editorial">
       <Container size="default">
         <SectionHeader 
           number={transparencyContent.sectionNumber} 

@@ -10,7 +10,7 @@ import { natureContent } from '@/content/homepage/nature';
 
 export function Nature() {
   return (
-    <Section spacing="xl" background="transparent" variant="editorial">
+    <Section spacing="default" background="transparent" variant="editorial">
       <Container size="default">
         <SectionHeader 
           number={natureContent.sectionNumber} 
