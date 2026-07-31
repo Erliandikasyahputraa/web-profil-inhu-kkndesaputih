@@ -1,9 +1,9 @@
-import { Container } from '@/components';
-import { FadeIn } from '@/components';
+import { Container } from '@/components/ui';
+import { FadeIn } from '@/components/motion';
 import { ClosingStatement } from './components/ClosingStatement';
 import { ClosingImage } from './components/ClosingImage';
 import { ClosingActions } from './components/ClosingActions';
-import { ctaContent } from '../../../../content/homepage/cta';
+import { ctaContent } from '@/content/homepage/cta';
 
 export function CTA() {
   return (

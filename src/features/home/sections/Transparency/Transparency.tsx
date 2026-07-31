@@ -1,11 +1,11 @@
-import { Section } from '@/components';
-import { Container } from '@/components';
-import { SectionHeader } from '@/components';
-import { FadeIn, Reveal } from '@/components';
+import { Section } from '@/components/ui';
+import { Container } from '@/components/ui';
+import { SectionHeader } from '@/components/ui';
+import { FadeIn, Reveal } from '@/components/motion';
 import { TransparencyHeroMetric } from './components/TransparencyHeroMetric';
 import { TransparencyBreakdown } from './components/TransparencyBreakdown';
 import { TransparencyNarrative } from './components/TransparencyNarrative';
-import { transparencyContent } from '../../../../content/homepage/transparency';
+import { transparencyContent } from '@/content/homepage/transparency';
 
 export function Transparency() {
   return (

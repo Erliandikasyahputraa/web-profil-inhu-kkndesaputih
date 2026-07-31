@@ -1,5 +1,5 @@
-import { EditorialImage } from '@/components';
-import { Body } from '@/components';
+import { EditorialImage } from '@/components/ui';
+import { Body } from '@/components/typography';
 import type { TransparencyNarrativeProps } from '../Transparency.types';
 
 export function TransparencyNarrative({ image, imageAlt, description, cta }: TransparencyNarrativeProps) {

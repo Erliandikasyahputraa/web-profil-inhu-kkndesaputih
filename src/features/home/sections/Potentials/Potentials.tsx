@@ -1,10 +1,10 @@
-import { Section } from '@/components';
-import { Container } from '@/components';
-import { SectionHeader } from '@/components';
-import { Button } from '@/components';
-import { FadeIn } from '@/components';
+import { Section } from '@/components/ui';
+import { Container } from '@/components/ui';
+import { SectionHeader } from '@/components/ui';
+import { Button } from '@/components/ui';
+import { FadeIn } from '@/components/motion';
 import { PotentialBlock } from './components/PotentialBlock';
-import { potentialsContent } from '../../../../content/homepage/potentials';
+import { potentialsContent } from '@/content/homepage/potentials';
 
 export function Potentials() {
   return (

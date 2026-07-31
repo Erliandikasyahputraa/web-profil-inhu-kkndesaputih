@@ -1,4 +1,4 @@
-import { EditorialImage } from '@/components';
+import { EditorialImage } from '@/components/ui';
 import type { HeroMediaProps } from '../Hero.types';
 
 export function HeroMedia({ imageSrc }: HeroMediaProps) {

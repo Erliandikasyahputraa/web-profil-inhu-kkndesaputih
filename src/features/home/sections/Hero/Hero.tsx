@@ -1,8 +1,8 @@
-import { Section } from '@/components';
+import { Section } from '@/components/ui';
 import { HeroMedia } from './components/HeroMedia';
 import { HeroContent } from './components/HeroContent';
 import { HeroActions } from './components/HeroActions';
-import { heroContent } from '../../../../content/homepage/hero';
+import { heroContent } from '@/content/homepage/hero';
 
 export function Hero() {
   return (

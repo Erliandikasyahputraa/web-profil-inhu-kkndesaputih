@@ -1,7 +1,7 @@
-import { Heading, Body } from '@/components';
-import { EditorialImage } from '@/components';
-import { EditorialStats } from '@/components';
-import { FadeIn, Reveal } from '@/components';
+import { Heading, Body } from '@/components/typography';
+import { EditorialImage } from '@/components/ui';
+import { EditorialStats } from '@/components/ui';
+import { FadeIn, Reveal } from '@/components/motion';
 import type { PotentialBlockProps } from '../Potentials.types';
 
 export function PotentialBlock({ title, description, image, imageAlt, stats }: PotentialBlockProps) {

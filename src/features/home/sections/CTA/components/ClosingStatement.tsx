@@ -1,4 +1,4 @@
-import { Display, Body } from '@/components';
+import { Display, Body } from '@/components/typography';
 import type { ClosingStatementProps } from '../CTA.types';
 
 export function ClosingStatement({ text, description }: ClosingStatementProps) {

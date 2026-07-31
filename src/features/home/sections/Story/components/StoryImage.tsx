@@ -1,5 +1,5 @@
-import { EditorialImage } from '@/components';
-import { Caption } from '@/components';
+import { EditorialImage } from '@/components/ui';
+import { Caption } from '@/components/typography';
 import type { StoryImageProps } from '../Story.types';
 
 export function StoryImage({ imageSrc, imageAlt, caption }: StoryImageProps) {

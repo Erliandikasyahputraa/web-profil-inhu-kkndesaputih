@@ -1,10 +1,10 @@
-import { Section } from '@/components';
-import { Container } from '@/components';
-import { SectionHeader } from '@/components';
-import { FadeIn, Reveal } from '@/components';
+import { Section } from '@/components/ui';
+import { Container } from '@/components/ui';
+import { SectionHeader } from '@/components/ui';
+import { FadeIn, Reveal } from '@/components/motion';
 import { StoryContent } from './components/StoryContent';
 import { StoryImage } from './components/StoryImage';
-import { storyContent } from '../../../../content/homepage/story';
+import { storyContent } from '@/content/homepage/story';
 
 export function Story() {
   return (

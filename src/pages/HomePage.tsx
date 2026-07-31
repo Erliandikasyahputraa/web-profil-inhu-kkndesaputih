@@ -1,5 +1,5 @@
-import { PageMetadata } from '@/components';
-import { homeMetadata } from '../constants/metadata/home';
+import { PageMetadata } from '@/components/common';
+import { homeMetadata } from '@/constants/metadata/home';
 import { HomeComposition } from '../features/home';
 
 export function HomePage() {

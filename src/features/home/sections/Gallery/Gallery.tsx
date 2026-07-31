@@ -1,11 +1,11 @@
-import { Section } from '@/components';
-import { Container } from '@/components';
-import { SectionHeader } from '@/components';
-import { PullQuote } from '@/components';
-import { FadeIn } from '@/components';
+import { Section } from '@/components/ui';
+import { Container } from '@/components/ui';
+import { SectionHeader } from '@/components/ui';
+import { PullQuote } from '@/components/ui';
+import { FadeIn } from '@/components/motion';
 import { GalleryCollage } from './components/GalleryCollage';
 import { GalleryCTA } from './components/GalleryCTA';
-import { galleryContent } from '../../../../content/homepage/gallery';
+import { galleryContent } from '@/content/homepage/gallery';
 
 export function Gallery() {
   return (

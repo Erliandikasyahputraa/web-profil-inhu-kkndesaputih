@@ -1,10 +1,10 @@
-import { Section } from '@/components';
-import { Container } from '@/components';
-import { SectionHeader } from '@/components';
-import { PullQuote } from '@/components';
-import { FadeIn } from '@/components';
+import { Section } from '@/components/ui';
+import { Container } from '@/components/ui';
+import { SectionHeader } from '@/components/ui';
+import { PullQuote } from '@/components/ui';
+import { FadeIn } from '@/components/motion';
 import { TimelineChapter } from './components/TimelineChapter';
-import { timelineContent } from '../../../../content/homepage/timeline';
+import { timelineContent } from '@/content/homepage/timeline';
 
 export function Timeline() {
   return (

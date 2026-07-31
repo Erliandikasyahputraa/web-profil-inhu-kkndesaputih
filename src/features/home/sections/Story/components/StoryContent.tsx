@@ -1,4 +1,4 @@
-import { Heading, Lead, Body } from '@/components';
+import { Heading, Lead, Body } from '@/components/typography';
 import type { StoryContentProps } from '../Story.types';
 import { StoryMeta } from './StoryMeta';
 import { storyContent } from '../../../../../../src/content/homepage/story';

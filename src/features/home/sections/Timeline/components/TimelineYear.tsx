@@ -1,4 +1,4 @@
-import { Display } from '@/components';
+import { Display } from '@/components/typography';
 import type { TimelineYearProps } from '../Timeline.types';
 
 export function TimelineYear({ year }: TimelineYearProps) {

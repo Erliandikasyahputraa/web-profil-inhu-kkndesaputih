@@ -1,4 +1,4 @@
-import { FadeIn, Reveal } from '@/components';
+import { FadeIn, Reveal } from '@/components/motion';
 import { TimelineYear } from './TimelineYear';
 import { TimelineMedia } from './TimelineMedia';
 import { TimelineContent } from './TimelineContent';
