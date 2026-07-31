@@ -1,10 +1,9 @@
-export interface FooterLink {
-  label: string;
-  href: string;
-}
+import type { LinkMetadata, Quote } from '@/types/content';
+
+export interface FooterLink extends LinkMetadata {}
 
 export interface FooterQuoteProps {
-  quote: string;
+  quote: Quote;
 }
 
 export interface FooterNavigationProps {

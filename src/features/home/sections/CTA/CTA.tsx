@@ -8,7 +8,9 @@ import { ctaContent } from '@/content/homepage/cta';
 export function CTA() {
   return (
     <section className="relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden py-32 mt-32">
-      <ClosingImage src={ctaContent.image} alt={ctaContent.imageAlt} />
+      <div className="relative aspect-[4/3] md:aspect-[21/9] lg:aspect-[3/1] mt-16 lg:mt-24 rounded-2xl overflow-hidden">
+        <ClosingImage image={ctaContent.image} />
+      </div>
       <div className="absolute inset-0 bg-stone-900/40" />
       
       <Container size="default" className="relative z-10 flex flex-col items-center justify-center">

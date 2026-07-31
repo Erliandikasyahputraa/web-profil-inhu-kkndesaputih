@@ -14,7 +14,7 @@ export function TimelineChapter({ chapter }: TimelineChapterProps) {
       </div>
       <div className="col-span-1 lg:col-span-8 flex flex-col space-y-12">
         <Reveal>
-          <TimelineMedia src={chapter.image} alt={chapter.imageAlt} />
+          <TimelineMedia image={chapter.image} />
         </Reveal>
         <FadeIn delay={0.2}>
           <TimelineContent title={chapter.title} description={chapter.description} />

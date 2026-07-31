@@ -28,11 +28,7 @@ export function Story() {
           </div>
           <div className="col-span-1 lg:col-span-7 order-1 lg:order-2">
             <Reveal stagger="hero">
-              <StoryImage 
-                imageSrc={storyContent.image} 
-                imageAlt={storyContent.imageAlt} 
-                caption={storyContent.imageCaption}
-              />
+              <StoryImage image={storyContent.image} />
             </Reveal>
           </div>
         </div>

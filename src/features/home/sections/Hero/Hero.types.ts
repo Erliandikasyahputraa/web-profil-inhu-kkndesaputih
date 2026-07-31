@@ -3,11 +3,13 @@ export interface HeroContentProps {
   description: string;
 }
 
+import type { LinkMetadata, ImageMetadata } from '@/types/content';
+
 export interface HeroActionsProps {
-  primaryLabel: string;
-  secondaryLabel: string;
+  primary: LinkMetadata;
+  secondary: LinkMetadata;
 }
 
 export interface HeroMediaProps {
-  imageSrc: string;
+  image: ImageMetadata;
 }

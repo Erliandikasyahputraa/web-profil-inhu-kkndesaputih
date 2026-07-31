@@ -1,9 +1,10 @@
+import type { ImageMetadata, LinkMetadata } from '@/types/content';
+
 export type GallerySpan = 'full' | 'portrait' | 'landscape' | 'small';
 
 export interface GalleryImageItem {
   id: string;
-  src: string;
-  alt: string;
+  image: ImageMetadata;
   span: GallerySpan;
 }
 
@@ -12,6 +13,5 @@ export interface GalleryCollageProps {
 }
 
 export interface GalleryCTAProps {
-  label: string;
-  href: string;
+  cta: LinkMetadata;
 }

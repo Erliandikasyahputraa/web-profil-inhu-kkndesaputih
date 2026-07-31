@@ -4,11 +4,11 @@ import { EditorialStats } from '@/components/ui';
 import { FadeIn, Reveal } from '@/components/motion';
 import type { PotentialBlockProps } from '../Potentials.types';
 
-export function PotentialBlock({ title, description, image, imageAlt, stats }: PotentialBlockProps) {
+export function PotentialBlock({ title, description, image, stats }: PotentialBlockProps) {
   return (
     <div className="flex flex-col space-y-8 lg:space-y-12">
       <Reveal className="w-full">
-        <EditorialImage src={image} alt={imageAlt} preset="landscape" />
+        <EditorialImage src={image.src} alt={image.alt} preset="landscape" />
       </Reveal>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-12 lg:gap-x-24">
         <div className="col-span-1 lg:col-span-8">

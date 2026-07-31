@@ -3,10 +3,10 @@ export interface NatureParagraph {
   text: string;
 }
 
-export interface NatureStat {
+import type { ImageMetadata, Statistic, Quote } from '@/types/content';
+
+export interface NatureStat extends Statistic {
   id: string;
-  value: string;
-  label: string;
 }
 
 export interface NatureContentProps {
@@ -14,13 +14,11 @@ export interface NatureContentProps {
 }
 
 export interface NatureMediaProps {
-  imageSrc: string;
-  imageAlt: string;
+  image: ImageMetadata;
 }
 
 export interface NatureQuoteProps {
-  text: string;
-  author: string;
+  quote: Quote;
 }
 
 export interface NatureStatsProps {

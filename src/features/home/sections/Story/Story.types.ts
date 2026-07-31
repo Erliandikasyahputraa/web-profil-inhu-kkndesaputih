@@ -9,10 +9,10 @@ export interface StoryContentProps {
   paragraphs: readonly StoryParagraph[];
 }
 
+import type { ImageMetadata } from '@/types/content';
+
 export interface StoryImageProps {
-  imageSrc: string;
-  imageAlt: string;
-  caption?: string;
+  image: ImageMetadata;
 }
 
 export interface StoryMetaProps {

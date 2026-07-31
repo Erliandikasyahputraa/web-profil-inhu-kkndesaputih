@@ -1,6 +1,6 @@
-export interface CTAActionItem {
-  label: string;
-  href: string;
+import type { ImageMetadata, LinkMetadata } from '@/types/content';
+
+export interface CTAActionItem extends LinkMetadata {
   primary: boolean;
 }
 
@@ -14,6 +14,5 @@ export interface ClosingStatementProps {
 }
 
 export interface ClosingImageProps {
-  src: string;
-  alt: string;
+  image: ImageMetadata;
 }

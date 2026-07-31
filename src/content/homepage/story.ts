@@ -17,7 +17,6 @@ export const storyContent = {
     label: 'Lokasi Geografis',
     value: '0°32\'S 102°15\'E',
   },
-  image: '/images/history/historical_documentary_photograph_of_the_old_village_well_and_spring_mata_air.png',
-  imageAlt: 'Mata Air dan Kehidupan Sehari-hari Warga Desa Air Putih',
+  image: { src: '/images/history/historical_documentary_photograph_of_the_old_village_well_and_spring_mata_air.png', alt: 'Mata Air dan Kehidupan Sehari-hari Warga Desa Air Putih' },
   imageCaption: 'Potret dokumenter mata air bersejarah, urat nadi kehidupan desa.',
 } as const;

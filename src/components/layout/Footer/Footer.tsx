@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <footer className="w-full bg-stone-50 border-t border-stone-200 mt-auto">
       <Container size="default">
-        <FooterQuote quote={footerContent.quote} />
+        <FooterQuote quote={{ text: footerContent.quote }} />
         <FooterNavigation 
           about={footerContent.about}
           navigation={footerContent.navigation}

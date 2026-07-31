@@ -7,9 +7,9 @@ import { heroContent } from '@/content/homepage/hero';
 export function Hero() {
   return (
     <Section variant="hero" background="transparent">
-      <HeroMedia imageSrc={heroContent.image} />
+      <HeroMedia image={heroContent.media.image} />
       <HeroContent title={heroContent.title} description={heroContent.description}>
-        <HeroActions primaryLabel={heroContent.cta.primary} secondaryLabel={heroContent.cta.secondary} />
+        <HeroActions primary={heroContent.cta.primary} secondary={heroContent.cta.secondary} />
       </HeroContent>
     </Section>
   );

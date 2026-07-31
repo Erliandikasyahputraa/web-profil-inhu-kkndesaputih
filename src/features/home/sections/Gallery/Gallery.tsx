@@ -31,7 +31,7 @@ export function Gallery() {
         </div>
 
         <FadeIn delay={0.2}>
-          <GalleryCTA label={galleryContent.cta.label} href={galleryContent.cta.href} />
+          <GalleryCTA cta={galleryContent.cta} />
         </FadeIn>
       </Container>
     </Section>

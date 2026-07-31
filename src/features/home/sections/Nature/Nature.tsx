@@ -21,10 +21,7 @@ export function Nature() {
           
           {/* Full-width Cinematic Image */}
           <Reveal>
-            <NatureMedia 
-              imageSrc={natureContent.image} 
-              imageAlt={natureContent.imageAlt} 
-            />
+            <NatureMedia image={natureContent.image} />
           </Reveal>
 
           {/* Large Pull Quote */}

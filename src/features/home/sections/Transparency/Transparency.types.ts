@@ -4,10 +4,10 @@ export interface TransparencyHeroMetricProps {
   description: string;
 }
 
-export interface TransparencyMetricItem {
+import type { ImageMetadata, LinkMetadata, Statistic } from '@/types/content';
+
+export interface TransparencyMetricItem extends Statistic {
   id: string;
-  value: string;
-  label: string;
 }
 
 export interface TransparencyBreakdownProps {
@@ -15,11 +15,7 @@ export interface TransparencyBreakdownProps {
 }
 
 export interface TransparencyNarrativeProps {
-  image: string;
-  imageAlt: string;
+  image: ImageMetadata;
   description: string;
-  cta: {
-    label: string;
-    href: string;
-  };
+  cta: LinkMetadata;
 }

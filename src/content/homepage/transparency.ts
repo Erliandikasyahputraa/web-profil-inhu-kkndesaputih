@@ -3,8 +3,7 @@ export const transparencyContent = {
   kicker: 'TRANSPARANSI',
   title: 'Membangun dengan Keterbukaan',
   description: 'Setiap sen dana desa adalah amanah. Kami percaya bahwa pembangunan yang berkelanjutan berawal dari kepercayaan dan transparansi publik.',
-  image: '/images/gallery/editorial_documentary_photograph_of_a_village_discussion_in_desa_air_putih_riau.png',
-  imageAlt: 'Musyawarah desa mengenai pembangunan',
+  image: { src: '/images/gallery/editorial_documentary_photograph_of_a_village_discussion_in_desa_air_putih_riau.png', alt: 'Musyawarah desa mengenai pembangunan' },
   mainMetric: {
     value: 'Rp 1.2M',
     label: 'Total APBDes 2026',

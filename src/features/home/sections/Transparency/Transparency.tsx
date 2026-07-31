@@ -32,12 +32,7 @@ export function Transparency() {
           </div>
           <div className="col-span-1 lg:col-span-7">
             <Reveal delay={0.3}>
-              <TransparencyNarrative 
-                image={transparencyContent.image}
-                imageAlt={transparencyContent.imageAlt}
-                description={transparencyContent.description}
-                cta={transparencyContent.cta}
-              />
+              <TransparencyNarrative image={transparencyContent.image} description={transparencyContent.description} cta={transparencyContent.cta} />
             </Reveal>
           </div>
         </div>

@@ -2,12 +2,12 @@ import { EditorialImage } from '@/components/ui';
 import { Body } from '@/components/typography';
 import type { TransparencyNarrativeProps } from '../Transparency.types';
 
-export function TransparencyNarrative({ image, imageAlt, description, cta }: TransparencyNarrativeProps) {
+export function TransparencyNarrative({ image, description, cta }: TransparencyNarrativeProps) {
   return (
     <div className="flex flex-col space-y-12 h-full">
       <EditorialImage 
-        src={image} 
-        alt={imageAlt} 
+        src={image.src} 
+        alt={image.alt} 
         preset="portrait"
         className="w-full object-cover lg:aspect-[4/5] rounded-none"
       />

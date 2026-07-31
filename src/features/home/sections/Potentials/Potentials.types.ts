@@ -1,12 +1,11 @@
-import type { StatItem } from '@/components';
+import type { ImageMetadata, Statistic } from '@/types/content';
 
 export interface PotentialItem {
   id: string;
   title: string;
   description: string;
-  image: string;
-  imageAlt: string;
-  stats: readonly StatItem[];
+  image: ImageMetadata;
+  stats: readonly (Statistic & { id: string })[];
 }
 
 export interface PotentialBlockProps extends PotentialItem {

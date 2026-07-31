@@ -1,10 +1,11 @@
+import type { ImageMetadata } from '@/types/content';
+
 export interface TimelineChapterItem {
   id: string;
   year: string;
   title: string;
   description: string;
-  image: string;
-  imageAlt: string;
+  image: ImageMetadata;
 }
 
 export interface TimelineChapterProps {
@@ -16,8 +17,7 @@ export interface TimelineYearProps {
 }
 
 export interface TimelineMediaProps {
-  src: string;
-  alt: string;
+  image: ImageMetadata;
 }
 
 export interface TimelineContentProps {
