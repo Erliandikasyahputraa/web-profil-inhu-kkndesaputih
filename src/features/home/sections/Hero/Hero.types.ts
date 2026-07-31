@@ -1,6 +1,13 @@
 export interface HeroContentProps {
   title: string;
-  subtitle: string;
   description: string;
-  image: string;
+}
+
+export interface HeroActionsProps {
+  primaryLabel: string;
+  secondaryLabel: string;
+}
+
+export interface HeroMediaProps {
+  imageSrc: string;
 }

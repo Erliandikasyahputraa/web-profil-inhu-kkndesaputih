@@ -4,10 +4,11 @@ import { cn } from '../../lib/utils';
 interface SectionProps extends HTMLAttributes<HTMLElement> {
   spacing?: 'none' | 'sm' | 'md' | 'lg' | 'xl';
   background?: 'transparent' | 'primary' | 'muted' | 'accent' | 'dark';
+  variant?: 'default' | 'hero' | 'editorial';
 }
 
 export const Section = forwardRef<HTMLElement, SectionProps>(
-  ({ className, spacing = 'lg', background = 'transparent', children, ...props }, ref) => {
+  ({ className, spacing = 'lg', background = 'transparent', variant = 'default', children, ...props }, ref) => {
     
     const spacingClasses = {
       none: '',
@@ -25,10 +26,16 @@ export const Section = forwardRef<HTMLElement, SectionProps>(
       dark: 'bg-stone-900 text-stone-50',
     };
 
+    const variantClasses = {
+      default: '',
+      hero: 'relative min-h-dvh flex items-end overflow-hidden pb-24 pt-32',
+      editorial: 'relative max-w-7xl mx-auto',
+    };
+
     return (
       <section
         ref={ref}
-        className={cn('w-full', spacingClasses[spacing], bgClasses[background], className)}
+        className={cn('w-full', spacingClasses[spacing], bgClasses[background], variantClasses[variant], className)}
         {...props}
       >
         {children}
