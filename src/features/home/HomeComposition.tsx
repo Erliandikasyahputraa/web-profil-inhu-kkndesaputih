@@ -5,9 +5,7 @@ import { PotentialsSection } from './sections/Potentials';
 import { TimelineSection } from './sections/Timeline';
 import { GallerySection } from './sections/Gallery';
 import { TransparencySection } from './sections/Transparency';
-/* 
 import { CTASection } from './sections/CTA';
-*/
 
 export function HomeComposition() {
   return (
@@ -19,9 +17,9 @@ export function HomeComposition() {
       <TimelineSection />
       <GallerySection />
       <TransparencySection />
+      <CTASection />
       {/* 
         Placeholder for future sections:
-        <CTASection />
       */}
     </>
   );
