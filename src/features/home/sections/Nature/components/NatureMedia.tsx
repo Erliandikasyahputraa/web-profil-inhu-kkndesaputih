@@ -1,4 +1,4 @@
-import { EditorialImage } from '../../../../../components/ui/EditorialImage';
+import { EditorialImage } from '@/components';
 import type { NatureMediaProps } from '../Nature.types';
 
 export function NatureMedia({ imageSrc, imageAlt }: NatureMediaProps) {

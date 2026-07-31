@@ -1,5 +1,5 @@
-import { Container } from '../../../../components/ui/Container';
-import { FadeIn } from '../../../../components/motion';
+import { Container } from '@/components';
+import { FadeIn } from '@/components';
 import { ClosingStatement } from './components/ClosingStatement';
 import { ClosingImage } from './components/ClosingImage';
 import { ClosingActions } from './components/ClosingActions';

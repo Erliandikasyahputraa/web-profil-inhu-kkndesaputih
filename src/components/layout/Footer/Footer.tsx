@@ -2,7 +2,7 @@ import { Container } from '../../ui/Container';
 import { FooterQuote } from './components/FooterQuote';
 import { FooterNavigation } from './components/FooterNavigation';
 import { FooterBottom } from './components/FooterBottom';
-import { footerContent } from '../../../content/layout/footer';
+import { footerContent } from '@/content/layout/footer';
 
 export function Footer() {
   return (

@@ -1,4 +1,4 @@
-import { EditorialImage } from '../../../../../components/ui/EditorialImage';
+import { EditorialImage } from '@/components';
 import type { TimelineMediaProps } from '../Timeline.types';
 
 export function TimelineMedia({ src, alt }: TimelineMediaProps) {

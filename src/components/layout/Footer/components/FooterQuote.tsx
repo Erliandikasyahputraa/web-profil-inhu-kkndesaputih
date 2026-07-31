@@ -1,4 +1,4 @@
-import { Body } from '../../../typography';
+import { Body } from '@/components/typography';
 import type { FooterQuoteProps } from '../Footer.types';
 
 export function FooterQuote({ quote }: FooterQuoteProps) {

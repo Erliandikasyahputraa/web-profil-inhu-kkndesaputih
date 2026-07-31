@@ -1,4 +1,4 @@
-import { Display } from '../typography';
+import { Display } from '@/components/typography';
 
 interface PullQuoteProps {
   text: string;

@@ -1,11 +1,11 @@
-import { Section } from '../../../../components/ui/Section';
-import { Container } from '../../../../components/ui/Container';
-import { SectionHeader } from '../../../../components/ui/SectionHeader';
-import { FadeIn, Reveal, Parallax } from '../../../../components/motion';
+import { Section } from '@/components';
+import { Container } from '@/components';
+import { SectionHeader } from '@/components';
+import { FadeIn, Reveal, Parallax } from '@/components';
 import { NatureMedia } from './components/NatureMedia';
 import { NatureContent } from './components/NatureContent';
-import { PullQuote } from '../../../../components/ui/PullQuote';
-import { EditorialStats } from '../../../../components/ui/EditorialStats';
+import { PullQuote } from '@/components';
+import { EditorialStats } from '@/components';
 import { natureContent } from '../../../../content/homepage/nature';
 
 export function Nature() {

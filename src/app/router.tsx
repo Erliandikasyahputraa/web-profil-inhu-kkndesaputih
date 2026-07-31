@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { ROUTES } from '../constants/routes';
+import { ROUTES } from '@/constants/routes';
 import { RootLayout } from '../layout/RootLayout';
 
 // Temporary placeholder for features until we build them

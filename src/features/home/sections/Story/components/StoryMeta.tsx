@@ -1,4 +1,4 @@
-import { Overline } from '../../../../../components/typography';
+import { Overline } from '@/components';
 import type { StoryMetaProps } from '../Story.types';
 
 export function StoryMeta({ label, value }: StoryMetaProps) {

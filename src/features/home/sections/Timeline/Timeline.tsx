@@ -1,8 +1,8 @@
-import { Section } from '../../../../components/ui/Section';
-import { Container } from '../../../../components/ui/Container';
-import { SectionHeader } from '../../../../components/ui/SectionHeader';
-import { PullQuote } from '../../../../components/ui/PullQuote';
-import { FadeIn } from '../../../../components/motion';
+import { Section } from '@/components';
+import { Container } from '@/components';
+import { SectionHeader } from '@/components';
+import { PullQuote } from '@/components';
+import { FadeIn } from '@/components';
 import { TimelineChapter } from './components/TimelineChapter';
 import { timelineContent } from '../../../../content/homepage/timeline';
 

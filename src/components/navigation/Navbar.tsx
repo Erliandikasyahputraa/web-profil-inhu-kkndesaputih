@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { ROUTES } from '../../constants/routes';
-import { Container } from '../ui/Container';
-import { Overline } from '../typography';
+import { ROUTES } from '@/constants/routes';
+import { Container } from '@/components/ui';
+import { Overline } from '@/components/typography';
 
 export function Navbar() {
   return (

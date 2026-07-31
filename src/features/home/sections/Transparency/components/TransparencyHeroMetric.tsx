@@ -1,4 +1,4 @@
-import { Display, Heading, Body } from '../../../../../components/typography';
+import { Display, Heading, Body } from '@/components';
 import type { TransparencyHeroMetricProps } from '../Transparency.types';
 
 export function TransparencyHeroMetric({ value, label, description }: TransparencyHeroMetricProps) {

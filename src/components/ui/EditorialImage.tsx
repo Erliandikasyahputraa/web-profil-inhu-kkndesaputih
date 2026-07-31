@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { cn } from '../../lib/utils';
+import { cn } from '@/lib/utils';
 
 export type ImagePreset = 'hero' | 'story' | 'landscape' | 'portrait' | 'gallery' | 'thumbnail' | 'custom';
 export type ImageOverlay = 'none' | 'dark' | 'cinematic' | 'light';

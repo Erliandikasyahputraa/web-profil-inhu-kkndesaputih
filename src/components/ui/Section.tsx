@@ -1,5 +1,5 @@
 import { forwardRef, type HTMLAttributes } from 'react';
-import { cn } from '../../lib/utils';
+import { cn } from '@/lib/utils';
 
 interface SectionProps extends HTMLAttributes<HTMLElement> {
   spacing?: 'none' | 'sm' | 'md' | 'lg' | 'xl';

@@ -1,4 +1,4 @@
-import { Heading, Body } from '../../../../../components/typography';
+import { Heading, Body } from '@/components';
 import type { TimelineContentProps } from '../Timeline.types';
 
 export function TimelineContent({ title, description }: TimelineContentProps) {

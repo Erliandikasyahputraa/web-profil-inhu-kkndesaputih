@@ -1,6 +1,6 @@
 import { Providers } from './providers';
 import { AppRouter } from './router';
-import { ErrorBoundary } from '../components/common/ErrorBoundary';
+import { ErrorBoundary } from '@/components';
 
 export default function App() {
   return (

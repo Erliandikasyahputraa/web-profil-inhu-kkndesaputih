@@ -1,7 +1,7 @@
-import { Section } from '../../../../components/ui/Section';
-import { Container } from '../../../../components/ui/Container';
-import { SectionHeader } from '../../../../components/ui/SectionHeader';
-import { FadeIn, Reveal } from '../../../../components/motion';
+import { Section } from '@/components';
+import { Container } from '@/components';
+import { SectionHeader } from '@/components';
+import { FadeIn, Reveal } from '@/components';
 import { TransparencyHeroMetric } from './components/TransparencyHeroMetric';
 import { TransparencyBreakdown } from './components/TransparencyBreakdown';
 import { TransparencyNarrative } from './components/TransparencyNarrative';

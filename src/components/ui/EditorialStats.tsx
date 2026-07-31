@@ -1,4 +1,4 @@
-import { Overline, Heading } from '../typography';
+import { Overline, Heading } from '@/components/typography';
 
 export interface StatItem {
   id: string;

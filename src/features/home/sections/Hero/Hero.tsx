@@ -1,4 +1,4 @@
-import { Section } from '../../../../components/ui/Section';
+import { Section } from '@/components';
 import { HeroMedia } from './components/HeroMedia';
 import { HeroContent } from './components/HeroContent';
 import { HeroActions } from './components/HeroActions';

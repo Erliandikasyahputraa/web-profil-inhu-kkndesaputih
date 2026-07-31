@@ -1,4 +1,4 @@
-import { EditorialImage } from '../../../../../components/ui/EditorialImage';
+import { EditorialImage } from '@/components';
 import type { GalleryImageItem } from '../Gallery.types';
 
 export function GalleryCard({ src, alt, span }: GalleryImageItem) {

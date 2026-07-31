@@ -1,5 +1,5 @@
 import type { HTMLAttributes } from 'react';
-import { cn } from '../../lib/utils';
+import { cn } from '@/lib/utils';
 
 type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
 type TypographyVariant = 'editorial' | 'standard' | 'muted';

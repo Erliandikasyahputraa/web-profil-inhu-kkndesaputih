@@ -1,4 +1,4 @@
-import { Body } from '../../../../../components/typography';
+import { Body } from '@/components';
 import type { NatureContentProps } from '../Nature.types';
 
 export function NatureContent({ paragraphs }: NatureContentProps) {

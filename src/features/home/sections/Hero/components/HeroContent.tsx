@@ -1,6 +1,6 @@
-import { Container } from '../../../../../components/ui/Container';
-import { Display, Lead } from '../../../../../components/typography';
-import { FadeIn, Reveal } from '../../../../../components/motion';
+import { Container } from '@/components';
+import { Display, Lead } from '@/components';
+import { FadeIn, Reveal } from '@/components';
 import type { HeroContentProps } from '../Hero.types';
 
 export function HeroContent({ title, description, children }: HeroContentProps & { children?: React.ReactNode }) {

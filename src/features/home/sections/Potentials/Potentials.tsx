@@ -1,8 +1,8 @@
-import { Section } from '../../../../components/ui/Section';
-import { Container } from '../../../../components/ui/Container';
-import { SectionHeader } from '../../../../components/ui/SectionHeader';
-import { Button } from '../../../../components/ui/Button';
-import { FadeIn } from '../../../../components/motion';
+import { Section } from '@/components';
+import { Container } from '@/components';
+import { SectionHeader } from '@/components';
+import { Button } from '@/components';
+import { FadeIn } from '@/components';
 import { PotentialBlock } from './components/PotentialBlock';
 import { potentialsContent } from '../../../../content/homepage/potentials';
 

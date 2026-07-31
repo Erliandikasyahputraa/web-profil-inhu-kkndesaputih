@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import { Navbar } from '../components/navigation/Navbar';
-import { Footer } from '../components/layout/Footer';
+import { Navbar } from '@/components';
+import { Footer } from '@/components';
 
 /**
  * RootLayout provides the base structure for the entire application.

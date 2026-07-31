@@ -1,4 +1,4 @@
-import type { StatItem } from '../../../../components/ui/EditorialStats';
+import type { StatItem } from '@/components';
 
 export interface PotentialItem {
   id: string;

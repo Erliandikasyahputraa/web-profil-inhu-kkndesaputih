@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import type { ErrorInfo, ReactNode } from 'react';
-import { Container } from '../ui/Container';
-import { Display, Body } from '../typography';
+import { Container } from '@/components/ui';
+import { Display, Body } from '@/components/typography';
 
 interface Props {
   children: ReactNode;

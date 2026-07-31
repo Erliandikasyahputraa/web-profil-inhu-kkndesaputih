@@ -1,5 +1,5 @@
-import { Reveal } from '../../../../../components/motion';
-import { Button } from '../../../../../components/ui/Button';
+import { Reveal } from '@/components';
+import { Button } from '@/components';
 import type { HeroActionsProps } from '../Hero.types';
 
 export function HeroActions({ primaryLabel, secondaryLabel }: HeroActionsProps) {
