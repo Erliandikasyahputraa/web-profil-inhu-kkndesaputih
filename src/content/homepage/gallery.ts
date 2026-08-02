@@ -25,9 +25,9 @@ export const galleryContent = {
       span: 'small'
     }
   ],
-  quote: {
-    text: 'Dalam setiap jepretan, ada jiwa desa yang terus berdenyut.',
-    author: 'Fotografer Desa'
+  callout: {
+    content: 'Dalam setiap jepretan, ada jiwa desa yang terus berdenyut.',
+    title: 'Fotografer Desa'
   },
   cta: {
     label: 'Lihat Seluruh Galeri',

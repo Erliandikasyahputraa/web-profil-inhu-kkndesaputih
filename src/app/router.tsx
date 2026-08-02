@@ -12,7 +12,9 @@ function Placeholder({ title }: { title: string }) {
 }
 
 // We will import HomePage from pages
+// We will import HomePage from pages
 import { HomePage } from '../pages/HomePage';
+import { ProfilePage } from '../pages/ProfilePage';
 
 export function AppRouter() {
   return (
@@ -20,7 +22,7 @@ export function AppRouter() {
       <Routes>
         <Route element={<RootLayout />}>
           <Route path={ROUTES.HOME} element={<HomePage />} />
-          <Route path={ROUTES.SEJARAH} element={<Placeholder title="Sejarah" />} />
+          <Route path={ROUTES.PROFIL} element={<ProfilePage />} />
           <Route path={ROUTES.GALERI} element={<Placeholder title="Galeri" />} />
           <Route path={ROUTES.POTENSI} element={<Placeholder title="Potensi Desa" />} />
           <Route path={ROUTES.ORGANISASI} element={<Placeholder title="Organisasi" />} />

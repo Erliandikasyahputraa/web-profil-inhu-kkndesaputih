@@ -55,3 +55,20 @@ We opted for fluid typography using CSS `clamp()` functions in `tokens.css`. Typ
 - **Positive:** Typography looks perfect on *any* screen size, including odd widths.
 - **Positive:** Dramatically cleans up markup by eliminating `md:` and `lg:` prefix bloat.
 - **Negative:** Requires CSS variables and custom Tailwind config rather than purely standard Tailwind utility usage.
+
+---
+
+## ADR-004: Rename `quote` → `callout` in Content Schema
+
+**Status:** Accepted  
+**Date:** August 2026
+
+### Context
+Initially, narrative sections included a `quote` property typed as `PullQuoteProps` to represent highlighted text within the editorial layout. This tightly coupled the content data layer to a specific UI component (`PullQuote`).
+
+### Decision
+We renamed the `quote` property to `callout` globally across all content schemas and introduced a generic `EditorialCallout` type (`{ title?: string; content: string; variant?: string }`). The content layer now remains agnostic of how the callout is rendered.
+
+### Consequences
+- **Positive:** **Future compatibility**. The `callout` field can now be rendered not just as a `PullQuote`, but flexibly as a *Fact Box*, *Statistic*, or *Warning Highlight* in the future simply by changing the renderer, without mutating the content schema.
+- **Positive:** True separation of concerns (content vs presentation).

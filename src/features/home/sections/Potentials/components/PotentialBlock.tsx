@@ -7,7 +7,7 @@ import type { PotentialBlockProps } from '../Potentials.types';
 
 export function PotentialBlock({ title, description, image, stats }: PotentialBlockProps) {
   return (
-    <Stack spacing="section">
+    <Stack spacing="grid">
       <Reveal className="w-full">
         <EditorialImage image={image} preset="landscape" variant="rounded" />
       </Reveal>

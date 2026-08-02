@@ -1,8 +1,11 @@
 export const ROUTES = {
   HOME: '/',
-  SEJARAH: '/sejarah',
+  PROFIL: '/profil',
+  GEOGRAFI: '/geografi',
+  PEMERINTAHAN: '/pemerintahan',
   GALERI: '/galeri',
   POTENSI: '/potensi',
+  INFORMASI: '/informasi',
   ORGANISASI: '/organisasi',
   DIGITAL_TWIN: '/digital-twin',
   TENTANG: '/tentang',

@@ -3,9 +3,9 @@ export const timelineContent = {
   kicker: 'PERJALANAN DESA',
   title: 'Jejak Langkah Air Putih',
   description: 'Sejarah bukan sekadar masa lalu, melainkan fondasi yang membentuk identitas kami hari ini.',
-  quote: {
-    text: 'Setiap jengkal tanah ini menyimpan cerita perjuangan dan doa para pendahulu.',
-    author: 'Tetua Desa Air Putih'
+  callout: {
+    content: 'Setiap jengkal tanah ini menyimpan cerita perjuangan dan doa para pendahulu.',
+    title: 'Tetua Desa Air Putih'
   },
   chapters: [
     {

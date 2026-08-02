@@ -1,5 +1,5 @@
 export const footerContent = {
-  quote: 'Terima kasih telah meluangkan waktu untuk mengenal Desa Air Putih.',
+  callout: 'Terima kasih telah meluangkan waktu untuk mengenal Desa Air Putih.',
   about: {
     title: 'Desa Air Putih',
     description: 'Sebuah desa yang tumbuh bersama alam, menjunjung tinggi kearifan lokal, dan terus bergerak maju menuju kemandirian ekonomi serta kesejahteraan masyarakat.'

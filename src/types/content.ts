@@ -23,10 +23,10 @@ export interface CTA extends LinkMetadata {
   icon?: string;
 }
 
-export interface Quote {
+export interface Callout {
   id?: string;
-  text: string;
-  author?: string;
+  content: string;
+  title?: string;
   source?: string;
 }
 

@@ -3,7 +3,7 @@ export interface NatureParagraph {
   text: string;
 }
 
-import type { ImageMetadata, Statistic, Quote } from '@/types/content';
+import type { ImageMetadata, Statistic, Callout } from '@/types/content';
 
 export interface NatureStat extends Statistic {
   id: string;
@@ -17,8 +17,8 @@ export interface NatureMediaProps {
   image: ImageMetadata;
 }
 
-export interface NatureQuoteProps {
-  quote: Quote;
+export interface NatureCalloutProps {
+  callout: Callout;
 }
 
 export interface NatureStatsProps {

@@ -3,8 +3,10 @@ export const natureContent = {
   kicker: 'ALAM',
   title: 'Sumber Kehidupan yang Berkelanjutan',
   image: { src: '/images/potentials/editorial_documentary_landscape_photograph_of_a_vast_palm_oil_plantation_in.png', alt: 'Hamparan perkebunan kelapa sawit di Desa Air Putih' },
-  quote: 'Alam bukan sekadar pemandangan, tetapi nyawa yang menghidupi setiap napas masyarakat kami.',
-  quoteAuthor: 'Warga Desa Air Putih',
+  callout: {
+    content: 'Alam bukan sekadar pemandangan, tetapi nyawa yang menghidupi setiap napas masyarakat kami.',
+    title: 'Warga Desa Air Putih'
+  },
   paragraphs: [
     {
       id: 'n1',

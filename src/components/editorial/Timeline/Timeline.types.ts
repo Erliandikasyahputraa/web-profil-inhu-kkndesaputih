@@ -1,0 +1,9 @@
+export type TimelineItem = {
+  year: string;
+  title: string;
+  description: string;
+};
+
+export type TimelineProps = {
+  items: TimelineItem[];
+};

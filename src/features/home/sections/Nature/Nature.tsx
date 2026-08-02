@@ -1,53 +1,27 @@
-import { Section, Container, SectionHeader } from '@/components/ui';
-import { Split, Stack } from '@/components/layout';
-import { FadeIn, Reveal, Parallax } from '@/components/motion';
-import { NatureMedia } from './components/NatureMedia';
-import { NatureContent } from './components/NatureContent';
-import { PullQuote } from '@/components/ui';
-import { EditorialStats } from '@/components/ui';
+import { Section, EditorialImage } from '@/components/ui';
 import { natureContent } from '@/content/homepage/nature';
 
 export function Nature() {
   return (
-    <Section spacing="default" background="transparent" variant="editorial">
-      <Container size="default">
-        <SectionHeader 
-          number={natureContent.sectionNumber} 
-          title={natureContent.kicker} 
+    <Section variant="default" spacing="none" background="primary" className="relative w-full h-[60vh] md:h-[80vh] flex flex-col justify-end bg-[#F7F3EE]">
+      {/* 
+        Scene 3: The Cinematic Pause (The Void)
+        A wide landscape shot. Total immersion. Breathing room.
+      */}
+      <div className="absolute inset-0 z-0">
+        <EditorialImage 
+          image={natureContent.image} 
+          preset="landscape"
+          overlay="none"
         />
-        
-        <Stack spacing="section" className="mt-12">
-          
-          {/* Full-width Cinematic Image */}
-          <Reveal>
-            <NatureMedia image={natureContent.image} />
-          </Reveal>
+      </div>
 
-          {/* Large Pull Quote */}
-          <Parallax offset={20}>
-            <PullQuote 
-              text={natureContent.quote} 
-              author={natureContent.quoteAuthor} 
-            />
-          </Parallax>
-
-          {/* Editorial Grid: Text + Stats */}
-          <Split ratio="sidebar" className="items-start">
-            <div>
-              <FadeIn stagger="editorial">
-                <NatureContent paragraphs={natureContent.paragraphs} />
-              </FadeIn>
-            </div>
-            
-            <div>
-              <FadeIn stagger="editorial" delay={0.2}>
-                <EditorialStats stats={natureContent.stats} />
-              </FadeIn>
-            </div>
-          </Split>
-
-        </Stack>
-      </Container>
+      {/* Unanchored Caption */}
+      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 pb-8 md:pb-12 flex justify-end">
+        <p className="text-[10px] md:text-xs text-stone-100 uppercase tracking-[0.2em] max-w-xs text-right font-medium drop-shadow-sm">
+          {natureContent.callout.content}
+        </p>
+      </div>
     </Section>
   );
 }

@@ -28,7 +28,7 @@ export function Navbar() {
           </svg>
         </button>
         <nav className="hidden md:flex gap-8">
-          <Link to={ROUTES.SEJARAH} className="text-sm font-medium hover:text-brand-accent transition-colors">Sejarah</Link>
+          <Link to={ROUTES.PROFIL} className="text-sm font-medium hover:text-brand-accent transition-colors">Profil</Link>
           <Link to={ROUTES.POTENSI} className="text-sm font-medium hover:text-brand-accent transition-colors">Potensi</Link>
           <Link to={ROUTES.GALERI} className="text-sm font-medium hover:text-brand-accent transition-colors">Galeri</Link>
         </nav>
@@ -37,7 +37,7 @@ export function Navbar() {
       {isOpen && (
         <div className="md:hidden border-t border-stone-200/50 bg-background/95 backdrop-blur-md absolute w-full left-0">
           <Container className="flex flex-col space-y-4 py-6">
-            <Link to={ROUTES.SEJARAH} onClick={() => setIsOpen(false)} className="text-lg font-medium hover:text-brand-accent transition-colors">Sejarah</Link>
+            <Link to={ROUTES.PROFIL} onClick={() => setIsOpen(false)} className="text-lg font-medium hover:text-brand-accent transition-colors">Profil</Link>
             <Link to={ROUTES.POTENSI} onClick={() => setIsOpen(false)} className="text-lg font-medium hover:text-brand-accent transition-colors">Potensi</Link>
             <Link to={ROUTES.GALERI} onClick={() => setIsOpen(false)} className="text-lg font-medium hover:text-brand-accent transition-colors">Galeri</Link>
           </Container>

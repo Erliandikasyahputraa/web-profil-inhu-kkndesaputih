@@ -1,9 +1,9 @@
-import type { LinkMetadata, Quote } from '@/types/content';
+import type { LinkMetadata } from '@/types/content';
 
 export interface FooterLink extends LinkMetadata {}
 
-export interface FooterQuoteProps {
-  quote: Quote;
+export interface FooterCalloutProps {
+  callout: string;
 }
 
 export interface FooterNavigationProps {
