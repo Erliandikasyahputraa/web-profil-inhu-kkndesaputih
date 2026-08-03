@@ -2,74 +2,66 @@ import { Section, EditorialImage } from '@/components/ui';
 import { potentialsContent } from '@/content/homepage/potentials';
 
 export function Potentials() {
+  const [dominant, support1, support2] = potentialsContent.items;
+
   return (
-    <Section variant="default" spacing="none" className="bg-[#F7F3EE] py-24 md:py-32 px-6">
-      <div className="max-w-7xl mx-auto">
+    <Section variant="default" spacing="none" className="bg-[#F2EFE9] py-24 md:py-40 px-6 overflow-hidden">
+      <div className="max-w-7xl mx-auto w-full relative flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-8">
         
-        <div className="mb-16 md:mb-24 flex items-end justify-between border-b border-stone-300 pb-8">
-          <h2 className="font-serif text-3xl md:text-5xl text-stone-900 tracking-tight max-w-xl">
-            {potentialsContent.title}
+        {/* Oversized Title - Left side, anchors the composition */}
+        <div className="w-full md:w-1/3 z-20 relative pt-12 md:pt-24">
+          <h2 className="font-serif text-5xl md:text-6xl lg:text-[5.5rem] text-stone-900 leading-[0.9] tracking-tight mix-blend-multiply">
+            Kekayaan<br/>Alam &<br/>Kearifan.
           </h2>
-          <span className="hidden md:block text-[10px] md:text-xs uppercase tracking-[0.2em] text-stone-500 max-w-xs text-right">
-            {potentialsContent.description}
-          </span>
+          <div className="mt-16 md:mt-32">
+            <a href={potentialsContent.cta.href} className="text-[10px] uppercase tracking-[0.2em] text-stone-900 font-bold flex items-center gap-4 group hover:opacity-70 transition-opacity">
+              <span className="w-8 h-[1px] bg-stone-900 group-hover:w-12 transition-all duration-300" />
+              {potentialsContent.cta.label}
+            </a>
+          </div>
         </div>
 
-        {/* Scene 4: Discovery (The Collage) */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-start">
+        {/* Diagonal Interconnected Cluster - Right side */}
+        <div className="w-full md:w-2/3 relative h-[70vh] md:h-[90vh]">
           
-          {/* Main Visual - Spans 7 columns */}
-          <div className="md:col-span-7 flex flex-col gap-4">
+          {/* Support 1 (Top Left of cluster) */}
+          <div className="absolute top-0 left-0 md:left-[10%] w-[45%] md:w-[35%] aspect-[3/4] shadow-xl z-20 hover:z-40 transition-all duration-500">
             <EditorialImage 
-              image={potentialsContent.items[0].image}
-              preset="custom"
-              className="w-full aspect-[4/3] object-cover"
+              image={support1.image}
+              preset="portrait"
               overlay="none"
+              className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
             />
-            <div className="flex justify-between items-start mt-2">
-              <h3 className="font-serif text-xl md:text-2xl text-stone-900">{potentialsContent.items[0].title}</h3>
-              <p className="text-[10px] md:text-xs text-stone-500 uppercase tracking-widest text-right">
-                {potentialsContent.items[0].stats[0].value} {potentialsContent.items[0].stats[0].label}
-              </p>
-            </div>
           </div>
 
-          {/* Secondary Visuals - Spans 5 columns, staggered down */}
-          <div className="md:col-span-5 flex flex-col gap-16 md:mt-32">
-            
-            <div className="flex flex-col gap-4">
-              <EditorialImage 
-                image={potentialsContent.items[1].image}
-                preset="portrait"
-                className="w-full aspect-[3/4] md:aspect-[4/5] object-cover"
-                overlay="none"
-              />
-              <div className="flex justify-between items-start mt-2">
-                <h3 className="font-serif text-lg md:text-xl text-stone-900">{potentialsContent.items[1].title}</h3>
-                <p className="text-[10px] md:text-xs text-stone-500 uppercase tracking-widest text-right">
-                  {potentialsContent.items[1].stats[0].value} {potentialsContent.items[1].stats[0].label}
-                </p>
-              </div>
+          {/* Dominant Image (Center Right, Largest) */}
+          <div className="absolute top-[15%] md:top-[20%] right-0 w-[75%] md:w-[65%] aspect-[4/3] shadow-2xl z-10">
+            <EditorialImage 
+              image={dominant.image}
+              preset="landscape"
+              overlay="none"
+              className="w-full h-full object-cover"
+            />
+            {/* Tiny Caption */}
+            <div className="absolute -bottom-6 right-0 text-right">
+              <span className="text-[9px] uppercase tracking-[0.2em] text-stone-500 font-bold">
+                {dominant.title}
+              </span>
             </div>
-
-            <div className="flex flex-col gap-4">
-              <EditorialImage 
-                image={potentialsContent.items[2].image}
-                preset="landscape"
-                className="w-full aspect-[16/9] object-cover"
-                overlay="none"
-              />
-              <div className="flex justify-between items-start mt-2">
-                <h3 className="font-serif text-lg md:text-xl text-stone-900">{potentialsContent.items[2].title}</h3>
-                <p className="text-[10px] md:text-xs text-stone-500 uppercase tracking-widest text-right">
-                  {potentialsContent.items[2].stats[0].value} {potentialsContent.items[2].stats[0].label}
-                </p>
-              </div>
-            </div>
-
           </div>
-
+          
+          {/* Support 2 (Bottom Left, overlapping dominant) */}
+          <div className="absolute bottom-[10%] left-[10%] md:left-[20%] w-[40%] md:w-[30%] aspect-square shadow-xl z-30 border-4 border-[#F2EFE9] hover:z-40 transition-all duration-500">
+            <EditorialImage 
+              image={support2.image}
+              preset="custom"
+              overlay="none"
+              className="w-full h-full object-cover grayscale opacity-90 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+            />
+          </div>
+          
         </div>
+
       </div>
     </Section>
   );

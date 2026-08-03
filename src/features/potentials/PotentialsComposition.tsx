@@ -1,47 +1,17 @@
-import { PageMetadata } from '@/components/common/PageMetadata';
-import { Stack } from '@/components/layout';
-import { Hero } from './sections/Hero/Hero';
-import { Intro } from './sections/Intro/Intro';
-import { Sector } from './sections/Sector/Sector';
-import { Stats } from './sections/Stats/Stats';
-import { Gallery } from './sections/Gallery/Gallery';
-import { Closing } from './sections/Closing/Closing';
-
-import {
-  potentialsMetadata,
-  potentialsHero,
-  potentialsIntro,
-  potentialsAgriculture,
-  potentialsPlantation,
-  potentialsFishery,
-  potentialsMSME,
-  potentialsTourism,
-  potentialsStats,
-  potentialsGallery,
-  potentialsClosing
-} from '@/content/potentials';
+import { Scene01Abundance } from './sections/Scene01Abundance';
+import { Scene02Agriculture } from './sections/Scene02Agriculture';
+import { Scene03Plantation } from './sections/Scene03Plantation';
+import { Scene04to06Grid } from './sections/Scene04to06Grid';
+import { Scene07Reflection } from './sections/Scene07Reflection';
 
 export function PotentialsComposition() {
   return (
-    <>
-      <PageMetadata {...potentialsMetadata} />
-      
-      <main className="min-h-screen">
-        <Stack spacing="none">
-          <Hero content={potentialsHero} />
-          <Intro content={potentialsIntro} />
-          
-          <Sector content={potentialsAgriculture} background="primary" />
-          <Sector content={potentialsPlantation} background="muted" reverse />
-          <Sector content={potentialsFishery} background="primary" />
-          <Sector content={potentialsMSME} background="muted" reverse />
-          <Sector content={potentialsTourism} background="primary" />
-          
-          <Stats content={potentialsStats} />
-          <Gallery content={potentialsGallery} />
-          <Closing content={potentialsClosing} />
-        </Stack>
-      </main>
-    </>
+    <div className="w-full flex flex-col bg-[#F9F8F6]">
+      <Scene01Abundance />
+      <Scene02Agriculture />
+      <Scene03Plantation />
+      <Scene04to06Grid />
+      <Scene07Reflection />
+    </div>
   );
 }

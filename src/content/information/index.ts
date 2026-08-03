@@ -93,8 +93,9 @@ export const informationContact = {
     title: 'Pemerintah Desa Air Putih'
   },
   details: [
-    { label: 'Alamat', value: 'Jl. Poros Desa Air Putih No. 1, Kecamatan Kubu, Kabupaten Rokan Hilir' },
+    { label: 'Alamat', value: 'Jl. Lintas Air Putih No. 01, Kecamatan Lubuk Batu Jaya, Kabupaten Indragiri Hulu, Riau 29351' },
     { label: 'Jam Kerja', value: 'Senin - Jumat, 08.00 - 15.00 WIB' },
-    { label: 'Email', value: 'kontak@desaairputih.id' }
+    { label: 'Telepon', value: '(+62) 812-3456-7890' },
+    { label: 'Email', value: 'info@airputih.desa.id' }
   ]
 };

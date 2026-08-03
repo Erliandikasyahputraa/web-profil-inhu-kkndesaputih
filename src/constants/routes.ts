@@ -9,5 +9,4 @@ export const ROUTES = {
   ORGANISASI: '/organisasi',
   DIGITAL_TWIN: '/digital-twin',
   TENTANG: '/tentang',
-  KONTAK: '/kontak',
 } as const;

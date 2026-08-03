@@ -1,26 +1,19 @@
 import { HeroSection } from './sections/Hero';
 import { StorySection } from './sections/Story';
-import { NatureSection } from './sections/Nature';
-import { PotentialsSection } from './sections/Potentials';
 import { TimelineSection } from './sections/Timeline';
-import { GallerySection } from './sections/Gallery';
-import { TransparencySection } from './sections/Transparency';
 import { CTASection } from './sections/CTA';
+import { PotentialsSection } from './sections/Potentials';
+import { GallerySection } from './sections/Gallery';
 
 export function HomeComposition() {
   return (
     <>
       <HeroSection />
       <StorySection />
-      <NatureSection />
-      <PotentialsSection />
-      <TimelineSection />
-      <GallerySection />
-      <TransparencySection />
       <CTASection />
-      {/* 
-        Placeholder for future sections:
-      */}
+      <TimelineSection />
+      <PotentialsSection />
+      <GallerySection />
     </>
   );
 }

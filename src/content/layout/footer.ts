@@ -7,7 +7,7 @@ export const footerContent = {
   navigation: {
     title: 'Navigasi',
     links: [
-      { label: 'Beranda', href: '/' },
+      { label: 'Hubungi Kami', href: '/informasi' },
       { label: 'Profil Desa', href: '/profil' },
       { label: 'Pemerintahan', href: '/pemerintahan' },
       { label: 'Transparansi', href: '/transparansi' },

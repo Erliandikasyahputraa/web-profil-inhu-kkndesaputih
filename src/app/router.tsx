@@ -15,6 +15,7 @@ function Placeholder({ title }: { title: string }) {
 // We will import HomePage from pages
 import { HomePage } from '../pages/HomePage';
 import { ProfilePage } from '../pages/ProfilePage';
+import { GalleryPage } from '../pages/GalleryPage';
 
 export function AppRouter() {
   return (
@@ -23,12 +24,11 @@ export function AppRouter() {
         <Route element={<RootLayout />}>
           <Route path={ROUTES.HOME} element={<HomePage />} />
           <Route path={ROUTES.PROFIL} element={<ProfilePage />} />
-          <Route path={ROUTES.GALERI} element={<Placeholder title="Galeri" />} />
+          <Route path={ROUTES.GALERI} element={<GalleryPage />} />
           <Route path={ROUTES.POTENSI} element={<Placeholder title="Potensi Desa" />} />
           <Route path={ROUTES.ORGANISASI} element={<Placeholder title="Organisasi" />} />
           <Route path={ROUTES.DIGITAL_TWIN} element={<Placeholder title="Digital Twin" />} />
           <Route path={ROUTES.TENTANG} element={<Placeholder title="Tentang Kami" />} />
-          <Route path={ROUTES.KONTAK} element={<Placeholder title="Kontak" />} />
         </Route>
       </Routes>
     </BrowserRouter>

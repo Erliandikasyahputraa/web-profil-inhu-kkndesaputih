@@ -1,16 +1,16 @@
 {
-  "name": "Desa Air Putih",
+  "name": "Desa Air Putih Digital Experience",
   "short_name": "Air Putih",
-  "description": "Website Resmi Desa Air Putih",
+  "description": "Sebuah dokumenter interaktif tentang Desa Air Putih, Indragiri Hulu, Riau.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#FAFAF9",
-  "theme_color": "#1C1917",
+  "background_color": "#F2EFE9",
+  "theme_color": "#1A1A1A",
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ]
 }

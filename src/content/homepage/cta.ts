@@ -9,8 +9,8 @@ export const ctaContent = {
       primary: true
     },
     {
-      label: 'Hubungi Pemerintah Desa',
-      href: '/kontak',
+      label: 'Hubungi Kami',
+      href: '/informasi',
       primary: false
     }
   ]

@@ -7,6 +7,7 @@ import { GeographyPage } from './pages/GeographyPage';
 import { GovernancePage } from './pages/GovernancePage';
 import { PotentialsPage } from './pages/PotentialsPage';
 import { InformationPage } from './pages/InformationPage';
+import { GalleryPage } from './pages/GalleryPage';
 
 // Temporary placeholder for features until we build them in Phase 3 & 4
 function Placeholder({ title }: { title: string }) {
@@ -28,11 +29,10 @@ function App() {
           <Route path={ROUTES.PEMERINTAHAN} element={<GovernancePage />} />
           <Route path={ROUTES.POTENSI} element={<PotentialsPage />} />
           <Route path={ROUTES.INFORMASI} element={<InformationPage />} />
-          <Route path={ROUTES.GALERI} element={<Placeholder title="Galeri" />} />
+          <Route path={ROUTES.GALERI} element={<GalleryPage />} />
           <Route path={ROUTES.ORGANISASI} element={<Placeholder title="Organisasi" />} />
           <Route path={ROUTES.DIGITAL_TWIN} element={<Placeholder title="Digital Twin" />} />
           <Route path={ROUTES.TENTANG} element={<Placeholder title="Tentang Kami" />} />
-          <Route path={ROUTES.KONTAK} element={<Placeholder title="Kontak" />} />
         </Route>
       </Routes>
     </BrowserRouter>
