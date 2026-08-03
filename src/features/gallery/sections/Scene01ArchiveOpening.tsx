@@ -9,7 +9,7 @@ export function Scene01ArchiveOpening() {
         <EditorialImage 
           image={{ src: '/images/hero/cinematic_drone_photography_of_desa_air_putih_riau_indonesia._a_peaceful_river.png', alt: 'Galeri Desa Air Putih' }}
           preset="hero"
-          overlay="heavy"
+          overlay="cinematic"
           className="w-full h-full object-cover scale-105"
         />
         {/* Additional gradient for text legibility at bottom */}

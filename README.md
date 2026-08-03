@@ -79,6 +79,26 @@ pnpm build
 
 Hasil build akan berada di direktori `dist/`.
 
+### Deployment Flow
+
+Proses deployment pada proyek ini berjalan secara otomatis melalui Netlify. Pastikan Anda mengikuti alur kerja berikut dengan cermat untuk memastikan versi terbaru selalu ter-deploy:
+
+1. **Local Development** (Kerjakan fitur/perbaikan secara lokal)
+   ↓
+2. **Stage Changes** (`git add .`)
+   ↓
+3. **Commit** (`git commit -m "feat: deskripsi perubahan"`) — *Gunakan format semantic commit yang spesifik.*
+   ↓
+4. **Push ke GitHub** (`git push origin main`) — *Langkah paling penting agar Netlify bisa membaca update terbaru.*
+   ↓
+5. **GitHub** (Kode baru diterima di repository utama)
+   ↓
+6. **Netlify Auto Deploy** (Netlify mendeteksi push baru dan memulai proses build otomatis)
+   ↓
+7. **Production** (Website ter-update dengan perubahan terbaru)
+
+Untuk panduan mendalam tentang deployment, caching, dan troubleshooting, silakan baca [DEPLOYMENT.md](DEPLOYMENT.md).
+
 ## Penghargaan
 
 - **Masyarakat Desa Air Putih**: Atas keterbukaannya untuk didokumentasikan.

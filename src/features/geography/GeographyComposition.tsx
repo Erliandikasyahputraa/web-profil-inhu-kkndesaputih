@@ -1,19 +1,5 @@
 import { PageMetadata } from '@/components/common/PageMetadata';
-import { Stack } from '@/components/layout';
-import { Hero } from './sections/Hero/Hero';
-import { Location } from './sections/Location/Location';
-import { Boundaries } from './sections/Boundaries/Boundaries';
-import { Topography } from './sections/Topography/Topography';
-import { Map } from './sections/Map/Map';
-
-import {
-  geographyMetadata,
-  geographyHero,
-  geographyLocation,
-  geographyBoundaries,
-  geographyTopography,
-  geographyMap
-} from '@/content/geography';
+import { geographyMetadata } from '@/content/geography';
 
 import { Scene01Hero } from './sections/Scene01Hero';
 import { Scene02Location } from './sections/Scene02Location';

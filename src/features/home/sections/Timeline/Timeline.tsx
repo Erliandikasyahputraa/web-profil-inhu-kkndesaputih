@@ -47,7 +47,7 @@ export function Timeline() {
 
         {/* Mobile: Compact Editorial Timeline (hidden on desktop) */}
         <div className="md:hidden flex flex-col gap-6 relative before:absolute before:left-[35px] before:top-4 before:bottom-4 before:w-[1px] before:bg-stone-300/60">
-          {timelineContent.chapters.map((chapter, idx) => (
+          {timelineContent.chapters.map((chapter) => (
             <div key={chapter.id} className="flex gap-6 items-start relative bg-white/40 p-4 shadow-sm border border-stone-200/50">
               <div className="w-16 h-16 shrink-0 relative bg-stone-100 p-1 shadow-md border border-stone-200 rotate-[-2deg] mt-1 z-10">
                 <EditorialImage 

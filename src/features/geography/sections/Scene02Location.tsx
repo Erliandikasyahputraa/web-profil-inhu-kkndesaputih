@@ -1,4 +1,4 @@
-import { Section, EditorialImage } from '@/components/ui';
+import { Section } from '@/components/ui';
 
 export function Scene02Location() {
   return (

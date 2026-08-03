@@ -1,4 +1,4 @@
-import { Section, EditorialImage } from '@/components/ui';
+import { Section } from '@/components/ui';
 import { transparencyContent } from '@/content/homepage/transparency';
 
 export function Transparency() {

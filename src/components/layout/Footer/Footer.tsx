@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
-import { footerContent } from '@/content/layout/footer';
 import { ROUTES } from '@/constants/routes';
-import { EditorialImage } from '@/components/ui';
 
 export function Footer() {
   return (
