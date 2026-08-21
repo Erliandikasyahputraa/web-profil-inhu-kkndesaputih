@@ -1,109 +1,172 @@
-# Desa Air Putih Digital Experience
+# Desa Air Putih — Digital Experience
 
-> Sebuah dokumenter interaktif tentang Desa Air Putih. Menjelajahi harmoni antara alam, budaya, dan denyut kehidupan masyarakat di tepian Sungai Indragiri, Riau.
+## 1. Project Overview
 
-![Homepage Showcase](https://desaairputih.id/images/hero/cinematic_drone_photography_of_desa_air_putih_riau_indonesia._an_expansive.png)
+Digital Experience Desa Air Putih adalah website dokumenter digital yang didedikasikan untuk Desa Air Putih, Kecamatan Lubuk Batu Jaya, Kabupaten Indragiri Hulu, Riau. 
 
-## Visi Proyek
+Tujuan utama proyek ini adalah:
+- Memperkenalkan identitas Desa Air Putih
+- Mendokumentasikan sejarah dan kehidupan desa
+- Menyajikan informasi pemerintahan
+- Menyediakan dokumentasi fotografi desa
+- Mendokumentasikan kegiatan KKN UIN Suska Riau tahun 2026
 
-Desa Air Putih Digital Experience bukanlah website pemerintahan biasa atau portal berita desa. Proyek ini dibangun sebagai **dokumenter digital interaktif**. Tujuannya adalah untuk mendokumentasikan, mengarsipkan, dan menceritakan kehidupan Desa Air Putih—mulai dari sejarah, bentang alam, hingga semangat gotong royong masyarakatnya—dengan estetika editorial yang kuat.
+## 2. Design Direction
 
-Setiap halaman dirancang menyerupai bab dalam majalah atau buku seni, menggunakan tipografi yang tenang, ruang negatif yang luas, dan tata letak sinematik.
+Situs ini dibangun dengan prinsip desain **Minimal Editorial Documentary**. 
 
-## Struktur Dokumenter
+Karakter visual utama meliputi:
+- Pendekatan editorial dan dokumenter
+- Desain yang mengutamakan fotografi (*photography-led*)
+- Penggunaan warna latar *warm off-white*
+- Tipografi yang tenang dan tertahan (*restrained typography*)
+- Antarmuka pengguna (UI) yang minimalis
+- Alur vertikal yang natural
+- Mengutamakan perangkat seluler (*responsive/mobile-first*)
+- Animasi subtil (*subtle motion*)
+- Penekanan pada fotografi desa yang nyata
 
-Situs ini dibagi menjadi beberapa bab naratif:
-- **Beranda (Prolog)**: Pengantar emosional yang mengundang pengunjung.
-- **Profil Desa (Bab I)**: Menyelami akar sejarah, nilai-nilai, dan identitas hari ini.
-- **Geografi (Bab II)**: Dokumentasi bentang alam yang membentuk kehidupan desa.
-- **Pemerintahan (Bab III)**: Mengenal tokoh-tokoh yang merawat kesejahteraan warga.
-- **Potensi (Bab IV)**: Cerita tentang sumber daya dan kreativitas masyarakat.
-- **Informasi (Bab V)**: Arsip transparansi dan layanan publik.
-- **Galeri (Bab VI)**: Arsip visual komprehensif kehidupan desa.
+Desain ini dengan sengaja menghindari elemen antarmuka yang menyerupai *dashboard*, kartu berlebihan, *glassmorphism*, bayangan berlebihan, animasi kompleks, serta elemen pendukung yang mengganggu pengalaman tenang.
 
-## Stack Teknologi
+## 3. Pages / Routes
 
-Proyek ini menggunakan teknologi frontend modern untuk memastikan performa yang cepat dan animasi yang halus:
-- **Framework**: React 18 (Vite)
-- **Styling**: Tailwind CSS v4 (Custom Tokens + Vanilla CSS Architecture)
-- **Routing**: React Router v6
-- **Animasi**: Framer Motion
-- **Ikonografi**: Lucide React
-- **Tipografi**: Inter (Sans-serif) & Lora (Serif)
+Halaman yang tersedia di situs ini:
 
-## Struktur Folder
+- **`/` (Home / Beranda)**: Landing page utama yang memperkenalkan Desa Air Putih melalui narasi, sejarah, kehidupan desa, dan potensi lokal.
+- **`/profil` (Profil Desa)**: Informasi mendalam mengenai identitas desa, sejarah, geografi, lingkungan, dan potensi desa.
+- **`/pemerintahan` (Pemerintahan)**: Informasi mengenai struktur pemerintahan dan jajaran perangkat Desa Air Putih.
+- **`/galeri` (Galeri)**: Dokumentasi fotografi desa yang dikurasi dan dipisahkan secara artistik berdasarkan orientasi *landscape* dan *portrait*.
+- **`/kkn` (KKN 2026)**: Dokumentasi program Kuliah Kerja Nyata UIN Sultan Syarif Kasim Riau tahun 2026.
+
+## 4. KKN 2026
+
+**KULIAH KERJA NYATA · 2026**  
+**Desa Air Putih**  
+*Mengabdi Dengan Hati, Menginspirasi Dengan Aksi*
+
+- **Periode**: Juli s.d. Agustus 2026
+- **Lokasi**: Desa Air Putih, Kecamatan Lubuk Batu Jaya, Kabupaten Indragiri Hulu, Provinsi Riau
+
+Tiga program kerja inti:
+1. Web Desa
+2. Packaging Jamur Tiram
+3. Sosialisasi & Edukasi
+
+## 5. Tech Stack
+
+Proyek ini menggunakan teknologi berikut:
+- **React**: Pustaka utama untuk membangun antarmuka pengguna
+- **TypeScript**: Bahasa pemrograman dengan keamanan tipe data statis
+- **Vite**: *Build tool* dan peladen pengembangan (*dev server*) yang cepat
+- **Tailwind CSS**: *Framework* utilitas CSS untuk tata letak dan desain responsif
+- **Framer Motion**: Pustaka untuk mengelola animasi dan transisi UI yang subtil
+- **pnpm**: Manajer paket utama
+
+## 6. Project Structure
 
 ```text
 src/
-├── app/          # Konfigurasi aplikasi (Router, Contexts)
-├── components/   # Komponen UI global (Navbar, Footer, Button, EditorialImage)
-├── constants/    # Konstanta statis (Rute, Metadata, Pengaturan UI)
-├── content/      # Arsip data konten (Semua data statis berada di sini)
-├── features/     # Modul per halaman (Home, Profil, Geografi, dll)
-│   └── [feature]/
-│       ├── sections/        # Potongan scene untuk setiap halaman
-│       └── [Feature]Composition.tsx # Penggabungan scene (Layout)
-├── lib/          # Utilitas global (cn, helpers)
-├── pages/        # Entry point halaman (Menyambungkan feature ke rute)
-└── styles/       # Variabel CSS dan Tailwind Tokens
+├── components/   # Komponen UI yang dapat digunakan kembali (tombol, layout wrappers)
+├── constants/    # Konstanta aplikasi (seperti daftar rute)
+├── content/      # Konfigurasi data statis (data galeri, teks berulang, manifest)
+├── features/     # Modul per halaman yang merangkum komponen spesifik fitur
+├── layout/       # Komponen tata letak utama (Navbar, Footer, RootLayout)
+├── pages/        # Komponen entry-point React untuk setiap rute halaman
+├── styles/       # Pengaturan gaya global dan token Tailwind
+└── main.tsx      # Titik masuk utama aplikasi React
+
+public/
+└── images/       # Folder root untuk semua aset statis foto dan grafis
+
+docs/             # Dokumentasi arsitektur, laporan audit, dan rujukan aset
+tools/            # Skrip pengembangan historis dan utilitas proyek (archive)
 ```
 
-## Instalasi & Pengembangan
+## 7. Page Architecture
 
-Pastikan Anda memiliki Node.js dan `pnpm` terinstal di sistem Anda.
+Pemetaan *route* ke *React Component* utama:
 
-1. **Clone repositori**
-   ```bash
-   git clone https://github.com/your-username/desa-air-putih.git
-   cd "desa-air-putih"
-   ```
+- **Home (`/`)**
+  → `HomePage`
+  → `HomeComposition`
+  → `Hero`, `IdentitasDesa`, `HistorySection`, `KehidupanDesaSection`, `Potentials`, `Transparency`, `CTA`
 
-2. **Instal dependensi**
-   ```bash
-   pnpm install
-   ```
+- **Profil (`/profil`)**
+  → `ProfilePage`
+  → `ProfileComposition`
+  → `Scene01Identity`, `Scene02Beginning`, `Scene03Geografi`, `Scene03People`
 
-3. **Jalankan server pengembangan**
-   ```bash
-   pnpm dev
-   ```
-   Aplikasi akan berjalan di `http://localhost:5173`.
+- **Pemerintahan (`/pemerintahan`)**
+  → `PemerintahanPage`
 
-## Build & Deployment
+- **Galeri (`/galeri`)**
+  → `GalleryPage`
+  → `GalleryComposition`
+  → `gallery.ts` (Data)
 
-Proyek ini telah dikonfigurasi untuk Netlify (SPA fallback via `public/_redirects`), namun dapat dengan mudah di-deploy ke Vercel atau layanan hosting statis lainnya.
+- **KKN (`/kkn`)**
+  → `KknPage`
+  → `KknHero`, `KknAbout`, `KknPrograms`, `KknJejakKegiatan`, `KknTeam`, `KknClosing`
 
+## 8. Image / Asset Management
+
+Aset fotografi di dalam repositori telah diatur dengan *semantic filenames* agar mudah dikelola dan dilacak kegunaannya (contoh: `home_hero_01.jpg`, `profil_story_03.jpg`, `kkn_activity_07.jpg`).
+
+Lokasi folder foto:
+- `public/images/home/`
+- `public/images/profil/`
+- `public/images/pemerintahan/`
+- `public/images/kkn/`
+- `public/images/gallery/landscape/`
+- `public/images/background/`
+- `public/images/illustrations/`
+
+## 9. Photo Manifest
+
+Referensi terpenting untuk pemetaan penggunaan setiap gambar berada pada `docs/PHOTO_MANIFEST.md`. 
+Setiap aset dicatat secara detail, mencakup path, tipe orientasi, *usage count*, dan komponen spesifik tempat aset tersebut dirender.
+
+### Mengganti isi foto tanpa mengubah referensi
+Jika Anda ingin mengganti suatu foto (contohnya `kkn_activity_07.jpg`) sambil mempertahankan penggunaan di berbagai tempat sekaligus:
+1. Pastikan foto baru memiliki *filename* dan resolusi/orientasi yang serupa.
+2. Timpa (*replace*) foto lama dengan file foto baru pada direktori yang sama.
+3. Jalankan build.
+4. Periksa dampak perubahan pada *route* yang terdaftar di `PHOTO_MANIFEST.md`.
+
+### Mengganti foto hanya pada satu section
+Jika suatu foto *(multi-use)* hanya ingin diubah untuk satu bagian khusus:
+1. Masukkan foto baru ke dalam direktori `/images/...` dengan nama baru.
+2. Jangan hapus aset yang sudah ada.
+3. Ganti nama *file* (*reference string*) langsung di komponen atau *source file* yang dituju (lihat rujukan source pada `PHOTO_MANIFEST.md`).
+4. Jalankan build dan periksa kembali tampilannya.
+
+## 10. Local Development
+
+Untuk menjalankan proyek secara lokal:
+
+1. Pastikan Node.js (>= 18) dan pnpm terinstal.
+2. Kloning repositori.
+3. Jalankan instalasi dependensi:
+```bash
+pnpm install
+```
+4. Jalankan *development server*:
+```bash
+pnpm dev
+```
+
+## 11. Production Build & Deployment
+
+Untuk menguji kompilasi *production* lokal:
 ```bash
 pnpm build
 ```
+Pastikan `pnpm build` menghasilkan 0 error TypeScript sebelum melakukan peluncuran. 
 
-Hasil build akan berada di direktori `dist/`.
+**Deployment**:  
+Proyek ini di-deploy via integrasi otomatis (contoh: Netlify/Vercel) dengan perintah build `pnpm build` dan direktori publik `dist`. *Deployment* akan aktif ketika ada dorongan (*push*) baru ke cabang repositori utama (`main`).
 
-### Deployment Flow
-
-Proses deployment pada proyek ini berjalan secara otomatis melalui Netlify. Pastikan Anda mengikuti alur kerja berikut dengan cermat untuk memastikan versi terbaru selalu ter-deploy:
-
-1. **Local Development** (Kerjakan fitur/perbaikan secara lokal)
-   ↓
-2. **Stage Changes** (`git add .`)
-   ↓
-3. **Commit** (`git commit -m "feat: deskripsi perubahan"`) — *Gunakan format semantic commit yang spesifik.*
-   ↓
-4. **Push ke GitHub** (`git push origin main`) — *Langkah paling penting agar Netlify bisa membaca update terbaru.*
-   ↓
-5. **GitHub** (Kode baru diterima di repository utama)
-   ↓
-6. **Netlify Auto Deploy** (Netlify mendeteksi push baru dan memulai proses build otomatis)
-   ↓
-7. **Production** (Website ter-update dengan perubahan terbaru)
-
-Untuk panduan mendalam tentang deployment, caching, dan troubleshooting, silakan baca [DEPLOYMENT.md](DEPLOYMENT.md).
-
-## Penghargaan
-
-- **Masyarakat Desa Air Putih**: Atas keterbukaannya untuk didokumentasikan.
-- **Mahasiswa KKNT UIN Suska Riau**: Atas dedikasinya dalam menggali dan menyusun narasi desa.
-- **Pemerintah Kabupaten Indragiri Hulu**: Atas dukungannya terhadap digitalisasi desa.
-
----
-Dibuat dengan ❤️ di Riau, Indonesia.
+## 12. Aturan Repositori
+- Jangan mengunggah sembarang *file* tambahan yang tidak digunakan. 
+- Folder seperti `scratch/`, `node_modules/`, dan `dist/` wajib diabaikan.
+- Hindari penambahan library atau perubahan gaya jika itu bertentangan dengan prinsip desain awal (Editorial Documentary).
