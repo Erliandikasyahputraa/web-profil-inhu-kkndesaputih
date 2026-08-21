@@ -3,7 +3,7 @@ import { transparencyContent } from '@/content/homepage/transparency';
 
 export function Transparency() {
   return (
-    <Section variant="default" spacing="none" className="bg-[#F2EFE9] py-32 md:py-48 px-6">
+    <Section variant="default" spacing="none" className="bg-[#F2EFE9] py-16 md:py-32 md:py-48 px-6">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         
         {/* Scene 7: The Data Climax */}
@@ -12,7 +12,7 @@ export function Transparency() {
         </p>
         
         <div className="text-center w-full max-w-4xl mb-32">
-          <h2 className="font-serif text-6xl sm:text-8xl md:text-9xl lg:text-[12rem] text-stone-900 tracking-tighter leading-[0.9] mb-8 mix-blend-multiply">
+          <h2 className="font-serif text-5xl sm:text-7xl md:text-9xl lg:text-[12rem] text-stone-900 tracking-tighter leading-[0.9] mb-8 mix-blend-multiply">
             {transparencyContent.mainMetric.value}
           </h2>
           <p className="text-[10px] md:text-sm text-stone-600 uppercase tracking-[0.3em] font-medium">

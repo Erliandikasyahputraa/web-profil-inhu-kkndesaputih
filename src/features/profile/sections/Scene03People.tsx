@@ -2,15 +2,15 @@ import { Section, EditorialImage } from '@/components/ui';
 
 export function Scene03People() {
   return (
-    <Section variant="default" spacing="none" className="bg-[#EBE7E0] py-32 md:py-48 px-6">
+    <Section variant="default" spacing="none" className="bg-[#EBE7E0] py-16 md:py-32 md:py-48 px-6">
       <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row gap-16 md:gap-24 items-start">
         
         {/* Left Column: Typography & Illustration */}
         <div className="w-full md:w-5/12 flex flex-col pt-0 md:pt-16">
           <p className="text-[9px] uppercase tracking-[0.2em] text-stone-500 font-bold mb-10">
-            03 — WARGA KAMI
+            04 — WARGA / KEHIDUPAN DESA
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-stone-900 leading-[1.2] mb-16 mix-blend-multiply">
+          <h2 className="font-serif text-3xl md:text-5xl lg:text-[3.5rem] text-stone-900 leading-[1.2] mb-16 mix-blend-multiply">
             Warga yang sederhana, pekerja keras, dan penuh kehangatan.
           </h2>
           
@@ -37,7 +37,7 @@ export function Scene03People() {
           <div className="flex flex-row gap-4">
             <div className="w-1/3 aspect-[3/4] shadow-md">
               <EditorialImage 
-                image={{ src: '/images/gallery/editorial_documentary_photograph_of_family_activities_in_desa_air_putih_riau.png', alt: 'Anak-anak tersenyum' }}
+                image={{ src: '/images/profil/profil_story_03.jpg', alt: 'Warga tersenyum' }}
                 preset="portrait"
                 overlay="none"
                 className="w-full h-full object-cover grayscale-[0.2]"
@@ -45,7 +45,7 @@ export function Scene03People() {
             </div>
             <div className="w-2/3 aspect-[16/9] shadow-md">
               <EditorialImage 
-                image={{ src: '/images/gallery/editorial_documentary_photograph_of_a_village_discussion_in_desa_air_putih_riau.png', alt: 'Warga berkumpul' }}
+                image={{ src: '/images/gallery/landscape/gallery_landscape_02.jpg', alt: 'Warga berkumpul' }}
                 preset="landscape"
                 overlay="none"
                 className="w-full h-full object-cover grayscale-[0.2]"
@@ -57,7 +57,7 @@ export function Scene03People() {
           <div className="flex flex-row gap-4">
             <div className="w-2/3 aspect-[16/9] shadow-md">
               <EditorialImage 
-                image={{ src: '/images/potentials/editorial_documentary_landscape_photograph_of_a_traditional_rubber_plantation.png', alt: 'Warga bekerja di ladang' }}
+                image={{ src: '/images/gallery/landscape/gallery_landscape_13.jpg', alt: 'Aktivitas di luar' }}
                 preset="landscape"
                 overlay="none"
                 className="w-full h-full object-cover grayscale-[0.2]"
@@ -65,7 +65,7 @@ export function Scene03People() {
             </div>
             <div className="w-1/3 aspect-[3/4] shadow-md">
               <EditorialImage 
-                image={{ src: '/images/gallery/editorial_documentary_photograph_of_traditional_cooking_in_desa_air_putih_riau.png', alt: 'Warga memasak' }}
+                image={{ src: '/images/gallery/landscape/gallery_landscape_14.jpg', alt: 'Warga berpose' }}
                 preset="portrait"
                 overlay="none"
                 className="w-full h-full object-cover grayscale-[0.2]"
@@ -74,7 +74,31 @@ export function Scene03People() {
           </div>
 
         </div>
+      </div>
 
+      {/* Merged Section 05: Terus bertumbuh */}
+      <div className="max-w-7xl mx-auto w-full mt-32 md:mt-48 pt-16 md:pt-32 border-t border-stone-300 flex flex-col md:flex-row gap-16 items-start">
+        {/* Text Container */}
+        <div className="w-full md:w-5/12 flex flex-col relative z-20">
+          <h2 className="font-serif text-3xl md:text-5xl lg:text-[4rem] text-stone-900 leading-[1.1] mb-10 mix-blend-multiply pr-4">
+            Terus bertumbuh, tanpa melupakan akar.
+          </h2>
+          <p className="text-stone-800 text-sm md:text-base leading-[1.8] max-w-sm">
+            Kami terbuka pada perubahan, tetapi tidak pernah melepaskan nilai-nilai yang membuat kami menjadi kami.
+          </p>
+        </div>
+
+        {/* Large Landscape Image */}
+        <div className="w-full md:w-7/12 relative z-10 md:mt-12 md:-ml-8 shadow-2xl">
+          <div className="w-full aspect-video md:aspect-[21/9]">
+            <EditorialImage
+              image={{ src: '/images/profil/profil_content_06.jpg', alt: 'Masa depan Desa Air Putih' }}
+              preset="landscape"
+              overlay="none"
+              className="w-full h-full object-cover sepia-[0.2] grayscale-[0.3]"
+            />
+          </div>
+        </div>
       </div>
     </Section>
   );

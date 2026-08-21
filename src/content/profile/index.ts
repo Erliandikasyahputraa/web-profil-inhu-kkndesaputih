@@ -6,8 +6,8 @@ export const profileContent = {
   scene01: {
     statement: "Bukan sekadar titik di peta. Ini adalah rumah bagi jiwa-jiwa yang tenang.",
     image: {
-      src: "/images/hero/editorial_documentary_landscape_photograph_of_a_peaceful_river_in_desa_air.png",
-      alt: "Pemandangan sungai Indragiri di pagi hari"
+      src: "/images/profil/profil_story_02.jpg",
+      alt: "Pemandangan desa di pagi hari"
     }
   },
   scene02: {
@@ -18,7 +18,7 @@ export const profileContent = {
       "Dari sekelompok kecil peladang yang mencari penghidupan di tepi sungai, Desa Air Putih perlahan tumbuh. Bukan karena paksaan zaman, melainkan karena kesabaran merawat tanah yang dititipkan."
     ],
     image: {
-      src: "/images/history/vintage_historical_documentary_photograph_of_the_original_settlement_of_desa.png",
+      src: "/images/background/background_02.jpg",
       alt: "Potret masa lampau pemukiman desa"
     }
   },
@@ -27,9 +27,9 @@ export const profileContent = {
     title: "Napas Desa",
     story: "Setiap pagi dimulai dengan suara yang sama: derak perahu di tepian sungai, langkah para penderes karet menembus embun, dan tawa anak-anak berlarian ke sekolah. Di sini, kehidupan tidak diukur dari seberapa cepat waktu berlalu, melainkan dari seberapa dalam senyum yang dibagikan antar tetangga.",
     images: [
-      { src: "/images/gallery/editorial_documentary_photograph_of_family_activities_in_desa_air_putih_riau.png", alt: "Keluarga berkumpul di pagi hari" },
-      { src: "/images/gallery/editorial_documentary_photograph_of_a_village_discussion_in_desa_air_putih_riau.png", alt: "Warga berbincang hangat" },
-      { src: "/images/gallery/editorial_documentary_photograph_of_a_traditional_wooden_house_rumah_panggung.png", alt: "Rumah panggung kayu tradisional" }
+      { src: "/images/profil/profil_story_03.jpg", alt: "Keluarga berkumpul di pagi hari" },
+      { src: "/images/gallery/landscape/gallery_landscape_02.jpg", alt: "Warga berbincang hangat" },
+      { src: "/images/gallery/landscape/gallery_landscape_13.jpg", alt: "Aktivitas warga" }
     ]
   },
   scene04: {
@@ -53,8 +53,8 @@ export const profileContent = {
     text: "Hari ini, Desa Air Putih bukan lagi pemukiman sunyi. Jalanan telah beraspal, listrik telah menerangi malam, dan anak-anak kami menatap dunia dengan mata terbuka lebar. Namun, jika Anda bertanya apa yang paling membuat kami bangga, jawabannya tetap sama:",
     pride: "Kami masih mengingat siapa diri kami.",
     image: {
-      src: "/images/hero/cinematic_full_width_photograph_of_a_sunset_over_desa_air_putih._warm_golden.png",
-      alt: "Anak-anak desa menatap senja"
+      src: "/images/profil/profil_content_06.jpg",
+      alt: "Anak-anak desa"
     }
   }
 };

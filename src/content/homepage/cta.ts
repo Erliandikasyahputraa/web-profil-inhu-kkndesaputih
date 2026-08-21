@@ -1,17 +1,12 @@
 export const ctaContent = {
-  statement: 'Setiap perjalanan selalu dimulai dengan sebuah langkah.',
-  description: 'Kami mengundang Anda untuk mengenal Desa Air Putih lebih dekat. Temukan ketenangan, saksikan gotong royong, dan rasakan denyut kehidupan kami secara langsung.',
-  image: { src: '/images/gallery/editorial_documentary_photograph_of_a_quiet_unpaved_village_road_in_desa_air.png', alt: 'Jalan desa yang tenang di Air Putih' },
+  statement: 'Mengabdi dengan Hati, Menginspirasi dengan Aksi.',
+  description: 'Melihat lebih dekat jejak pengabdian, kolaborasi, dan semangat gotong royong bersama masyarakat Desa Air Putih.',
+  image: { src: '/images/kkn/kkn_activity_07.jpg', alt: 'Gotong Royong' },
   actions: [
     {
-      label: 'Jelajahi Desa Air Putih',
-      href: '/tentang',
+      label: 'Lihat Cerita KKN',
+      href: '/kkn',
       primary: true
-    },
-    {
-      label: 'Hubungi Kami',
-      href: '/informasi',
-      primary: false
     }
   ]
 } as const;

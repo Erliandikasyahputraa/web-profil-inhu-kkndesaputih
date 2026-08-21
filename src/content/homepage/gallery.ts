@@ -6,23 +6,33 @@ export const galleryContent = {
   images: [
     {
       id: 'gal-1',
-      image: { src: '/images/gallery/editorial_documentary_landscape_photograph_of_expansive_rice_fields_at_the_edge.png', alt: 'Hamparan sawah di pinggir desa' },
-      span: 'full'
-    },
-    {
-      id: 'gal-2',
-      image: { src: '/images/gallery/editorial_documentary_photograph_of_family_activities_in_desa_air_putih_riau.png', alt: 'Aktivitas keluarga di halaman rumah' },
-      span: 'portrait'
-    },
-    {
-      id: 'gal-3',
-      image: { src: '/images/gallery/editorial_documentary_photograph_of_a_village_discussion_in_desa_air_putih_riau.png', alt: 'Diskusi warga desa' },
+      image: { src: '/images/profil/profil_content_06.jpg', alt: 'Aktivitas Anak-anak Desa' },
       span: 'landscape'
     },
     {
+      id: 'gal-2',
+      image: { src: '/images/gallery/landscape/gallery_landscape_03.jpg', alt: 'Keseharian Warga' },
+      span: 'landscape'
+    },
+    {
+      id: 'gal-3',
+      image: { src: '/images/gallery/landscape/gallery_landscape_13.jpg', alt: 'Belajar Bersama' },
+      span: 'portrait'
+    },
+    {
       id: 'gal-4',
-      image: { src: '/images/gallery/editorial_documentary_photograph_of_the_village_mosque_in_desa_air_putih_riau.png', alt: 'Masjid desa Air Putih' },
-      span: 'small'
+      image: { src: '/images/profil/profil_content_01.jpg', alt: 'Interaksi Siswa' },
+      span: 'portrait'
+    },
+    {
+      id: 'gal-5',
+      image: { src: '/images/gallery/landscape/gallery_landscape_04.jpg', alt: 'Aktivitas Belajar' },
+      span: 'landscape'
+    },
+    {
+      id: 'gal-6',
+      image: { src: '/images/kkn/kkn_activity_11.jpg', alt: 'Keceriaan Belajar' },
+      span: 'portrait'
     }
   ],
   callout: {

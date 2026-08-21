@@ -1,44 +1,29 @@
-# Walkthrough — PR #21: Profile QA, SEO & Architecture Freeze
+# KKN 2026 Page Implementation Walkthrough
 
-PR #21 menyelesaikan tahap **Production Hardening** untuk seluruh halaman **Profil Desa** (`/profil`). Semua seksi (`Hero`, `Welcome`, `History`, `Vision`, `Philosophy`) dinyatakan beku (*frozen*) dan terverifikasi secara arsitektural.
+## Scene 01: Arrival — Implemented
 
----
+The initial stage of the KKN 2026 documentary page has been successfully built into the application.
 
-## Perubahan yang Dilakukan
+### Changes Made
+- Added the `/kkn` route to the application constants (`src/constants/routes.ts`).
+- Integrated the `KKN 2026` link into the main desktop navigation (`Navbar.tsx` under the `EXPLORE` group) to match the existing routing structure without breaking the simplified contact rules.
+- Registered `<KknPage />` in `App.tsx` routing.
+- Created `src/pages/KknPage.tsx` with **Scene 01 (Arrival)**.
 
-### 1. SEO & Metadata Integration
-- **[NEW] [profile.ts](file:///c:/Mine/porto/profildesainhu/Desa%20Air%20Putih%20Digital%20Experience/src/constants/metadata/profile.ts):** Dibuat file konstanta metadata terpusat berisi `title`, `description`, dan `keywords` khusus halaman Profil Desa.
-- **[MODIFY] [ProfilePage.tsx](file:///c:/Mine/porto/profildesainhu/Desa%20Air%20Putih%20Digital%20Experience/src/pages/ProfilePage.tsx):** Diintegrasikan dengan komponen `<PageMetadata>` untuk penanganan tag `<head>` standar (OpenGraph, Twitter Card, Meta Description, Title).
+### Visual Design Applied
+- Followed the requested Swiss editorial structure.
+- Used the `bg-background` class to ensure the warm paper background from the global tokens.
+- Styled typography using `font-heading` (Libre Baskerville) and `text-brand-primary` (Dark Olive).
+- Implemented the muted typography metadata using `text-brand-accent` (Muted Sepia) and `font-sans` with wide tracking (`tracking-[0.25em]`).
+- Placed the location metadata elegantly below the main hero image.
 
-### 2. Living Documentation & Freeze Policy
-- **[MODIFY] [profile.md](file:///c:/Mine/porto/profildesainhu/Desa%20Air%20Putih%20Digital%20Experience/docs/pages/profile.md):** Diperbarui dengan status implementasi akhir, tautan metadata, dan placeholder screenshot.
-- **[NEW] [PROFILE_FREEZE.md](file:///c:/Mine/porto/profildesainhu/Desa%20Air%20Putih%20Digital%20Experience/PROFILE_FREEZE.md):** Dokumen kebijakan resmi yang membekukan halaman Profil dari perubahan yang tidak perlu.
+> [!NOTE]
+> **Image Usage**
+> Since the `KKN_IMAGE_MANIFEST.md` confirmed there are no real KKN photographs yet, I have temporarily used one of the strongest community gathering photographs from the village gallery (`editorial_documentary_photograph_of_a_community_gathering_in_desa_air_putih.png`) as the hero image placeholder.
 
----
+### Next Steps
+Please visually review `/kkn` in your local environment.
 
-## Verifikasi Quality Gate
+As requested: **Implementation is paused**.
 
-Semua verifikasi statis berjalan hijau 100%:
-
-```bash
-# 1. Lint Check (Oxlint)
-pnpm lint
-# Result: 0 errors, 0 warnings
-
-# 2. Type Check (TypeScript)
-pnpm tsc --noEmit
-# Result: 0 errors
-
-# 3. Production Build (Vite + Rolldown)
-pnpm build
-# Result: ✓ built in 2.24s (2305 modules transformed)
-```
-
----
-
-## Catatan QA Statis & Guardrails
-
-- **Aksesibilitas & Hirarki Heading:** Terverifikasi `H1` (Hero), `H2` (Welcome, History, Vision, Philosophy), dan `H4` (Timeline). Alt text tersedia di `src/content/profile/index.ts`.
-- **Aksesibilitas Kontras & Keyboard:** Menggunakan kombinasi token `text-brand-primary` / `text-stone-900` pada latar belakang `bg-background` / `bg-stone-50` yang memenuhi rasio kontras 4.5:1.
-- **Responsive Layout:** Seluruh layout menggunakan Tailwind breakpoint responsive (`md:`, `lg:`) dan Layout Primitives (`Split`, `Stack`, `Container`) tanpa hardcoded px width.
-- **Performa:** Gambar dirender via `<EditorialImage>` dengan atribut `loading="lazy"` (kecuali Hero `priority`).
+Once you approve Scene 01's layout and feel, I will proceed to implementing Scene 02.

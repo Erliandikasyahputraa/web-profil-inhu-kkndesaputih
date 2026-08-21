@@ -1,0 +1,51 @@
+id,filename,decision,primary_page,secondary_page,confidence,short_reason,technical_score,visual_tier
+002,IMG_8068.JPG,KEEP,BACKGROUND,SUPPORTING,MEDIUM,Tree branches. Good texture.,96.85,S-CANDIDATE
+004,IMG_8113.JPG,TOP_PICK,BACKGROUND,SUPPORTING,HIGH,Tree silhouette against sky. Perfect for text overlay.,94.41,S-CANDIDATE
+008,IMG_8083.JPG,TOP_PICK,ABOUT,GALLERY,HIGH,Nice candid portrait showing village environment.,95.9,S-CANDIDATE
+012,IMG_8088.JPG,TOP_PICK,KKN,GALLERY,HIGH,Gotong royong activity (sweeping). Directly shows pengabdian.,96.9,S-CANDIDATE
+014,IMG_8091.JPG,KEEP,GALLERY,SUPPORTING,HIGH,Little girl peeking. Great human interest.,109.67,S-CANDIDATE
+016,IMG_8094.JPG,TOP_PICK,SUPPORTING,GALLERY,HIGH,Boy holding green flag. Good leading lines and action.,107.35,S-CANDIDATE
+019,IMG_8101.JPG,KEEP,KKN,GALLERY,HIGH,Carrying items together. Teamwork vibe.,59.25,B-CANDIDATE
+022,IMG_8109.JPG,KEEP,GALLERY,SUPPORTING,MEDIUM,Portrait under tree.,98.06,S-CANDIDATE
+030,IMG_7855.JPG,KEEP,PENDIDIKAN,GALLERY,HIGH,"Kids lined up outdoors, good documentation of activity.",100.0,S-CANDIDATE
+032,IMG_7859.JPG,KEEP,KKN,GALLERY,MEDIUM,Teachers and KKN interacting with students.,71.19,B-CANDIDATE
+042,IMG_7877.JPG,KEEP,PENDIDIKAN,GALLERY,MEDIUM,"Uniformed kids, shows school environment.",92.42,S-CANDIDATE
+060,IMG_7917.JPG,TOP_PICK,PENDIDIKAN,GALLERY,HIGH,Active crafting (volcano project). Great storytelling.,-7.87,REJECT-CANDIDATE
+072,IMG_7954.JPG,KEEP,PENDIDIKAN,GALLERY,HIGH,Proud kid showing artwork.,90.6,S-CANDIDATE
+077,IMG_7959.JPG,KEEP,GALLERY,PENDIDIKAN,HIGH,Proud artwork portrait.,99.05,S-CANDIDATE
+083,IMG_7965.JPG,KEEP,GALLERY,PENDIDIKAN,HIGH,Proud artwork portrait.,101.87,S-CANDIDATE
+091,IMG_7973.JPG,KEEP,GALLERY,PENDIDIKAN,HIGH,Proud artwork portrait.,105.02,S-CANDIDATE
+107,IMG_7990.JPG,TOP_PICK,KKN,GALLERY,HIGH,Great interaction between KKN members and kids.,94.08,S-CANDIDATE
+119,IMG_8002.JPG,TOP_PICK,HERO,KKN,HIGH,Large vibrant group shot outdoors. Good energy.,104.03,S-CANDIDATE
+134,IMG_8018.JPG,KEEP,KKN,GALLERY,HIGH,Large group documentation shot on porch.,103.86,S-CANDIDATE
+157,IMG_8041.JPG,KEEP,KKN,GALLERY,HIGH,KKN members posing outdoors with kids.,96.24,S-CANDIDATE
+160,IMG_8044.JPG,TOP_PICK,GALLERY,SUPPORTING,HIGH,Fun meta photo of KKN taking picture of a kid on slide.,107.35,S-CANDIDATE
+166,IMG_8050.JPG,KEEP,GALLERY,SUPPORTING,MEDIUM,Kid on slide. Playful.,105.69,S-CANDIDATE
+173,IMG_8263.JPG,TOP_PICK,GALLERY,KKN,HIGH,Close up selfie with kids. Very dynamic and fun.,102.7,S-CANDIDATE
+176,IMG_8355.JPG,KEEP,GALLERY,PENDIDIKAN,HIGH,Pinning a badge. Detailed action shot.,37.65,C-CANDIDATE
+183,IMG_8596.JPG,TOP_PICK,HERO,PENDIDIKAN,HIGH,Excellent close-up portrait of smiling boy. Strong emotional connection.,106.52,S-CANDIDATE
+187,IMG_8600.JPG,TOP_PICK,PENDIDIKAN,GALLERY,HIGH,Boy focused on coloring. Good composition.,90.6,S-CANDIDATE
+197,IMG_8617.JPG,TOP_PICK,KKN,PENDIDIKAN,HIGH,Group shot displaying finished artwork.,94.41,S-CANDIDATE
+209,IMG_8629.JPG,KEEP,PENDIDIKAN,GALLERY,HIGH,Top-down view of kids coloring on the floor. Immersive.,92.09,S-CANDIDATE
+227,IMG_8650.JPG,KEEP,KKN,GALLERY,MEDIUM,Another good group documentation.,107.68,S-CANDIDATE
+250,IMG_8676.JPG,KEEP,GALLERY,SUPPORTING,MEDIUM,Guy posing on stairs.,108.67,S-CANDIDATE
+255,IMG_8682.JPG,KEEP,ABOUT,GALLERY,HIGH,Another warm portrait for humanizing the about page.,101.87,S-CANDIDATE
+258,IMG_8686.JPG,KEEP,GALLERY,SUPPORTING,HIGH,Girl smiling on playground.,102.21,S-CANDIDATE
+320,IMG_8491.JPG,KEEP,PENDIDIKAN,GALLERY,MEDIUM,Close up of kids making kolase.,97.56,S-CANDIDATE
+325,IMG_8497.JPG,KEEP,HERO,PENDIDIKAN,MEDIUM,Unique top-down angle of kids crafting. Good for creative layout.,108.34,S-CANDIDATE
+393,IMG_8386.JPG,TOP_PICK,PENDIDIKAN,GALLERY,HIGH,Teaching in front of the class. Essential education shot.,94.58,S-CANDIDATE
+402,IMG_8406.JPG,KEEP,PENDIDIKAN,GALLERY,HIGH,Boys at desks paying attention.,76.67,A-CANDIDATE
+410,IMG_8419.JPG,KEEP,KKN,GALLERY,MEDIUM,Candid shot of KKN members relaxing by bikes.,96.02,S-CANDIDATE
+420,IMG_8430.JPG,KEEP,GALLERY,SUPPORTING,HIGH,Jumping outdoors. High energy.,75.46,A-CANDIDATE
+430,IMG_8770.JPG,KEEP,GALLERY,SUPPORTING,MEDIUM,Two girls posing.,101.21,S-CANDIDATE
+439,IMG_7391.JPG,KEEP,GALLERY,SUPPORTING,HIGH,Girl smiling looking back. Good candid vibe.,104.53,S-CANDIDATE
+442,IMG_7559.JPG,KEEP,PENDIDIKAN,GALLERY,HIGH,Student presenting at the front.,108.34,S-CANDIDATE
+457,IMG_7586.JPG,TOP_PICK,PENDIDIKAN,GALLERY,HIGH,Large class sitting on floor. Shows scale of activity.,109.5,S-CANDIDATE
+467,IMG_7599.JPG,KEEP,PENDIDIKAN,GALLERY,MEDIUM,Students listening attentively.,87.56,A-CANDIDATE
+471,IMG_7602.JPG,KEEP,PENDIDIKAN,GALLERY,HIGH,Student speaking into microphone. Active participation.,93.08,S-CANDIDATE
+486,IMG_7622.JPG,KEEP,PENDIDIKAN,GALLERY,HIGH,Handing out a prize/gift. Rewarding moment.,102.87,S-CANDIDATE
+489,IMG_7628.JPG,KEEP,KKN,GALLERY,HIGH,Formal group photo of KKN team.,93.42,S-CANDIDATE
+495,IMG_7634.JPG,TOP_PICK,KKN,GALLERY,HIGH,Holding 'Stop Bullying' frame. Clear campaign message.,89.6,A-CANDIDATE
+506,IMG_7650.JPG,KEEP,GALLERY,SUPPORTING,MEDIUM,Two girls posing.,98.56,S-CANDIDATE
+516,IMG_7659.JPG,KEEP,ABOUT,KKN,HIGH,"Strong portrait of KKN member, good for 'Our Team' or KKN section, not general village profile.",110.0,S-CANDIDATE
+523,IMG_7671.JPG,KEEP,GALLERY,SUPPORTING,HIGH,Girls crouching by flowers. Nice aesthetics.,103.37,S-CANDIDATE

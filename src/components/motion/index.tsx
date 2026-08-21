@@ -53,7 +53,7 @@ export function Parallax({ children, offset = 50, className, ...props }: RevealP
       initial={{ opacity: 0, y: offset }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-100px' }}
-      transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className={cn(className)}
       {...props}
     >

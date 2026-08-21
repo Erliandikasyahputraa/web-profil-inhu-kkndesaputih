@@ -3,35 +3,32 @@ import { Link, useLocation } from 'react-router-dom';
 import { ROUTES } from '@/constants/routes';
 
 const DESKTOP_LINKS = [
-  { label: 'PROFIL', href: ROUTES.PROFIL },
-  { label: 'GEOGRAFI', href: ROUTES.GEOGRAFI },
+  { label: 'BERANDA', href: ROUTES.HOME },
+  { label: 'PROFIL DESA', href: ROUTES.PROFIL },
   { label: 'PEMERINTAHAN', href: ROUTES.PEMERINTAHAN },
-  { label: 'POTENSI', href: ROUTES.POTENSI },
-  { label: 'INFORMASI', href: ROUTES.INFORMASI },
   { label: 'GALERI', href: ROUTES.GALERI },
+  { label: 'KKN', href: ROUTES.KKN },
 ];
 
 const NAVIGATION_GROUPS = [
   {
     label: 'JOURNEY',
     items: [
-      { id: '01', label: 'Home', href: ROUTES.HOME },
+      { id: '01', label: 'Beranda', href: ROUTES.HOME },
       { id: '02', label: 'Profil Desa', href: ROUTES.PROFIL },
-      { id: '03', label: 'Geografi', href: ROUTES.GEOGRAFI },
     ]
   },
   {
     label: 'VILLAGE',
     items: [
-      { id: '04', label: 'Pemerintahan', href: ROUTES.PEMERINTAHAN },
-      { id: '05', label: 'Potensi', href: ROUTES.POTENSI },
-      { id: '06', label: 'Informasi', href: ROUTES.INFORMASI },
+      { id: '03', label: 'Pemerintahan', href: ROUTES.PEMERINTAHAN },
     ]
   },
   {
     label: 'EXPLORE',
     items: [
-      { id: '07', label: 'Galeri', href: ROUTES.GALERI },
+      { id: '04', label: 'Galeri', href: ROUTES.GALERI },
+      { id: '05', label: 'KKN 2026', href: ROUTES.KKN },
     ]
   }
 ];
@@ -88,6 +85,12 @@ export function Navbar() {
                   <Link 
                     key={link.href}
                     to={link.href} 
+                    onClick={(e) => {
+                      if (isActive) {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }
+                    }}
                     className="relative text-[10px] uppercase tracking-[0.2em] font-medium transition-colors duration-500 text-stone-900 group py-2"
                   >
                     <span className={`transition-opacity duration-500 ${isActive ? 'opacity-100' : 'opacity-40 group-hover:opacity-100'}`}>
@@ -144,7 +147,7 @@ export function Navbar() {
 
         <div className="flex-1 overflow-y-auto w-full">
           <nav className="flex flex-col pt-10 pb-16 md:pt-16 md:pb-20 px-8 md:px-16 max-w-4xl mx-auto w-full">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+            <div className="flex flex-col gap-12 md:gap-16">
               {NAVIGATION_GROUPS.map((group) => (
                 <div key={group.label} className="flex flex-col gap-6">
                   <span className="text-[9px] uppercase tracking-[0.2em] font-bold text-stone-400 border-b border-stone-300 pb-2 mb-2">
@@ -169,6 +172,13 @@ export function Navbar() {
                           </span>
                           <Link 
                             to={chapter.href}
+                            onClick={(e) => {
+                              if (isActive) {
+                                e.preventDefault();
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                                setIsOpen(false);
+                              }
+                            }}
                             className={`inline-block font-serif transition-colors duration-500 ${
                               isActive 
                                 ? 'text-stone-900 text-2xl md:text-3xl' 

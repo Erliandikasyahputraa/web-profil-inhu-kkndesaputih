@@ -3,10 +3,8 @@ export const ROUTES = {
   PROFIL: '/profil',
   GEOGRAFI: '/geografi',
   PEMERINTAHAN: '/pemerintahan',
-  GALERI: '/galeri',
   POTENSI: '/potensi',
   INFORMASI: '/informasi',
-  ORGANISASI: '/organisasi',
-  DIGITAL_TWIN: '/digital-twin',
-  TENTANG: '/tentang',
+  GALERI: '/galeri',
+  KKN: '/kkn',
 } as const;

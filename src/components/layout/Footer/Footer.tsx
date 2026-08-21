@@ -3,10 +3,10 @@ import { ROUTES } from '@/constants/routes';
 
 export function Footer() {
   return (
-    <footer className="w-full bg-[#1A1A1A] pt-32 md:pt-48 pb-12 px-6 flex flex-col items-center overflow-hidden">
+    <footer className="w-full bg-[#1A1A1A] pt-16 md:pt-32 pb-12 px-6 flex flex-col items-center overflow-hidden">
       
       {/* Footer Navigation & Information */}
-      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 md:gap-8 border-t border-white/10 pt-16 md:pt-24 relative z-20">
+      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 md:gap-8 border-t border-white/10 pt-12 md:pt-24 relative z-20">
         
         <div className="md:col-span-1">
           <Link to="/" className="text-white hover:opacity-70 transition-opacity">
@@ -22,10 +22,7 @@ export function Footer() {
           <ul className="flex flex-col gap-4">
             <li><Link to={ROUTES.HOME} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">Home</Link></li>
             <li><Link to={ROUTES.PROFIL} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">Profil Desa</Link></li>
-            <li><Link to={ROUTES.GEOGRAFI} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">Geografi</Link></li>
-            <li><Link to={ROUTES.PEMERINTAHAN} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">Pemerintahan</Link></li>
-            <li><Link to={ROUTES.POTENSI} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">Potensi</Link></li>
-            <li><Link to={ROUTES.INFORMASI} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">Informasi</Link></li>
+            <li><Link to={ROUTES.KKN} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">KKN</Link></li>
             <li><Link to={ROUTES.GALERI} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">Galeri</Link></li>
           </ul>
         </div>
@@ -59,7 +56,7 @@ export function Footer() {
       </div>
 
       {/* 4. Tiny copyright */}
-      <div className="w-full max-w-6xl mx-auto mt-24 md:mt-32 flex flex-col md:flex-row justify-between items-center gap-4 border-t border-white/5 pt-8 relative z-20">
+      <div className="w-full max-w-6xl mx-auto mt-16 md:mt-32 flex flex-col md:flex-row justify-between items-center gap-4 border-t border-white/5 pt-8 relative z-20">
         <p className="text-[9px] text-white/30 uppercase tracking-widest">
           &copy; 2026 Desa Air Putih.
         </p>

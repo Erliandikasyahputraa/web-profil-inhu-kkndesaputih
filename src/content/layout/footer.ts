@@ -5,12 +5,11 @@ export const footerContent = {
     description: 'Sebuah desa yang tumbuh bersama alam, menjunjung tinggi kearifan lokal, dan terus bergerak maju menuju kemandirian ekonomi serta kesejahteraan masyarakat.'
   },
   navigation: {
-    title: 'Navigasi',
+    title: 'Indeks',
     links: [
-      { label: 'Hubungi Kami', href: '/informasi' },
+      { label: 'Beranda', href: '/' },
       { label: 'Profil Desa', href: '/profil' },
       { label: 'Pemerintahan', href: '/pemerintahan' },
-      { label: 'Transparansi', href: '/transparansi' },
       { label: 'Galeri', href: '/galeri' }
     ]
   },

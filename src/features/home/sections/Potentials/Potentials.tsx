@@ -5,7 +5,7 @@ export function Potentials() {
   const [dominant, support1, support2] = potentialsContent.items;
 
   return (
-    <Section variant="default" spacing="none" className="bg-[#F2EFE9] py-24 md:py-40 px-6 overflow-hidden">
+    <Section variant="default" spacing="none" className="bg-[#F2EFE9] py-16 md:py-24 md:py-20 md:py-40 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full relative flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-8">
         
         {/* Oversized Title - Left side, anchors the composition */}

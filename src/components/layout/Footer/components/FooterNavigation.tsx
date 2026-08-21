@@ -4,7 +4,7 @@ import type { FooterNavigationProps } from '../Footer.types';
 
 export function FooterNavigation({ about, navigation, contact, socials }: FooterNavigationProps) {
   return (
-    <Grid variant="gallery" spacing="grid" className="py-24">
+    <Grid variant="gallery" spacing="grid" className="py-16 md:py-24">
       {/* About */}
       <Stack spacing="content" className="lg:col-span-4 lg:pr-12">
         <Heading level={4} variant="standard">{about.title}</Heading>

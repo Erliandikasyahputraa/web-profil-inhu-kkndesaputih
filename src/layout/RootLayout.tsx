@@ -9,7 +9,7 @@ import { Footer } from '@/components/layout';
  */
 export function RootLayout() {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground selection:bg-brand-accent/30 selection:text-brand-primary">
+    <div className="min-h-[70vh] md:min-h-screen flex flex-col bg-background text-foreground selection:bg-brand-accent/30 selection:text-brand-primary">
       <Navbar />
       <Suspense fallback={<div className="flex-1 bg-background animate-pulse" />}>
         <main className="flex-1 flex flex-col">

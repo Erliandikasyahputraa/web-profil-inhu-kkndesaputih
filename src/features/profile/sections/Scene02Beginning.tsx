@@ -2,7 +2,7 @@ import { Section, EditorialImage } from '@/components/ui';
 
 export function Scene02Beginning() {
   return (
-    <Section variant="default" spacing="none" className="bg-[#F2EFE9] py-32 md:py-48 px-6">
+    <Section variant="default" spacing="none" className="bg-[#F2EFE9] py-16 md:py-32 md:py-48 px-6">
       <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row gap-16 md:gap-24 items-start">
         
         {/* Left Column: Typography */}
@@ -10,7 +10,7 @@ export function Scene02Beginning() {
           <p className="text-[9px] uppercase tracking-[0.2em] text-stone-500 font-bold mb-10">
             02 — ASAL USUL
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl lg:text-[3.5rem] text-stone-900 leading-[1.2] mb-12 mix-blend-multiply">
+          <h2 className="font-serif text-3xl md:text-5xl lg:text-[3.5rem] text-stone-900 leading-[1.2] mb-12 mix-blend-multiply">
             Berawal dari aliran sungai dan kebersamaan.
           </h2>
           <p className="text-stone-800 text-sm md:text-base leading-[1.8] max-w-sm">
@@ -24,7 +24,7 @@ export function Scene02Beginning() {
           {/* Main Large Photo */}
           <div className="w-full aspect-[4/3] md:aspect-[16/10] shadow-xl relative z-10">
             <EditorialImage 
-              image={{ src: '/images/history/vintage_historical_documentary_photograph_of_the_original_settlement_of_desa.png', alt: 'Pemukiman Awal Desa' }}
+              image={{ src: '/images/background/background_02.jpg', alt: 'Pemukiman Awal Desa' }}
               preset="landscape"
               overlay="none"
               className="w-full h-full object-cover sepia-[0.3] grayscale-[0.8]"
@@ -34,7 +34,7 @@ export function Scene02Beginning() {
           {/* Overlapping Small Framed Photo */}
           <div className="absolute -bottom-12 md:-bottom-24 -left-4 md:-left-16 w-32 md:w-48 aspect-[4/3] bg-[#F9F8F6] p-2 pb-6 md:p-3 md:pb-10 shadow-2xl z-20 rotate-[-2deg]">
             <EditorialImage 
-              image={{ src: '/images/history/historical_documentary_photograph_of_the_old_village_well_and_spring_mata_air.png', alt: 'Mata Air Lama' }}
+              image={{ src: '/images/background/background_01.jpg', alt: 'Mata Air Lama' }}
               preset="landscape"
               overlay="none"
               className="w-full h-full object-cover sepia-[0.5] grayscale-[0.9]"

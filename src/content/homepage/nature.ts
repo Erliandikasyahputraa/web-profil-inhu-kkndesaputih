@@ -2,7 +2,7 @@ export const natureContent = {
   sectionNumber: '02',
   kicker: 'ALAM',
   title: 'Sumber Kehidupan yang Berkelanjutan',
-  image: { src: '/images/potentials/editorial_documentary_landscape_photograph_of_a_vast_palm_oil_plantation_in.png', alt: 'Hamparan perkebunan kelapa sawit di Desa Air Putih' },
+  image: { src: '/images/kkn/kkn_activity_07.jpg', alt: 'Aktivitas warga di alam' },
   callout: {
     content: 'Alam bukan sekadar pemandangan, tetapi nyawa yang menghidupi setiap napas masyarakat kami.',
     title: 'Warga Desa Air Putih'

@@ -109,7 +109,7 @@ export function EditorialImage({
       sizes: IMAGE_SIZES.cta,
     },
     thumbnail: {
-      aspectClasses: 'w-full aspect-square',
+      aspectClasses: 'w-full aspect-[4/3]',
       objectFit: 'object-cover',
       loading: 'lazy',
       fetchPriority: 'auto',

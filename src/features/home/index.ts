@@ -1,4 +1,5 @@
 export { HomeComposition } from './HomeComposition';
 export { HeroSection } from './sections/Hero';
-export { StorySection } from './sections/Story';
-// We will export other sections here as they are fully implemented.
+export { IdentitasDesa } from './sections/IdentitasDesa';
+export { HistorySection } from './sections/History';
+export { KehidupanDesaSection } from './sections/KehidupanDesa';

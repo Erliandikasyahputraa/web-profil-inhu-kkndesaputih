@@ -3,7 +3,7 @@ import { timelineContent } from '@/content/homepage/timeline';
 
 export function Timeline() {
   return (
-    <Section variant="default" spacing="none" className="bg-[#F2EFE9] py-24 md:py-32 px-6 border-t border-stone-300/50">
+    <Section variant="default" spacing="none" className="bg-[#F2EFE9] py-16 md:py-24 md:py-32 px-6 border-t border-stone-300/50">
       <div className="max-w-7xl mx-auto w-full">
         
         {/* The Hook */}
