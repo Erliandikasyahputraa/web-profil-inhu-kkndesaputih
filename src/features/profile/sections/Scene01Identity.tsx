@@ -7,7 +7,7 @@ export function Scene01Identity() {
       {/* Background Image with Gradient Fade */}
       <div className="absolute inset-0 z-0">
         <EditorialImage 
-          image={{ src: '/images/profil/profil_story_02.jpg', alt: 'Warga Desa Air Putih' }}
+          image={{ src: '/images/profil/profil_story_02.webp', alt: 'Warga Desa Air Putih' }}
           preset="custom"
           overlay="none"
           className="w-full h-full object-cover object-right md:object-center opacity-80 md:w-3/4 md:absolute md:right-0"

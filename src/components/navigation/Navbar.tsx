@@ -74,6 +74,7 @@ export function Navbar() {
       >
         <div className="flex items-center justify-between px-6 md:px-10 h-12 md:h-14 max-w-[1440px] mx-auto transition-all duration-700">
           <Link to={ROUTES.HOME} className="text-stone-900 hover:opacity-70 transition-opacity flex items-center gap-3">
+            <img src="/logo_inhu.webp" alt="Logo Kabupaten Indragiri Hulu" className="w-6 h-auto md:w-8" />
             <span className="font-serif text-sm md:text-base uppercase tracking-[0.2em] font-medium">Desa Air Putih</span>
           </Link>
           

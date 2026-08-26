@@ -10,7 +10,7 @@ export function Potentials() {
         
         {/* Oversized Title - Left side, anchors the composition */}
         <div className="w-full md:w-1/3 z-20 relative pt-12 md:pt-24">
-          <h2 className="font-serif text-5xl md:text-6xl lg:text-[5.5rem] text-stone-900 leading-[0.9] tracking-tight mix-blend-multiply">
+          <h2 className="font-serif text-4xl md:text-6xl lg:text-[5.5rem] text-stone-900 leading-[1.1] md:leading-[0.9] tracking-tight mix-blend-multiply">
             Kekayaan<br/>Alam &<br/>Kearifan.
           </h2>
           <div className="mt-16 md:mt-32">

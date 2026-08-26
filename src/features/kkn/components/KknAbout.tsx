@@ -18,7 +18,7 @@ export function KknAbout() {
           </div>
           <div className="w-full relative bg-stone-200 overflow-hidden max-h-[260px] md:max-h-[500px]" style={{ aspectRatio: '3/2' }}>
             <img 
-              src="/images/kkn/kkn_activity_04.jpg" 
+              src="/images/kkn/kkn_activity_04.webp" 
               alt="Interaksi KKN dengan anak-anak Desa Air Putih" 
               className="w-full h-full object-cover"
             />

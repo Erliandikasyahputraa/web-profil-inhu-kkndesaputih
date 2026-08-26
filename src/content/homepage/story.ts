@@ -17,6 +17,6 @@ export const storyContent = {
     label: 'Lokasi Geografis',
     value: '0°32\'S 102°15\'E',
   },
-  image: { src: '/images/background/background_02.jpg', alt: 'Aktivitas keseharian warga Desa Air Putih' },
+  image: { src: '/images/background/background_02.webp', alt: 'Aktivitas keseharian warga Desa Air Putih' },
   imageCaption: 'Potret keseharian, urat nadi kehidupan desa.',
 } as const;

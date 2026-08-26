@@ -34,19 +34,19 @@ export function CTA() {
           {/* Thumbnails */}
           <div className="w-full grid grid-cols-3 gap-3 md:gap-6">
             <EditorialImage 
-              image={{ src: '/images/profil/profil_content_08.jpg', alt: 'Aktivitas KKN 1' }}
+              image={{ src: '/images/profil/profil_content_08.webp', alt: 'Aktivitas KKN 1' }}
               preset="thumbnail"
               className="w-full h-full object-cover"
               overlay="none"
             />
             <EditorialImage 
-              image={{ src: '/images/profil/profil_content_09.jpg', alt: 'Aktivitas KKN 2' }}
+              image={{ src: '/images/profil/profil_content_09.webp', alt: 'Aktivitas KKN 2' }}
               preset="thumbnail"
               className="w-full h-full object-cover"
               overlay="none"
             />
             <EditorialImage 
-              image={{ src: '/images/kkn/kkn_activity_04.jpg', alt: 'Aktivitas KKN 3' }}
+              image={{ src: '/images/kkn/kkn_activity_04.webp', alt: 'Aktivitas KKN 3' }}
               preset="thumbnail"
               className="w-full h-full object-cover"
               overlay="none"

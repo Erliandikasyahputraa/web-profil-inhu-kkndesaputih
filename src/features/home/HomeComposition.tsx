@@ -61,19 +61,19 @@ export function HomeComposition() {
           <FadeIn>
             <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12">
               <h2 className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold text-stone-500 mb-4">
-                JEJAK KKN
+                KERUKUNAN WARGA
               </h2>
               <h3 className="font-serif text-3xl md:text-4xl text-stone-900 leading-tight mb-6">
-                "Mengabdi dengan Hati,<br/>Menginspirasi dengan Aksi."
+                "Lewat tawa di lapangan, <br/>kita merawat kebersamaan."
               </h3>
               <p className="text-stone-700 leading-relaxed mb-8">
-                Melihat lebih dekat jejak pengabdian, kolaborasi, dan semangat gotong royong bersama masyarakat Desa Air Putih.
+                Momen sederhana bermain voli di sore hari menjadi cara warga dan teman-teman mahasiswa membaur, merajut kerukunan tanpa sekat.
               </p>
             </div>
             
             <div className="max-w-4xl mx-auto mb-10">
               <EditorialImage 
-                image={{ src: '/images/home/home_hero_01.jpg', alt: 'Dokumentasi KKN Desa Air Putih' }}
+                image={{ src: '/images/home/bersamawarga10.webp', alt: 'Bermain voli bersama di Desa Air Putih' }}
                 preset="landscape"
                 overlay="none"
                 className="w-full h-auto aspect-[16/9] object-cover"

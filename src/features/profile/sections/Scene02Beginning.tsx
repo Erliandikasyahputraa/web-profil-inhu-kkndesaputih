@@ -24,7 +24,7 @@ export function Scene02Beginning() {
           {/* Main Large Photo */}
           <div className="w-full aspect-[4/3] md:aspect-[16/10] shadow-xl relative z-10">
             <EditorialImage 
-              image={{ src: '/images/background/background_02.jpg', alt: 'Pemukiman Awal Desa' }}
+              image={{ src: '/images/background/background_02.webp', alt: 'Pemukiman Awal Desa' }}
               preset="landscape"
               overlay="none"
               className="w-full h-full object-cover sepia-[0.3] grayscale-[0.8]"
@@ -34,7 +34,7 @@ export function Scene02Beginning() {
           {/* Overlapping Small Framed Photo */}
           <div className="absolute -bottom-12 md:-bottom-24 -left-4 md:-left-16 w-32 md:w-48 aspect-[4/3] bg-[#F9F8F6] p-2 pb-6 md:p-3 md:pb-10 shadow-2xl z-20 rotate-[-2deg]">
             <EditorialImage 
-              image={{ src: '/images/background/background_01.jpg', alt: 'Mata Air Lama' }}
+              image={{ src: '/images/background/background_01.webp', alt: 'Mata Air Lama' }}
               preset="landscape"
               overlay="none"
               className="w-full h-full object-cover sepia-[0.5] grayscale-[0.9]"

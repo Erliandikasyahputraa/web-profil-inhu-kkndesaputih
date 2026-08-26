@@ -10,7 +10,7 @@ export function IdentitasDesa() {
             <h2 className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold text-stone-500 mb-6">
               02 — IDENTITAS DESA
             </h2>
-            <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl text-stone-900 leading-tight">
+            <h3 className="font-serif text-2xl md:text-4xl lg:text-5xl text-stone-900 leading-[1.4] md:leading-tight">
               Di bawah naungan pepohonan rindang dan aliran sungai yang tak pernah lelah, Desa Air Putih menyimpan cerita tentang kesederhanaan dan ketangguhan.
             </h3>
           </div>
@@ -20,17 +20,17 @@ export function IdentitasDesa() {
           <div className="w-full md:w-5/12">
             <FadeIn delay={0.3}>
               <EditorialImage 
-                image={{ src: '/images/profil/profil_story_02.jpg', alt: 'Kehidupan Desa Air Putih' }}
-                preset="portrait"
+                image={{ src: '/images/home/beranda_01.webp', alt: 'Kehidupan Desa Air Putih' }}
+                preset="landscape"
                 overlay="none"
-                className="w-full max-w-[320px] mx-auto md:max-w-none md:w-full object-cover"
+                className="w-full h-auto aspect-[4/3] md:aspect-auto md:h-[400px] object-cover"
               />
             </FadeIn>
           </div>
           
           <div className="w-full md:w-5/12 flex flex-col justify-center">
             <FadeIn delay={0.4}>
-              <p className="text-stone-700 text-base md:text-lg leading-relaxed">
+              <p className="text-stone-700 text-sm md:text-base lg:text-lg leading-[1.7]">
                 Jauh dari hiruk-pikuk kota besar, desa kami bertumbuh bersama alam. Masyarakat yang ramah, udara yang sejuk, dan semangat gotong royong adalah identitas utama yang selalu kami rawat.
               </p>
               <div className="mt-8 border-t border-stone-300 pt-4 w-12"></div>

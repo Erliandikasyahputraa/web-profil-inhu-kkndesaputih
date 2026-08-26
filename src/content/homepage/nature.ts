@@ -2,7 +2,7 @@ export const natureContent = {
   sectionNumber: '02',
   kicker: 'ALAM',
   title: 'Sumber Kehidupan yang Berkelanjutan',
-  image: { src: '/images/kkn/kkn_activity_07.jpg', alt: 'Aktivitas warga di alam' },
+  image: { src: '/images/kkn/kkn_activity_07.webp', alt: 'Aktivitas warga di alam' },
   callout: {
     content: 'Alam bukan sekadar pemandangan, tetapi nyawa yang menghidupi setiap napas masyarakat kami.',
     title: 'Warga Desa Air Putih'

@@ -18,7 +18,7 @@ export function Scene03People() {
             {/* Simple leaf illustration placeholder (we can use an SVG or image) */}
             <div className="w-24 md:w-32 opacity-30 mix-blend-multiply pointer-events-none">
               <EditorialImage 
-                image={{ src: '/images/gallery/hand_drawn_charcoal_illustration_of_a_deep_rooted_banyan_tree_representing_akar.png', alt: 'Ilustrasi daun' }}
+                image={{ src: '/images/gallery/hand_drawn_charcoal_illustration_of_a_deep_rooted_banyan_tree_representing_akar.webp', alt: 'Ilustrasi daun' }}
                 preset="custom"
                 overlay="none"
                 className="w-full h-auto grayscale"
@@ -37,7 +37,7 @@ export function Scene03People() {
           <div className="flex flex-row gap-4">
             <div className="w-1/3 aspect-[3/4] shadow-md">
               <EditorialImage 
-                image={{ src: '/images/profil/profil_story_03.jpg', alt: 'Warga tersenyum' }}
+                image={{ src: '/images/profil/warga_profil_1.webp', alt: 'Warga tersenyum' }}
                 preset="portrait"
                 overlay="none"
                 className="w-full h-full object-cover grayscale-[0.2]"
@@ -45,7 +45,7 @@ export function Scene03People() {
             </div>
             <div className="w-2/3 aspect-[16/9] shadow-md">
               <EditorialImage 
-                image={{ src: '/images/gallery/landscape/gallery_landscape_02.jpg', alt: 'Warga berkumpul' }}
+                image={{ src: '/images/profil/warga_profil_2.webp', alt: 'Warga berkumpul' }}
                 preset="landscape"
                 overlay="none"
                 className="w-full h-full object-cover grayscale-[0.2]"
@@ -57,7 +57,7 @@ export function Scene03People() {
           <div className="flex flex-row gap-4">
             <div className="w-2/3 aspect-[16/9] shadow-md">
               <EditorialImage 
-                image={{ src: '/images/gallery/landscape/gallery_landscape_13.jpg', alt: 'Aktivitas di luar' }}
+                image={{ src: '/images/profil/warga_profil_3.webp', alt: 'Aktivitas di luar' }}
                 preset="landscape"
                 overlay="none"
                 className="w-full h-full object-cover grayscale-[0.2]"
@@ -65,7 +65,7 @@ export function Scene03People() {
             </div>
             <div className="w-1/3 aspect-[3/4] shadow-md">
               <EditorialImage 
-                image={{ src: '/images/gallery/landscape/gallery_landscape_14.jpg', alt: 'Warga berpose' }}
+                image={{ src: '/images/profil/warga_profil_4.webp', alt: 'Warga berpose' }}
                 preset="portrait"
                 overlay="none"
                 className="w-full h-full object-cover grayscale-[0.2]"
@@ -92,7 +92,7 @@ export function Scene03People() {
         <div className="w-full md:w-7/12 relative z-10 md:mt-12 md:-ml-8 shadow-2xl">
           <div className="w-full aspect-video md:aspect-[21/9]">
             <EditorialImage
-              image={{ src: '/images/profil/profil_content_06.jpg', alt: 'Masa depan Desa Air Putih' }}
+              image={{ src: '/images/profil/profil_content_06.webp', alt: 'Masa depan Desa Air Putih' }}
               preset="landscape"
               overlay="none"
               className="w-full h-full object-cover sepia-[0.2] grayscale-[0.3]"

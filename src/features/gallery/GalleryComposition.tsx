@@ -1,18 +1,20 @@
 import { useState, useMemo, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { GALLERY_PHOTOS, type PhotoCategory, type Photo } from '@/content/gallery';
+import { GALLERY_PHOTOS, type Photo } from '@/content/gallery';
 
-const CATEGORIES: PhotoCategory[] = ['Semua', 'Masyarakat', 'Kegiatan', 'Pendidikan', 'KKN'];
+const CATEGORIES: ('Semua' | 'Landscape' | 'Portrait')[] = ['Semua', 'Landscape', 'Portrait'];
 
 export function GalleryComposition() {
-  const [activeCategory, setActiveCategory] = useState<PhotoCategory>('Semua');
+  const [activeCategory, setActiveCategory] = useState<'Semua' | 'Landscape' | 'Portrait'>('Semua');
   const [visibleCount, setVisibleCount] = useState(24);
   const [lightboxPhoto, setLightboxPhoto] = useState<Photo | null>(null);
 
   // Filter photos by category
   const categoryFilteredPhotos = useMemo(() => {
     if (activeCategory === 'Semua') return GALLERY_PHOTOS;
-    return GALLERY_PHOTOS.filter(p => p.category === activeCategory);
+    if (activeCategory === 'Landscape') return GALLERY_PHOTOS.filter(p => p.orientation !== 'portrait');
+    if (activeCategory === 'Portrait') return GALLERY_PHOTOS.filter(p => p.orientation === 'portrait');
+    return GALLERY_PHOTOS;
   }, [activeCategory]);
 
   const visiblePhotos = categoryFilteredPhotos.slice(0, visibleCount);
@@ -26,7 +28,7 @@ export function GalleryComposition() {
     setVisibleCount(prev => Math.min(prev + 12, categoryFilteredPhotos.length));
   };
 
-  const handleCategoryChange = (category: PhotoCategory) => {
+  const handleCategoryChange = (category: 'Semua' | 'Landscape' | 'Portrait') => {
     setActiveCategory(category);
     setVisibleCount(24);
   };
@@ -100,6 +102,8 @@ export function GalleryComposition() {
           </p>
         </header>
 
+
+
         {/* Filter */}
         <nav className="mb-12 md:mb-16 overflow-x-auto no-scrollbar pb-2">
           <ul className="flex items-center gap-2 w-max">
@@ -150,7 +154,6 @@ export function GalleryComposition() {
                       className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                     />
                     <div className="absolute inset-0 bg-stone-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex flex-col justify-end p-6 pointer-events-none">
-                      <p className="text-white font-mono text-xs mb-1 opacity-80">{photo.src.split('/').pop()}</p>
                       <p className="text-white font-serif text-lg">{photo.category} · Air Putih</p>
                     </div>
                   </motion.div>
@@ -190,7 +193,6 @@ export function GalleryComposition() {
                       className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                     />
                     <div className="absolute inset-0 bg-stone-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:flex flex-col justify-end p-6 pointer-events-none">
-                      <p className="text-white font-mono text-xs mb-1 opacity-80">{photo.src.split('/').pop()}</p>
                       <p className="text-white font-serif text-base leading-tight">{photo.category}</p>
                     </div>
                   </motion.div>

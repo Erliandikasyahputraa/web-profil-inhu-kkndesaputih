@@ -4,47 +4,47 @@ const TEAM_MEMBERS = [
   {
     role: "DOSEN PEMBIMBING LAPANGAN",
     members: [
-      { name: "Dr. Muslim, S.Ag., S.H., M.Hum", image: "/images/gallery/landscape/gallery_landscape_10.jpg" }
+      { name: "Dr. Muslim, S.Ag., S.H., M.Hum", image: "/images/gallery/landscape/gallery_landscape_10.webp" }
     ]
   },
   {
     role: "KOORDINATOR DESA",
     members: [
-      { name: "Rufai Asyafi’i", image: "/images/gallery/landscape/gallery_landscape_09.jpg" }
+      { name: "Rufai Asyafi’i", image: "/images/gallery/landscape/gallery_landscape_09.webp" }
     ]
   },
   {
     role: "SEKRETARIS",
     members: [
-      { name: "Putri Halimah Tusyadiah", image: "/images/gallery/landscape/gallery_landscape_04.jpg" },
-      { name: "Toni Syariffudin", image: "/images/supporting/supporting_01.jpg" }
+      { name: "Putri Halimah Tusyadiah", image: "/images/gallery/landscape/gallery_landscape_04.webp" },
+      { name: "Toni Syariffudin", image: "/images/supporting/supporting_01.webp" }
     ]
   },
   {
     role: "BENDAHARA",
     members: [
-      { name: "Inaayah Nazhifah", image: "/images/kkn/kkn_activity_03.jpg" }
+      { name: "Inaayah Nazhifah", image: "/images/kkn/kkn_activity_03.webp" }
     ]
   },
   {
     role: "HUBUNGAN MASYARAKAT",
     members: [
-      { name: "Deffarul Syahroyza", image: "/images/kkn/kkn_activity_07.jpg" },
-      { name: "Alya Fitri Herianti", image: "/images/profil/profil_content_07.jpg" }
+      { name: "Deffarul Syahroyza", image: "/images/kkn/kkn_activity_07.webp" },
+      { name: "Alya Fitri Herianti", image: "/images/profil/profil_content_07.webp" }
     ]
   },
   {
     role: "PERLENGKAPAN",
     members: [
-      { name: "Aisyah Ahmad", image: "/images/kkn/kkn_activity_08.jpg" }
+      { name: "Aisyah Ahmad", image: "/images/kkn/kkn_activity_08.webp" }
     ]
   },
   {
     role: "MEDIA KOMUNIKASI",
     members: [
-      { name: "Marsya Sofianti", image: "/images/profil/profil_content_08.jpg" },
-      { name: "Silvia", image: "/images/profil/profil_content_09.jpg" },
-      { name: "Elsa Yuni Rahmawati", image: "/images/profil/profil_content_06.jpg" }
+      { name: "Marsya Sofianti", image: "/images/profil/profil_content_08.webp" },
+      { name: "Silvia", image: "/images/profil/profil_content_09.webp" },
+      { name: "Elsa Yuni Rahmawati", image: "/images/profil/profil_content_06.webp" }
     ]
   }
 ];

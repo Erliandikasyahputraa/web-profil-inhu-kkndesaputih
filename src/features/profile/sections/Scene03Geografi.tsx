@@ -95,7 +95,7 @@ export function Scene03Geografi() {
             </p>
             <div className="w-full aspect-[16/9] shadow-sm">
               <EditorialImage 
-                image={{ src: '/images/background/background_02.jpg', alt: 'Bentang alam Desa Air Putih' }} 
+                image={{ src: '/images/profil/topografi.webp', alt: 'Bentang alam Desa Air Putih' }} 
                 preset="landscape"
                 className="w-full h-[50vh] md:h-full object-cover"
               />

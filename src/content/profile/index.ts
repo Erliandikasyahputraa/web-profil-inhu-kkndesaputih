@@ -6,7 +6,7 @@ export const profileContent = {
   scene01: {
     statement: "Bukan sekadar titik di peta. Ini adalah rumah bagi jiwa-jiwa yang tenang.",
     image: {
-      src: "/images/profil/profil_story_02.jpg",
+      src: "/images/profil/profil_story_02.webp",
       alt: "Pemandangan desa di pagi hari"
     }
   },
@@ -18,7 +18,7 @@ export const profileContent = {
       "Dari sekelompok kecil peladang yang mencari penghidupan di tepi sungai, Desa Air Putih perlahan tumbuh. Bukan karena paksaan zaman, melainkan karena kesabaran merawat tanah yang dititipkan."
     ],
     image: {
-      src: "/images/background/background_02.jpg",
+      src: "/images/background/background_02.webp",
       alt: "Potret masa lampau pemukiman desa"
     }
   },
@@ -27,9 +27,9 @@ export const profileContent = {
     title: "Napas Desa",
     story: "Setiap pagi dimulai dengan suara yang sama: derak perahu di tepian sungai, langkah para penderes karet menembus embun, dan tawa anak-anak berlarian ke sekolah. Di sini, kehidupan tidak diukur dari seberapa cepat waktu berlalu, melainkan dari seberapa dalam senyum yang dibagikan antar tetangga.",
     images: [
-      { src: "/images/profil/profil_story_03.jpg", alt: "Keluarga berkumpul di pagi hari" },
-      { src: "/images/gallery/landscape/gallery_landscape_02.jpg", alt: "Warga berbincang hangat" },
-      { src: "/images/gallery/landscape/gallery_landscape_13.jpg", alt: "Aktivitas warga" }
+      { src: "/images/profil/profil_story_03.webp", alt: "Keluarga berkumpul di pagi hari" },
+      { src: "/images/gallery/landscape/gallery_landscape_02.webp", alt: "Warga berbincang hangat" },
+      { src: "/images/gallery/landscape/gallery_landscape_13.webp", alt: "Aktivitas warga" }
     ]
   },
   scene04: {
@@ -53,7 +53,7 @@ export const profileContent = {
     text: "Hari ini, Desa Air Putih bukan lagi pemukiman sunyi. Jalanan telah beraspal, listrik telah menerangi malam, dan anak-anak kami menatap dunia dengan mata terbuka lebar. Namun, jika Anda bertanya apa yang paling membuat kami bangga, jawabannya tetap sama:",
     pride: "Kami masih mengingat siapa diri kami.",
     image: {
-      src: "/images/profil/profil_content_06.jpg",
+      src: "/images/profil/profil_content_06.webp",
       alt: "Anak-anak desa"
     }
   }

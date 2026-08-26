@@ -22,6 +22,7 @@ export function Footer() {
           <ul className="flex flex-col gap-4">
             <li><Link to={ROUTES.HOME} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">Home</Link></li>
             <li><Link to={ROUTES.PROFIL} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">Profil Desa</Link></li>
+            <li><Link to={ROUTES.PEMERINTAHAN} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">Pemerintahan</Link></li>
             <li><Link to={ROUTES.KKN} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">KKN</Link></li>
             <li><Link to={ROUTES.GALERI} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">Galeri</Link></li>
           </ul>
@@ -33,7 +34,7 @@ export function Footer() {
             <li>Jl. Lintas Air Putih No. 01</li>
             <li>Lubuk Batu Jaya, INHU</li>
             <li>(+62) 812-3456-7890</li>
-            <li>info@airputih.desa.id</li>
+            <li>desaairputih26@gmail.com</li>
           </ul>
         </div>
 
@@ -41,13 +42,13 @@ export function Footer() {
           <h4 className="text-[9px] uppercase tracking-[0.2em] text-white/40 mb-6 font-bold">Terhubung</h4>
           <ul className="flex flex-col gap-4 text-[11px] uppercase tracking-widest text-white/80">
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+              <a href="https://instagram.com/kkn.airputih.26" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                 Instagram
               </a>
             </li>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                YouTube
+              <a href="https://tiktok.com/@kkn_desa.air.putih" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                TikTok
               </a>
             </li>
           </ul>

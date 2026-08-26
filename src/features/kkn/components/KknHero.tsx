@@ -30,7 +30,7 @@ export function KknHero() {
       
       <div className="w-full relative bg-stone-200 overflow-hidden" style={{ aspectRatio: '16/9', maxHeight: '50vh' }}>
         <img 
-          src="/images/kkn/kkn_activity_07.jpg" 
+          src="/images/kkn/kkn_activity_07.webp" 
           alt="Gotong Royong KKN Desa Air Putih" 
           className="w-full h-[50vh] md:h-full object-cover"
         />

@@ -9,7 +9,7 @@ interface PageMetadataProps {
   type?: string;
 }
 
-export function PageMetadata({ title, description, keywords, image = '/og-image.jpg', url = 'https://desaairputih.id', type = 'website' }: PageMetadataProps) {
+export function PageMetadata({ title, description, keywords, image = '/og-image.webp', url = 'https://desaairputih.id', type = 'website' }: PageMetadataProps) {
   const siteName = import.meta.env.VITE_SITE_NAME || 'Desa Air Putih';
   const fullTitle = `${title} | ${siteName}`;
 

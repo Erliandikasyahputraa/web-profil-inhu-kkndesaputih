@@ -14,7 +14,7 @@ export function PemerintahanPage() {
           {/* Background Image with Gradient Fade */}
           <div className="absolute inset-0 z-0">
             <EditorialImage 
-              image={{ src: '/images/gallery/landscape/gallery_landscape_02.jpg', alt: 'Pemerintahan Desa Air Putih' }}
+              image={{ src: '/images/pemerintahan/pemerintahan_hero_01.webp', alt: 'Pemerintahan Desa Air Putih' }}
               preset="custom"
               overlay="none"
               className="w-full h-full object-cover object-right md:object-center opacity-70 md:w-3/4 md:absolute md:right-0 grayscale-[0.2]"
@@ -75,7 +75,7 @@ export function PemerintahanPage() {
                     // Fallback to png if svg fails to load
                     const target = e.target as HTMLImageElement;
                     target.onerror = null;
-                    target.src = '/images/pemerintahan/struktur-perangkat-desa.png';
+                    target.src = '/images/pemerintahan/struktur-perangkat-desa.webp';
                   }}
                 />
               </div>
@@ -83,38 +83,7 @@ export function PemerintahanPage() {
           </div>
         </section>
 
-        {/* SECTION: FOKUS PEMBANGUNAN */}
-        <section className="w-full bg-[#1A1A1A] text-white py-16 md:py-24">
-          <div className="max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16">
-            <h2 className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold text-white/40 mb-4 text-center">
-              FOKUS PEMBANGUNAN
-            </h2>
-            <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white/90 leading-tight mb-12 text-center max-w-3xl mx-auto">
-              Membangun ruang hidup yang lebih baik untuk masa depan desa.
-            </h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 border-t border-white/10 pt-12">
-              <div className="flex flex-col">
-                <span className="font-serif text-2xl text-white/90 mb-4">Infrastruktur</span>
-                <p className="text-white/50 leading-relaxed text-sm">
-                  Pemeliharaan dan peningkatan kualitas jalan desa, fasilitas publik, dan sistem drainase untuk mendukung mobilitas warga.
-                </p>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-2xl text-white/90 mb-4">Pemberdayaan</span>
-                <p className="text-white/50 leading-relaxed text-sm">
-                  Dukungan bagi UMKM lokal, kelompok tani, dan ibu-ibu PKK melalui penyuluhan dan bantuan sarana prasarana.
-                </p>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-2xl text-white/90 mb-4">Kesehatan</span>
-                <p className="text-white/50 leading-relaxed text-sm">
-                  Optimalisasi layanan Posyandu, pencegahan stunting, dan kampanye lingkungan bersih demi generasi yang lebih sehat.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+
 
         {/* SECTION 02: LAYANAN PUBLIK */}
         <section className="w-full bg-[#F8F6F3] pt-20 pb-24 md:pt-32 md:pb-40">

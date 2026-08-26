@@ -12,7 +12,7 @@ export function HistorySection() {
             <h2 className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold text-stone-500 mb-6">
               03 — PERJALANAN DESA
             </h2>
-            <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl text-stone-900 leading-tight">
+            <h3 className="font-serif text-2xl md:text-4xl lg:text-5xl text-stone-900 leading-[1.3] md:leading-tight">
               "Setiap jengkal tanah ini menyimpan cerita perjuangan dan doa para pendahulu."
             </h3>
           </FadeIn>
@@ -24,11 +24,11 @@ export function HistorySection() {
           {/* Era 1 */}
           <div className="flex flex-col group">
             <FadeIn delay={0.1}>
-              <h4 className="font-serif text-3xl text-stone-400 mb-4 transition-colors group-hover:text-stone-900">
+              <h4 className="font-serif text-2xl md:text-3xl text-stone-400 mb-4 transition-colors group-hover:text-stone-900">
                 1940
               </h4>
               <EditorialImage 
-                image={{ src: '/images/background/background_01.jpg', alt: 'Pemukiman Awal' }}
+                image={{ src: '/images/home/timeline_01.webp', alt: 'Pemukiman Awal' }}
                 preset="landscape"
                 overlay="none"
                 className="w-full h-auto aspect-[4/3] object-cover mb-6 grayscale hover:grayscale-0 transition-all duration-500"
@@ -45,11 +45,11 @@ export function HistorySection() {
           {/* Era 2 */}
           <div className="flex flex-col group">
             <FadeIn delay={0.2}>
-              <h4 className="font-serif text-3xl text-stone-400 mb-4 transition-colors group-hover:text-stone-900">
+              <h4 className="font-serif text-2xl md:text-3xl text-stone-400 mb-4 transition-colors group-hover:text-stone-900">
                 1975
               </h4>
               <EditorialImage 
-                image={{ src: '/images/gallery/landscape/gallery_landscape_09.jpg', alt: 'Perkembangan Infrastruktur' }}
+                image={{ src: '/images/home/timeline_02.webp', alt: 'Perkembangan Infrastruktur' }}
                 preset="landscape"
                 overlay="none"
                 className="w-full h-auto aspect-[4/3] object-cover mb-6 grayscale hover:grayscale-0 transition-all duration-500"
@@ -66,11 +66,11 @@ export function HistorySection() {
           {/* Era 3 */}
           <div className="flex flex-col group">
             <FadeIn delay={0.3}>
-              <h4 className="font-serif text-3xl text-stone-400 mb-4 transition-colors group-hover:text-stone-900">
+              <h4 className="font-serif text-2xl md:text-3xl text-stone-400 mb-4 transition-colors group-hover:text-stone-900">
                 1998
               </h4>
               <EditorialImage 
-                image={{ src: '/images/kkn/kkn_activity_08.jpg', alt: 'Perkembangan Masyarakat' }}
+                image={{ src: '/images/home/timeline_03.webp', alt: 'Perkembangan Masyarakat' }}
                 preset="landscape"
                 overlay="none"
                 className="w-full h-auto aspect-[4/3] object-cover mb-6 grayscale hover:grayscale-0 transition-all duration-500"
@@ -87,11 +87,11 @@ export function HistorySection() {
           {/* Era 4 */}
           <div className="flex flex-col group">
             <FadeIn delay={0.4}>
-              <h4 className="font-serif text-3xl text-stone-400 mb-4 transition-colors group-hover:text-stone-900">
+              <h4 className="font-serif text-2xl md:text-3xl text-stone-400 mb-4 transition-colors group-hover:text-stone-900">
                 2026
               </h4>
               <EditorialImage 
-                image={{ src: '/images/kkn/kkn_activity_06.jpg', alt: 'Air Putih Hari Ini' }}
+                image={{ src: '/images/home/timeline_04.webp', alt: 'Air Putih Hari Ini' }}
                 preset="landscape"
                 overlay="none"
                 className="w-full h-auto aspect-[4/3] object-cover mb-6 grayscale hover:grayscale-0 transition-all duration-500"
