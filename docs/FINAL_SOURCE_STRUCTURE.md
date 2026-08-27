@@ -1,76 +1,69 @@
-# FINAL SOURCE STRUCTURE
+# Struktur Kode Sumber Final (Final Source Structure)
 
-This document outlines the final stable structure of the React source code.
+Dokumen ini merangkum arsitektur kode sumber untuk proyek Desa Air Putih Digital Experience setelah fase stabilisasi (Phase 12).
 
-## 1. Directory Map
+## Hierarki Utama
 
-```text
-src/
-├── components/     # Reusable UI components (buttons, layout wrappers, specific modules)
-├── constants/      # App-wide constants (e.g., routes)
-├── content/        # Data definitions (gallery arrays, manifest, texts)
-├── features/       # Page-specific feature modules
-├── layout/         # Root layout components (Navbar, Footer, Main layout)
-├── pages/          # Entry-point React components for each route
-├── styles/         # Global styles (Tailwind base tokens)
-└── main.tsx        # React DOM entry point
+```
+Desa Air Putih Digital Experience/
+├── public/                 # Aset statis yang di-serve langsung
+│   ├── favicon.ico
+│   └── images/             # Root dari semua aset gambar fisik
+│       ├── beranda/
+│       ├── galeri/
+│       ├── kkn/
+│       ├── pemerintahan/
+│       └── profil/
+│
+├── src/                    # Kode sumber aplikasi (React)
+│   ├── assets/             # Aset yang di-import via JS/CSS
+│   │   ├── fonts/          # Font kustom (jika ada)
+│   │   └── index.css       # Global styles & Tailwind directives
+│   │
+│   ├── components/         # Komponen UI yang reusable (Dumb components)
+│   │   ├── common/         # Layout, Header, Footer, PageMetadata
+│   │   └── ui/             # Section, EditorialImage, dll
+│   │
+│   ├── constants/          # Nilai konstan global
+│   │   └── routes.ts       # Definisi URL routing
+│   │
+│   ├── content/            # Single Source of Truth untuk data teks
+│   │   ├── gallery/
+│   │   │   └── assetManifest.ts  # Daftar foto galeri
+│   │   ├── kkn/
+│   │   │   └── documentation.ts  # Teks halaman KKN
+│   │   └── village/
+│   │       ├── demographics.ts   # Data geografi & demografi
+│   │       ├── history.ts        # Sejarah & daftar kades
+│   │       ├── socialEconomy.ts  # Statistik sektoral
+│   │       └── visionMission.ts  # Visi misi
+│   │
+│   ├── features/           # Komponen UI spesifik untuk sebuah halaman
+│   │   ├── gallery/        # Logika dan UI khusus Galeri
+│   │   ├── home/           # Sections untuk Beranda
+│   │   ├── kkn/            # Sections untuk KKN
+│   │   └── profile/        # Sections untuk Profil
+│   │
+│   ├── pages/              # Komponen level-halaman (Rute Utama)
+│   │   ├── HomePage.tsx
+│   │   ├── ProfilePage.tsx
+│   │   ├── GalleryPage.tsx
+│   │   ├── KknPage.tsx
+│   │   └── PemerintahanPage.tsx
+│   │
+│   ├── App.tsx             # Root component & Routing configuration
+│   └── main.tsx            # React DOM entry point
+│
+├── docs/                   # Dokumentasi pengembang & panduan pengelolaan
+│   └── archive/            # Laporan proses development lama
+│
+├── tailwind.config.js      # Konfigurasi Tailwind CSS
+├── vite.config.ts          # Konfigurasi build (Vite)
+└── package.json            # Daftar dependencies
 ```
 
-## 2. Route-to-File Map
+## Prinsip Desain Arsitektur
 
-This map allows any future developer to immediately trace which files build which routes.
-
-### HOME 
-Route: `/`
-- **Entry**: `src/pages/HomePage.tsx` (or `App.tsx`)
-- **Composition**: `src/features/home/HomeComposition.tsx`
-- **Sections**:
-  - Hero: `src/features/home/sections/Hero/Hero.tsx`
-  - Identitas Desa: `src/features/home/sections/IdentitasDesa/IdentitasDesa.tsx`
-  - History / Perjalanan: `src/features/home/sections/History/HistorySection.tsx`
-  - Kehidupan / Gallery Preview: `src/features/home/sections/KehidupanDesa/KehidupanDesaSection.tsx`
-  - Potentials: `src/features/home/sections/Potentials/Potentials.tsx`
-  - Transparency: `src/features/home/sections/Transparency/Transparency.tsx`
-  - CTA: `src/features/home/sections/CTA/CTA.tsx`
-
-### PROFIL DESA
-Route: `/profil`
-- **Entry**: `src/pages/ProfilePage.tsx`
-- **Composition**: `src/features/profile/ProfileComposition.tsx`
-- **Sections**:
-  - Identity: `src/features/profile/sections/Scene01Identity.tsx`
-  - History: `src/features/profile/sections/Scene02Beginning.tsx`
-  - Geography: `src/features/profile/sections/Scene03Geografi.tsx`
-  - People & Values: `src/features/profile/sections/Scene03People.tsx`
-
-### PEMERINTAHAN
-Route: `/pemerintahan`
-- **Entry**: `src/pages/PemerintahanPage.tsx`
-- **Sections**:
-  - Entire page logic is currently contained directly in `PemerintahanPage.tsx`.
-
-### GALERI
-Route: `/galeri`
-- **Entry**: `src/pages/GalleryPage.tsx`
-- **Composition**: `src/features/gallery/GalleryComposition.tsx`
-- **Data Source**: `src/content/gallery.ts`
-
-### KKN
-Route: `/kkn`
-- **Entry**: `src/pages/KknPage.tsx`
-- **Sections**:
-  - Hero: `src/features/kkn/components/KknHero.tsx`
-  - About: `src/features/kkn/components/KknAbout.tsx`
-  - Programs: `src/features/kkn/components/KknPrograms.tsx`
-  - Activities: `src/features/kkn/components/KknJejakKegiatan.tsx`
-  - Team: `src/features/kkn/components/KknTeam.tsx`
-  - Closing: `src/features/kkn/components/KknClosing.tsx`
-
-## 3. Core Components
-
-- **Navbar**: `src/components/navigation/Navbar.tsx`
-- **Footer**: `src/components/layout/Footer/Footer.tsx`
-- **EditorialImage**: `src/components/ui/EditorialImage.tsx` (Handles lazy-loading and aspect-ratio wrapping)
-
-## 4. Archived / Dead Files
-All obsolete architecture (e.g., old `Scene04...`, duplicate `Story.tsx` components) have been successfully deleted during Phase 4 Cleanup. The current `src/` directory contains ONLY active, imported files.
+1.  **Separation of Concerns (SoC)**: Teks (`src/content/`) dipisahkan dari tampilan UI (`src/features/` & `src/pages/`). Hal ini memungkinkan non-developer untuk memperbarui data desa tanpa perlu memahami logika React atau Tailwind CSS.
+2.  **Absolute Imports**: Menggunakan `@/` untuk mengimpor modul, yang merujuk pada root folder `src/`.
+3.  **Flat Images Directory**: Seluruh gambar ditempatkan secara fisik di `public/images/`. Referensi gambar di dalam kode selalu merujuk pada absolute path dari domain root (misalnya `/images/beranda/nama_file.webp`).

@@ -1,53 +1,65 @@
+
 import { Section, EditorialImage } from '@/components/ui';
+import { villageHistory } from '@/content/village/history';
 
 export function Scene02Beginning() {
   return (
-    <Section variant="default" spacing="none" className="bg-[#F2EFE9] py-16 md:py-32 md:py-48 px-6">
+    <Section variant="default" spacing="none" className="bg-[#F2EFE9] py-16 md:py-32 px-6">
       <div className="max-w-6xl mx-auto w-full flex flex-col md:flex-row gap-16 md:gap-24 items-start">
         
-        {/* Left Column: Typography */}
-        <div className="w-full md:w-5/12 flex flex-col pt-0 md:pt-24">
+        {/* Left Column: Sejarah */}
+        <div className="w-full md:w-5/12 flex flex-col pt-0 md:pt-12">
           <p className="text-[9px] uppercase tracking-[0.2em] text-stone-500 font-bold mb-10">
-            02 — ASAL USUL
+            {villageHistory.sectionTitle}
           </p>
           <h2 className="font-serif text-3xl md:text-5xl lg:text-[3.5rem] text-stone-900 leading-[1.2] mb-12 mix-blend-multiply">
-            Berawal dari aliran sungai dan kebersamaan.
+            {villageHistory.mainHeading}
           </h2>
-          <p className="text-stone-800 text-sm md:text-base leading-[1.8] max-w-sm">
-            Dahulu, perahu menjadi jalan, sungai menjadi nadi, dan gotong royong menjadi kekuatan utama. Dari situlah Desa Air Putih berdiri dan bertahan, hingga kini.
-          </p>
+          <div className="flex flex-col gap-4">
+            {villageHistory.paragraphs.map((paragraph, index) => {
+              // Convert simple **bold** to strong tags safely without full markdown parser
+              const parts = paragraph.split(/(\*\*.*?\*\*)/g);
+              return (
+                <p key={index} className="text-stone-800 text-sm md:text-base leading-[1.8]">
+                  {parts.map((part, i) => {
+                    if (part.startsWith('**') && part.endsWith('**')) {
+                      return <strong key={i}>{part.slice(2, -2)}</strong>;
+                    }
+                    return part;
+                  })}
+                </p>
+              );
+            })}
+          </div>
         </div>
 
-        {/* Right Column: Editorial Photo Collage */}
-        <div className="w-full md:w-7/12 relative mt-16 md:mt-0">
+        {/* Right Column: Riwayat Kepala Desa & Foto */}
+        <div className="w-full md:w-7/12 relative mt-8 md:mt-0">
+          <div className="w-full bg-[#E8E5DF] p-6 md:p-12 mb-12">
+            <h3 className="font-serif text-2xl text-stone-900 mb-8 border-b border-stone-300 pb-4">
+              Riwayat Kepala Desa
+            </h3>
+            <ul className="flex flex-col gap-4">
+              {villageHistory.kadesList.map((k, i) => (
+                <li key={i} className="flex flex-col md:flex-row md:justify-between md:items-start border-b border-stone-300/50 pb-3 gap-1">
+                  <div className="flex flex-col">
+                    <span className="text-stone-800 text-sm md:text-base font-medium">{i + 1}. {k.name}</span>
+                    <span className="text-stone-500 text-xs md:text-sm">{k.desc}</span>
+                  </div>
+                  <span className="text-stone-600 text-xs md:text-sm font-mono mt-1 md:mt-0 md:text-right shrink-0">{k.period}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
           
-          {/* Main Large Photo */}
-          <div className="w-full aspect-[4/3] md:aspect-[16/10] shadow-xl relative z-10">
+          <div className="w-full aspect-[16/9] shadow-md relative">
             <EditorialImage 
-              image={{ src: '/images/background/background_02.webp', alt: 'Pemukiman Awal Desa' }}
+              image={villageHistory.image}
               preset="landscape"
               overlay="none"
               className="w-full h-full object-cover sepia-[0.3] grayscale-[0.8]"
             />
           </div>
-
-          {/* Overlapping Small Framed Photo */}
-          <div className="absolute -bottom-12 md:-bottom-24 -left-4 md:-left-16 w-32 md:w-48 aspect-[4/3] bg-[#F9F8F6] p-2 pb-6 md:p-3 md:pb-10 shadow-2xl z-20 rotate-[-2deg]">
-            <EditorialImage 
-              image={{ src: '/images/background/background_01.webp', alt: 'Mata Air Lama' }}
-              preset="landscape"
-              overlay="none"
-              className="w-full h-full object-cover sepia-[0.5] grayscale-[0.9]"
-            />
-          </div>
-
-          {/* Cursive Caption */}
-          <div className="absolute -bottom-16 md:-bottom-20 left-32 md:left-40 z-30 transform rotate-[-4deg]">
-            <span className="font-['Caveat',_cursive] italic text-xl md:text-2xl text-stone-600">
-              Kisah lama yang<br/>masih diceritakan.
-            </span>
-          </div>
-
         </div>
 
       </div>

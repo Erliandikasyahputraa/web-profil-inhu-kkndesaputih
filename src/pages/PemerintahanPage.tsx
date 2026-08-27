@@ -1,5 +1,20 @@
 import { PageMetadata } from '@/components/common';
 import { EditorialImage } from '@/components/ui';
+
+const operationalHours = [
+  { days: 'Senin - Kamis', time: '08.00 - 15.00 WIB', isClosed: false },
+  { days: 'Jumat', time: '08.00 - 11.30 WIB', isClosed: false },
+  { days: 'Sabtu - Minggu', time: 'Tutup', isClosed: true },
+];
+
+const mainServices = [
+  'Pembuatan Surat Pengantar KTP / KK',
+  'Surat Keterangan Domisili',
+  'Surat Keterangan Usaha',
+  'Surat Keterangan Tidak Mampu',
+  'Pengurusan Akta Kelahiran & Kematian'
+];
+
 export function PemerintahanPage() {
   return (
     <>
@@ -107,18 +122,12 @@ export function PemerintahanPage() {
                   JAM OPERASIONAL
                 </h4>
                 <ul className="flex flex-col gap-3 text-sm md:text-base text-stone-600">
-                  <li className="flex justify-between items-center">
-                    <span>Senin - Kamis</span>
-                    <span className="font-mono text-sm">08.00 - 15.00 WIB</span>
-                  </li>
-                  <li className="flex justify-between items-center">
-                    <span>Jumat</span>
-                    <span className="font-mono text-sm">08.00 - 11.30 WIB</span>
-                  </li>
-                  <li className="flex justify-between items-center text-stone-400">
-                    <span>Sabtu - Minggu</span>
-                    <span className="font-mono text-sm">Tutup</span>
-                  </li>
+                  {operationalHours.map((hour, i) => (
+                    <li key={i} className={`flex justify-between items-center ${hour.isClosed ? 'text-stone-400' : ''}`}>
+                      <span>{hour.days}</span>
+                      <span className="font-mono text-sm">{hour.time}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
@@ -127,26 +136,12 @@ export function PemerintahanPage() {
                   LAYANAN UTAMA
                 </h4>
                 <ul className="flex flex-col gap-3 text-sm md:text-base text-stone-600">
-                  <li className="flex gap-3">
-                    <span className="text-stone-400">•</span>
-                    <span>Pembuatan Surat Pengantar KTP / KK</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-stone-400">•</span>
-                    <span>Surat Keterangan Domisili</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-stone-400">•</span>
-                    <span>Surat Keterangan Usaha</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-stone-400">•</span>
-                    <span>Surat Keterangan Tidak Mampu</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-stone-400">•</span>
-                    <span>Pengurusan Akta Kelahiran & Kematian</span>
-                  </li>
+                  {mainServices.map((service, i) => (
+                    <li key={i} className="flex gap-3">
+                      <span className="text-stone-400">•</span>
+                      <span>{service}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
