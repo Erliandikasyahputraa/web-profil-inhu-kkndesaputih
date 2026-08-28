@@ -40,8 +40,14 @@ export function ProfileHero() {
           {/* Hero Image Container */}
           <div className="w-full h-full rounded-3xl overflow-hidden shadow-md relative bg-stone-200 border border-stone-200/90">
             <img 
-              src="/images/home/home_hero_01.webp" 
-              alt="Desa Air Putih" 
+              src="/images/profil/profil_hero.webp" 
+              srcSet="/images/profil/profil_hero_sm.webp 768w, /images/profil/profil_hero.webp 1536w"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              alt="Kantor Desa Air Putih" 
+              width={1536}
+              height={1024}
+              loading="eager"
+              fetchPriority="high"
               className="w-full h-full object-cover object-center scale-[1.02]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
@@ -91,7 +97,7 @@ export function ProfileHero() {
             <div className="flex flex-col">
               <span className="text-[10px] uppercase tracking-wider text-stone-400 font-mono font-medium">Jumlah Dusun</span>
               <div className="flex items-baseline gap-1">
-                <span className="font-serif text-xl sm:text-2xl font-bold text-stone-900">5</span>
+                <span className="font-serif text-xl sm:text-2xl font-bold text-stone-900">4</span>
                 <span className="text-xs text-stone-500 font-sans">Dusun</span>
               </div>
             </div>
@@ -106,7 +112,7 @@ export function ProfileHero() {
               <span className="text-[10px] uppercase tracking-wider text-stone-400 font-mono font-medium">Pembagian Rukun</span>
               <div className="flex items-baseline gap-1">
                 <span className="font-serif text-xl sm:text-2xl font-bold text-stone-900">28</span>
-                <span className="text-xs text-stone-500 font-sans">RT / 5 RW</span>
+                <span className="text-xs text-stone-500 font-sans">RT / 8 RW</span>
               </div>
             </div>
           </div>

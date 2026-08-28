@@ -12,7 +12,7 @@ export const kknDocumentation = {
       { label: "Periode", value: "Juli s.d. Agustus 2026" }
     ],
     image: {
-      src: "/images/kkn/kkn_hero_beranda4.webp",
+      src: "/images/kkn/kkn_hero.webp",
       alt: "Dokumentasi Kegiatan KKN Mahasiswa di Desa Air Putih"
     }
   },

@@ -4,9 +4,8 @@ import { villageDemographics } from '@/content/village/demographics';
 const DUSUN_DATA = [
   { name: "Dusun I Air Putih", population: "1.235" },
   { name: "Dusun II Mekar Jaya", population: "1.012" },
-  { name: "Dusun III Suka Maju", population: "865" },
-  { name: "Dusun IV Karya Bakti", population: "723" },
-  { name: "Dusun V Harapan Baru", population: "350" },
+  { name: "Dusun III Suka Maju", population: "1.045" },
+  { name: "Dusun IV Karya Bakti", population: "893" },
 ];
 
 export function ProfileData() {
@@ -52,8 +51,8 @@ export function ProfileData() {
                 <dd className="font-semibold text-stone-900">1.260 KK</dd>
               </div>
               <div className="py-2.5 flex justify-between">
-                <dt className="text-stone-500 font-sans">Dusun / RT</dt>
-                <dd className="font-semibold text-stone-900">5 Dusun / 28 RT</dd>
+                <dt className="text-stone-500 font-sans">Dusun / RT / RW</dt>
+                <dd className="font-semibold text-stone-900">4 Dusun / 8 RW / 28 RT</dd>
               </div>
               <div className="py-2.5 flex justify-between">
                 <dt className="text-stone-500 font-sans">Fasilitas Sekolah</dt>

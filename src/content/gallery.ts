@@ -14,9 +14,9 @@ export interface Photo {
 export const GALLERY_PHOTOS: Photo[] = [
   {
     "id": "01",
-    "src": "/images/gallery/collection/galeri_airputih_01.webp",
-    "alt": "Lanskap pedesaan dan panorama Desa Air Putih",
-    "caption": "Suasana asri dan lanskap hijau Desa Air Putih.",
+    "src": "/images/gallery/galeri_hero.webp",
+    "alt": "Potret kebersamaan warga dan lanskap Desa Air Putih",
+    "caption": "Potret kebersamaan dan keindahan lanskap Desa Air Putih.",
     "category": "Masyarakat",
     "date": "2026",
     "orientation": "landscape"

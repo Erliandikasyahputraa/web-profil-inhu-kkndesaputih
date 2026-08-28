@@ -8,7 +8,8 @@ import {
   Clock, 
   MapPin, 
   Maximize2,
-  X
+  X,
+  MessageCircle
 } from 'lucide-react';
 import { villageHistory } from '@/content/village/history';
 
@@ -47,6 +48,23 @@ const MAIN_SERVICES = [
   'Surat Keterangan Usaha (SKU)',
   'Surat Keterangan Tidak Mampu (SKTM)',
   'Pengurusan Akta Kelahiran & Kematian'
+];
+
+const CONTACT_PERSONS = [
+  {
+    role: "Kasi Pelayanan",
+    name: "Rusli",
+    phone: "+62 813-8351-1356",
+    waUrl: "https://wa.me/6281383511356",
+    desc: "Pelayanan administrasi kependudukan & surat pengantar desa"
+  },
+  {
+    role: "Kasi Pemerintahan",
+    name: "Abdul Muttaqin, S.T",
+    phone: "+62 823-8736-0261",
+    waUrl: "https://wa.me/6282387360261",
+    desc: "Konsultasi tata kelola, ketertiban & administrasi pemerintahan"
+  }
 ];
 
 export function PemerintahanPage() {
@@ -100,8 +118,12 @@ export function PemerintahanPage() {
               {/* Building Image Container */}
               <div className="w-full h-full rounded-3xl overflow-hidden shadow-md relative bg-stone-200 border border-stone-200/90">
                 <img 
-                  src="/images/home/home_hero_01.webp" 
+                  src="/images/pemerintahan/pemerintahan_hero.webp" 
+                  srcSet="/images/pemerintahan/pemerintahan_hero_sm.webp 768w, /images/pemerintahan/pemerintahan_hero.webp 1536w"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   alt="Kantor Desa Air Putih" 
+                  width={1536}
+                  height={1024}
                   loading="eager"
                   fetchPriority="high"
                   className="w-full h-full object-cover object-center scale-[1.02]"
@@ -275,6 +297,62 @@ export function PemerintahanPage() {
               </div>
             </div>
 
+          </div>
+
+          {/* Kontak Langsung Petugas Layanan (WhatsApp) */}
+          <div className="mt-6 bg-[#EBF3ED] border border-[#234A31]/20 rounded-2xl p-5 md:p-7 shadow-sm">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-[#234A31]/10">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-full bg-[#234A31] text-white flex items-center justify-center shrink-0">
+                  <MessageCircle className="w-4 h-4" />
+                </div>
+                <div>
+                  <h3 className="font-serif text-sm sm:text-base font-bold text-stone-900">
+                    Kontak Layanan & Informasi Cepat (WhatsApp)
+                  </h3>
+                  <p className="text-xs text-stone-600 font-sans">
+                    Hubungi langsung perangkat desa yang bertugas untuk pertanyaan dan konfirmasi administrasi:
+                  </p>
+                </div>
+              </div>
+              <span className="text-[10px] font-mono font-semibold uppercase tracking-wider text-[#234A31] bg-white px-3 py-1 rounded-full border border-[#234A31]/20 self-start sm:self-auto">
+                RESPON HARI KERJA
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {CONTACT_PERSONS.map((cp, idx) => (
+                <div 
+                  key={idx} 
+                  className="bg-white rounded-xl p-4 border border-stone-200/80 shadow-xs flex flex-col justify-between gap-3 hover:border-[#234A31]/40 transition-colors"
+                >
+                  <div>
+                    <div className="flex items-center justify-between gap-2 mb-1">
+                      <span className="text-[10px] uppercase font-mono tracking-wider font-bold text-[#234A31] bg-[#234A31]/10 px-2 py-0.5 rounded">
+                        {cp.role}
+                      </span>
+                    </div>
+                    <h4 className="font-serif text-base font-bold text-stone-900 leading-tight">
+                      {cp.name}
+                    </h4>
+                    <p className="text-xs text-stone-500 font-sans mt-0.5">
+                      {cp.desc}
+                    </p>
+                  </div>
+
+                  <a 
+                    href={cp.waUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-semibold rounded-xl shadow-xs transition-all hover:shadow group"
+                  >
+                    <MessageCircle className="w-4 h-4 fill-current" />
+                    <span>Chat WhatsApp: {cp.phone}</span>
+                    <span className="group-hover:translate-x-0.5 transition-transform">↗</span>
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
 
         </section>

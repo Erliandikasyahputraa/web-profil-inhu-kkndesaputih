@@ -93,7 +93,11 @@ export function GalleryComposition() {
               >
                 <img 
                   src={firstPhoto.src}
+                  srcSet="/images/gallery/galeri_hero_sm.webp 768w, /images/gallery/galeri_hero.webp 1280w"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   alt={firstPhoto.alt}
+                  width={1280}
+                  height={720}
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"

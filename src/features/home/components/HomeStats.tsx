@@ -18,12 +18,12 @@ const STATS = [
   },
   {
     icon: Building2,
-    value: "5 Dusun",
+    value: "4 Dusun",
     label: "Wilayah Desa"
   },
   {
     icon: Layers,
-    value: "28 RT / 5 RW",
+    value: "28 RT / 8 RW",
     label: "Pembagian Rukun"
   }
 ];
