@@ -39,55 +39,10 @@ export function KknHero() {
             Kuliah Kerja Nyata (KKN) Mahasiswa UIN Sultan Syarif Kasim Riau di Desa Air Putih, Kec. Lubuk Batu Jaya, Kab. Indragiri Hulu.
           </p>
 
-          {/* Floating Metadata Pill Bar */}
-          <div className="w-full bg-white/95 backdrop-blur-sm border border-stone-200/90 rounded-2xl p-3.5 shadow-sm mb-6">
-            <div className="grid grid-cols-4 gap-2 divide-x divide-stone-200">
-              <div className="flex items-center gap-2.5 px-2">
-                <div className="w-8 h-8 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
-                  <Calendar className="w-4 h-4" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[9px] uppercase tracking-wider text-stone-400 font-mono font-medium">Periode</span>
-                  <span className="text-xs font-semibold text-stone-800 truncate">Jul – Ags 2026</span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2.5 px-2">
-                <div className="w-8 h-8 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
-                  <MapPin className="w-4 h-4" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[9px] uppercase tracking-wider text-stone-400 font-mono font-medium">Lokasi</span>
-                  <span className="text-xs font-semibold text-stone-800 truncate">Desa Air Putih</span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2.5 px-2">
-                <div className="w-8 h-8 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
-                  <Users className="w-4 h-4" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[9px] uppercase tracking-wider text-stone-400 font-mono font-medium">Mahasiswa</span>
-                  <span className="text-xs font-semibold text-stone-800 truncate">10 Orang</span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2.5 px-2">
-                <div className="w-8 h-8 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
-                  <GraduationCap className="w-4 h-4" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[9px] uppercase tracking-wider text-stone-400 font-mono font-medium">DPL</span>
-                  <span className="text-xs font-semibold text-stone-800 truncate">1 Orang</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Primary CTA */}
           <a 
             href="#tentang-kkn"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#234A31] hover:bg-[#1B3A27] text-white text-sm font-semibold rounded-full shadow-sm hover:shadow-md transition-all group"
+            className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#234A31] hover:bg-[#1B3A27] text-white text-sm font-semibold rounded-full shadow-sm hover:shadow-md transition-all group"
           >
             <span>Tentang KKN</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -126,6 +81,67 @@ export function KknHero() {
 
         </div>
 
+      </div>
+
+      {/* Floating 4-Statistic Strip (Full Width Desktop Strip with No Overlap) */}
+      <div className="hidden md:block w-full bg-white border border-stone-200/90 rounded-2xl p-4 sm:p-5 shadow-sm mt-6 md:mt-8 relative z-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 divide-y sm:divide-y-0 sm:divide-x divide-stone-200">
+          
+          {/* Stat 1: Periode */}
+          <div className="flex items-center gap-3.5 px-2 pt-2 sm:pt-0">
+            <div className="w-10 h-10 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
+              <Calendar className="w-5 h-5" />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-[10px] uppercase tracking-wider text-stone-400 font-mono font-medium">Periode KKN</span>
+              <div className="flex items-baseline gap-1">
+                <span className="font-serif text-base lg:text-lg font-bold text-stone-900">Jul – Ags 2026</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Stat 2: Lokasi */}
+          <div className="flex items-center gap-3.5 px-2 pt-2 sm:pt-0">
+            <div className="w-10 h-10 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
+              <MapPin className="w-5 h-5" />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-[10px] uppercase tracking-wider text-stone-400 font-mono font-medium">Lokasi Pengabdian</span>
+              <div className="flex items-baseline gap-1">
+                <span className="font-serif text-base lg:text-lg font-bold text-stone-900">Desa Air Putih</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Stat 3: Mahasiswa */}
+          <div className="flex items-center gap-3.5 px-2 pt-2 sm:pt-0">
+            <div className="w-10 h-10 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
+              <Users className="w-5 h-5" />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-[10px] uppercase tracking-wider text-stone-400 font-mono font-medium">Jumlah Mahasiswa</span>
+              <div className="flex items-baseline gap-1">
+                <span className="font-serif text-base lg:text-lg font-bold text-stone-900">10</span>
+                <span className="text-xs text-stone-500 font-sans">Orang</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Stat 4: DPL */}
+          <div className="flex items-center gap-3.5 px-2 pt-2 sm:pt-0">
+            <div className="w-10 h-10 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
+              <GraduationCap className="w-5 h-5" />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-[10px] uppercase tracking-wider text-stone-400 font-mono font-medium">Dosen Pembimbing</span>
+              <div className="flex items-baseline gap-1">
+                <span className="font-serif text-base lg:text-lg font-bold text-stone-900">1</span>
+                <span className="text-xs text-stone-500 font-sans">Orang DPL</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       {/* MOBILE COMPOSITION (Specifically designed for mobile screens 375px - 414px) */}
