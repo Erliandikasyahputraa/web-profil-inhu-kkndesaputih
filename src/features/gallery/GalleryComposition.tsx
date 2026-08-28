@@ -1,5 +1,4 @@
 import { useState, useCallback, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FileText, ArrowRight } from 'lucide-react';
 import { GALLERY_PHOTOS, type Photo } from '@/content/gallery';
@@ -181,73 +180,67 @@ export function GalleryComposition() {
       </div>
 
       {/* 4. LIGHTBOX (Fully Preserved & Responsive) */}
-      <AnimatePresence>
-        {lightboxPhoto && (
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-50 bg-stone-950/95 flex flex-col"
-          >
-            {/* Lightbox Header */}
-            <div className="flex items-center justify-between p-4 md:p-6 text-white absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-black/60 to-transparent">
-              <div>
-                <p className="font-mono text-[10px] md:text-xs opacity-70 mb-0.5">
-                  Foto {String(GALLERY_PHOTOS.findIndex(p => p.id === lightboxPhoto.id) + 1).padStart(2, '0')} / {GALLERY_PHOTOS.length}
-                </p>
-                <p className="text-xs md:text-sm tracking-wider uppercase font-semibold text-emerald-300">
-                  {lightboxPhoto.category} · Desa Air Putih
-                </p>
-              </div>
-              <button 
-                onClick={closeLightbox}
-                className="p-2.5 hover:bg-stone-800 text-white rounded-full transition-colors"
-                aria-label="Tutup"
-              >
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </button>
+      {lightboxPhoto && (
+        <div 
+          className="fixed inset-0 z-50 bg-stone-950/95 flex flex-col animate-in fade-in duration-200"
+        >
+          {/* Lightbox Header */}
+          <div className="flex items-center justify-between p-4 md:p-6 text-white absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-black/60 to-transparent">
+            <div>
+              <p className="font-mono text-[10px] md:text-xs opacity-70 mb-0.5">
+                Foto {String(GALLERY_PHOTOS.findIndex(p => p.id === lightboxPhoto.id) + 1).padStart(2, '0')} / {GALLERY_PHOTOS.length}
+              </p>
+              <p className="text-xs md:text-sm tracking-wider uppercase font-semibold text-emerald-300">
+                {lightboxPhoto.category} · Desa Air Putih
+              </p>
             </div>
-
-            {/* Lightbox Content */}
-            <div 
-              className="flex-1 flex items-center justify-center p-4 md:p-12 relative w-full h-full"
+            <button 
               onClick={closeLightbox}
+              className="p-2.5 hover:bg-stone-800 text-white rounded-full transition-colors"
+              aria-label="Tutup"
             >
-              <img 
-                src={lightboxPhoto.src}
-                alt={lightboxPhoto.alt}
-                onClick={(e) => e.stopPropagation()}
-                className="max-w-full max-h-[85vh] object-contain pointer-events-auto rounded-lg shadow-2xl"
-              />
-              
-              {/* Navigation Buttons */}
-              <button 
-                onClick={(e) => { e.stopPropagation(); prevPhoto(); }}
-                className="absolute left-3 md:left-8 top-1/2 -translate-y-1/2 text-white p-3 bg-stone-900/60 hover:bg-stone-800 rounded-full transition-colors"
-                aria-label="Foto Sebelumnya"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
-              
-              <button 
-                onClick={(e) => { e.stopPropagation(); nextPhoto(); }}
-                className="absolute right-3 md:right-8 top-1/2 -translate-y-1/2 text-white p-3 bg-stone-900/60 hover:bg-stone-800 rounded-full transition-colors"
-                aria-label="Foto Selanjutnya"
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+
+          {/* Lightbox Content */}
+          <div 
+            className="flex-1 flex items-center justify-center p-4 md:p-12 relative w-full h-full"
+            onClick={closeLightbox}
+          >
+            <img 
+              src={lightboxPhoto.src}
+              alt={lightboxPhoto.alt}
+              onClick={(e) => e.stopPropagation()}
+              className="max-w-full max-h-[85vh] object-contain pointer-events-auto rounded-lg shadow-2xl"
+            />
+            
+            {/* Navigation Buttons */}
+            <button 
+              onClick={(e) => { e.stopPropagation(); prevPhoto(); }}
+              className="absolute left-3 md:left-8 top-1/2 -translate-y-1/2 text-white p-3 bg-stone-900/60 hover:bg-stone-800 rounded-full transition-colors"
+              aria-label="Foto Sebelumnya"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            
+            <button 
+              onClick={(e) => { e.stopPropagation(); nextPhoto(); }}
+              className="absolute right-3 md:right-8 top-1/2 -translate-y-1/2 text-white p-3 bg-stone-900/60 hover:bg-stone-800 rounded-full transition-colors"
+              aria-label="Foto Selanjutnya"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
