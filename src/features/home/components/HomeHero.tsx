@@ -49,7 +49,11 @@ export function HomeHero() {
           <div className="w-full h-full rounded-3xl overflow-hidden shadow-md relative bg-stone-200 border border-stone-200/90">
             <img 
               src="/images/home/home_hero_01.webp" 
+              srcSet="/images/home/home_hero_01_sm.webp 768w, /images/home/home_hero_01.webp 1920w"
+              sizes="(max-width: 768px) 100vw, 50vw"
               alt="Kantor Desa Air Putih" 
+              width={1920}
+              height={1280}
               loading="eager"
               fetchPriority="high"
               className="w-full h-full object-cover object-center scale-[1.02]"

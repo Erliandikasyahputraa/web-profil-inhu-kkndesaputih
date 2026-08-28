@@ -111,7 +111,11 @@ export function KknHero() {
           <div className="w-full h-[460px] lg:h-[520px] rounded-3xl overflow-hidden shadow-md relative bg-stone-200 border border-stone-200/80">
             <img 
               src={hero.image.src} 
+              srcSet="/images/kkn/kkn_hero_beranda4_sm.webp 768w, /images/kkn/kkn_hero_beranda4.webp 1920w"
+              sizes="(max-width: 768px) 100vw, 50vw"
               alt={hero.image.alt} 
+              width={1920}
+              height={1080}
               loading="eager"
               fetchPriority="high"
               className="w-full h-full object-cover object-center scale-[1.02]"
@@ -130,8 +134,12 @@ export function KknHero() {
         {/* Top: Hero Image in Rounded Container with Overlay Badge */}
         <div className="w-full rounded-2xl overflow-hidden aspect-[4/3] relative shadow-md bg-stone-200 border border-stone-200">
           <img 
-            src={hero.image.src} 
+            src="/images/kkn/kkn_hero_beranda4_sm.webp" 
+            srcSet="/images/kkn/kkn_hero_beranda4_sm.webp 768w, /images/kkn/kkn_hero_beranda4.webp 1920w"
+            sizes="(max-width: 768px) 100vw, 50vw"
             alt={hero.image.alt} 
+            width={768}
+            height={432}
             loading="eager"
             fetchPriority="high"
             className="w-full h-full object-cover object-center"
@@ -142,6 +150,8 @@ export function KknHero() {
                 <img 
                   src="/images/kkn/logo_kkn_airputih.webp" 
                   alt="Logo KKN" 
+                  width={20}
+                  height={20}
                   className="w-full h-full object-contain"
                 />
               </div>

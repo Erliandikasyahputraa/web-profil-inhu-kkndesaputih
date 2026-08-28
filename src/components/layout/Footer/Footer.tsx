@@ -14,8 +14,12 @@ export function Footer() {
           <Link to="/" className="flex items-center gap-3 mb-4 hover:opacity-90 transition-opacity">
             <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center p-1.5 border border-white/20 shrink-0">
               <img 
-                src="/logo_inhu.png" 
+                src="/logo_inhu.webp" 
                 alt="Lambang Kabupaten Indragiri Hulu" 
+                width={40}
+                height={28}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-contain"
               />
             </div>
