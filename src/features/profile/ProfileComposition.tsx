@@ -8,7 +8,7 @@ import { ProfileQuote } from './sections/ProfileQuote';
 
 export function ProfileComposition() {
   return (
-    <main className="bg-[#FAF8F5] min-h-screen pt-20 md:pt-28 flex flex-col">
+    <main className="bg-[#FAF8F5] min-h-screen pt-14 md:pt-16 flex flex-col">
       <ProfileHero />
       <ProfileVision />
       <ProfileAbout />

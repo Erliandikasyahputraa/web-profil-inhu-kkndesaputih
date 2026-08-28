@@ -77,10 +77,10 @@ export function PemerintahanPage() {
         description="Tata kelola pemerintahan Desa Air Putih, struktur organisasi perangkat desa, riwayat kepala desa, dan pusat layanan administrasi warga." 
       />
       
-      <main className="flex-1 flex flex-col bg-[#FAF8F5] min-h-screen pt-20 md:pt-28">
+      <main className="flex-1 flex flex-col bg-[#FAF8F5] min-h-screen pt-14 md:pt-16">
         
         {/* 1. HERO SECTION */}
-        <section className="w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 pt-4 md:pt-8 mb-16 md:mb-24">
+        <section className="w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 pt-2 md:pt-4 mb-16 md:mb-24">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[480px] lg:min-h-[540px] relative">
             

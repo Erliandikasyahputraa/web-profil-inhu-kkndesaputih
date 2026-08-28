@@ -50,7 +50,7 @@ export function GalleryComposition() {
   }, [lightboxPhoto]);
 
   return (
-    <main className="w-full bg-[#FAF8F5] text-stone-900 overflow-hidden pt-28 md:pt-36 pb-24 px-4 md:px-8 lg:px-12 xl:px-16 min-h-[70vh]">
+    <main className="w-full bg-[#FAF8F5] text-stone-900 overflow-hidden pt-16 md:pt-20 pb-24 px-4 md:px-8 lg:px-12 xl:px-16 min-h-[70vh]">
       <div className="max-w-[1400px] mx-auto w-full">
         
         {/* 1. HERO + FEATURED PHOTO #01 */}

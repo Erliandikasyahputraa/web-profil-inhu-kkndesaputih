@@ -6,7 +6,7 @@ import { HomeClosing } from './components/HomeClosing';
 
 export function HomeComposition() {
   return (
-    <main className="w-full bg-[#FAF8F5] text-stone-900 overflow-hidden pt-20 md:pt-28 flex flex-col">
+    <main className="w-full bg-[#FAF8F5] text-stone-900 overflow-hidden pt-14 md:pt-16 flex flex-col">
       <HomeHero />
       <HomeStats />
       <HomeAbout />

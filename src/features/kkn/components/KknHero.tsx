@@ -5,7 +5,7 @@ export function KknHero() {
   const { hero } = kknDocumentation;
   
   return (
-    <section className="w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 pt-4 md:pt-8 mb-20 md:mb-32">
+    <section className="w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 pt-2 md:pt-4 mb-20 md:mb-32">
       
       {/* DESKTOP & TABLET COMPOSITION */}
       <div className="hidden md:grid md:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[580px] lg:min-h-[620px] relative">

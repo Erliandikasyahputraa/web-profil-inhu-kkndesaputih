@@ -4,8 +4,8 @@ import { ROUTES } from '@/constants/routes';
 
 export function HomeHero() {
   return (
-    <section className="w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 pt-4 md:pt-8 mb-12 md:mb-20">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center relative min-h-[460px] lg:min-h-[520px]">
+    <section className="w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 pt-2 md:pt-4 mb-12 md:mb-20">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[480px] lg:min-h-[540px] relative">
         
         {/* Left Column: Heading, Subtitle & CTA */}
         <div className="md:col-span-6 lg:col-span-6 flex flex-col items-start z-10 pr-0 md:pr-4">

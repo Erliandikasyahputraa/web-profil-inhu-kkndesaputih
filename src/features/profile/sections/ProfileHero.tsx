@@ -2,7 +2,7 @@ import { Compass, Users, Home, Layers } from 'lucide-react';
 
 export function ProfileHero() {
   return (
-    <section className="w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 pt-4 md:pt-8 mb-16 md:mb-24">
+    <section className="w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 pt-2 md:pt-4 mb-16 md:mb-24">
       
       {/* Top Hero Grid */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center relative min-h-[480px] lg:min-h-[540px]">
