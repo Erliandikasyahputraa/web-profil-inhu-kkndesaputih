@@ -31,6 +31,8 @@ export function HomeClosing() {
           <img 
             src="/images/kkn/kkn_activity_05.webp" 
             alt="Bersama Warga Desa Air Putih" 
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover object-center"
           />
           {/* Gradient Masks */}
