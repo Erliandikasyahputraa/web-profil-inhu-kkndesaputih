@@ -13,11 +13,11 @@ export function KknPage() {
         title="KKN 2026 | Desa Air Putih" 
         description="Program Kuliah Kerja Nyata mahasiswa UIN Sultan Syarif Kasim Riau di Desa Air Putih." 
       />
-      <main className="flex-1 flex flex-col pt-32">
+      <main className="flex-1 flex flex-col pt-20 md:pt-28 bg-[#FAF8F5] min-h-screen">
         <KknHero />
         <KknAbout />
-        <KknPrograms />
         <KknJejakKegiatan />
+        <KknPrograms />
         <KknTeam />
         <KknClosing />
       </main>

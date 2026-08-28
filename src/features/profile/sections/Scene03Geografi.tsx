@@ -9,9 +9,13 @@ export function Scene03Geografi() {
         
         {/* OPENING & MAPS */}
         <div className="w-full max-w-5xl mb-32">
-          <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-stone-500 font-bold mb-6">
-            {villageDemographics.sectionTitle}
-          </p>
+          <div className="flex items-center gap-2 mb-4">
+            <span className="font-mono text-xs font-bold text-stone-400">§ 03</span>
+            <span className="w-6 h-px bg-stone-300"></span>
+            <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-stone-500 font-bold">
+              GEOGRAFI & DEMOGRAFI
+            </span>
+          </div>
           <h2 className="font-serif text-3xl md:text-5xl lg:text-[4rem] leading-[1.1] text-stone-900 mb-8">
             {villageDemographics.mainHeading}
           </h2>
@@ -42,9 +46,23 @@ export function Scene03Geografi() {
               title="Peta Lokasi"
             />
           </div>
-          <p className="text-stone-500 text-xs tracking-wide mb-20 md:mb-28">
+          <p className="text-stone-500 text-xs tracking-wide mb-12">
             {villageDemographics.mapCaption}
           </p>
+
+          {/* Peta Administrasi */}
+          <div className="w-full flex flex-col mb-20 md:mb-28">
+            <h3 className="text-[10px] uppercase tracking-[0.2em] text-stone-400 font-bold mb-6">
+              PETA ADMINISTRASI DESA
+            </h3>
+            <div className="w-full bg-[#EBE7E0] p-4 md:p-8 flex items-center justify-center border border-stone-200">
+              <img 
+                src="/images/profil/peta_administrasi.png" 
+                alt="Peta Administrasi Desa Air Putih" 
+                className="w-full max-w-4xl h-auto object-contain"
+              />
+            </div>
+          </div>
 
         </div>
 

@@ -1,5 +1,5 @@
 export const villageHistory = {
-  sectionTitle: "01 — SEJARAH & PEMBENTUKAN",
+  sectionTitle: "02 — SEJARAH & PEMBENTUKAN",
   mainHeading: "Berawal dari Transmigrasi.",
   paragraphs: [
     "Desa Air Putih pada mulanya bermula dari program transmigrasi dengan pola PIR perkebunan yang mulai terbentuk pada tahun 1990. Penduduk berasal dari Jawa Timur, Jawa Tengah, Jawa Barat, serta penduduk lokal yang saat itu berjumlah 640 KK.",

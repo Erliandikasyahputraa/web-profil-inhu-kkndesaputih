@@ -1,12 +1,13 @@
 import { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { GALLERY_PHOTOS, type Photo } from '@/content/gallery';
+import { kknDocumentation } from '@/content/kkn/documentation';
 
 const FEATURED_IDS = [
   '119', '016', '008', '325', 
-  '030', '173', '160', '107', 
-  '014', '209', '183', '060', 
-  '442', '012', '410', '255'
+  '014', '012', '002', '004', 
+  '1003', '489', '032', '134', 
+  '019', '197', '227', '457'
 ];
 
 export function GalleryComposition() {
@@ -52,18 +53,6 @@ export function GalleryComposition() {
     document.body.style.overflow = lightboxPhoto ? 'hidden' : 'unset';
     return () => { document.body.style.overflow = 'unset'; };
   }, [lightboxPhoto]);
-
-  const driveLinks = [
-    { title: "PROKER SMPN", subtitle: "Anti Bullying", url: "https://drive.google.com/drive/folders/1mex7HllDsr3Y7TVONnQz7DLz0dLrZT_I?usp=sharing" },
-    { title: "KARNAVAL 18 AGUSTUS", subtitle: "Desa Air Putih · 2026", url: "https://drive.google.com/drive/folders/1OFHzxBplVNaaW8z3FTbPBN43qTQr2hE7?usp=sharing" },
-    { title: "KARNAVAL 15 AGUSTUS", subtitle: "Kecamatan · 2026", url: "https://drive.google.com/drive/folders/1GORdOfTg6MamxI0Y1utuzmf_uPuojHtk?usp=sharing" },
-    { title: "SDN 010", subtitle: "Kolase Kertas", url: "https://drive.google.com/drive/folders/1GORdOfTg6MamxI0Y1utuzmf_uPuojHtk?usp=sharing" },
-    { title: "SDN 008", subtitle: "Kolase Plastik", url: "https://drive.google.com/drive/folders/11L6TUuBRar1LGqw9SY4oIxkK-M4HcBmX?usp=drive_link" },
-    { title: "TK TUNAS HARAPAN", subtitle: "Gunung Meletus", url: "https://drive.google.com/drive/folders/15aSmU-AlyKpBjD7uix5v3XJFziUXiqqg?usp=sharing" },
-    { title: "RA AL KAUTSAR", subtitle: "Gunung Meletus", url: "https://drive.google.com/drive/folders/1PparaTz7Ja6L3qsfyry2hwSm3Xj0aoZ6?usp=sharing" },
-    { title: "GORO", subtitle: "Gotong Royong", url: "https://drive.google.com/drive/folders/1468AeZUUlVpqplAzGBoZ8UJpBEFkTBah?usp=sharing" },
-    { title: "SMAN 02 LBJ", subtitle: "Dokumentasi", url: "https://drive.google.com/drive/folders/1dPMxvf-WPy3Kg1sFOXYe27yWxKpoWa2u" }
-  ];
 
   return (
     <div className="w-full bg-[#F8F6F3] min-h-[70vh] md:min-h-screen pt-32 pb-24 px-4 md:px-8 lg:px-12 xl:px-16">
@@ -118,41 +107,45 @@ export function GalleryComposition() {
         </section>
 
         {/* DOKUMENTASI KEGIATAN */}
-        <section className="mb-16 md:mb-24 max-w-3xl">
+        <section className="mb-16 md:mb-24 max-w-4xl">
           <div className="mb-12">
+            <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-stone-500 font-bold mb-2">
+              ARSIP FOTOGRAFI LENGKAP
+            </p>
             <h2 className="font-serif text-2xl md:text-3xl text-stone-900 mb-4">
-              DOKUMENTASI KEGIATAN
+              DOKUMENTASI KEGIATAN (GOOGLE DRIVE)
             </h2>
             <p className="text-stone-600 text-sm md:text-base leading-relaxed">
-              Cerita lengkap dari beberapa kegiatan dan pengabdian
-              tersimpan dalam dokumentasi masing-masing.
+              Dokumentasi resolusi penuh dan liputan lengkap dari setiap program pengabdian dan agenda desa tersimpan dalam folder Google Drive masing-masing.
             </p>
           </div>
           
           <div className="flex flex-col border-t border-stone-300">
-            {driveLinks.map((link, index) => (
+            {kknDocumentation.programs.map((program, index) => (
               <a 
                 key={index} 
-                href={link.url} 
+                href={program.link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group flex flex-col md:flex-row md:items-center justify-between py-6 border-b border-stone-300 hover:bg-stone-200/50 transition-colors px-4 -mx-4 md:px-6 md:-mx-6"
+                className="group flex flex-col md:flex-row md:items-center justify-between py-6 border-b border-stone-300/80 hover:bg-stone-200/50 transition-colors px-4 -mx-4 md:px-6 md:-mx-6"
+                aria-label={`Buka dokumentasi untuk ${program.title}`}
               >
-                <div className="flex items-start md:items-center gap-6 md:gap-12 mb-4 md:mb-0">
-                  <span className="text-[10px] md:text-xs font-mono opacity-50 font-bold pt-1 md:pt-0">
+                <div className="flex items-start md:items-center gap-6 md:gap-10 mb-3 md:mb-0">
+                  <span className="text-xs font-mono text-stone-400 font-bold pt-0.5 md:pt-0">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <div>
-                    <h3 className="text-sm md:text-base uppercase tracking-wider font-medium text-stone-900 mb-1">
-                      {link.title}
+                    <h3 className="text-sm md:text-base font-medium text-stone-900 mb-0.5">
+                      {program.title}
                     </h3>
-                    <p className="text-stone-500 font-serif text-sm">
-                      {link.subtitle}
+                    <p className="text-stone-500 text-xs md:text-sm">
+                      {program.target}
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center text-xs uppercase tracking-widest text-stone-500 group-hover:text-stone-900 transition-colors ml-12 md:ml-0">
-                  Lihat dokumentasi <span className="ml-2">→</span>
+                <div className="flex items-center text-xs uppercase tracking-widest font-semibold text-stone-600 group-hover:text-stone-900 transition-colors ml-12 md:ml-0">
+                  <span>Buka Dokumentasi</span>
+                  <span className="ml-2 transition-transform duration-200 group-hover:translate-x-1">↗</span>
                 </div>
               </a>
             ))}

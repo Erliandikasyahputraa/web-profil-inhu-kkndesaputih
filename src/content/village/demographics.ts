@@ -1,5 +1,5 @@
 export const villageDemographics = {
-  sectionTitle: "02 — DEMOGRAFI & GEOGRAFI",
+  sectionTitle: "03 — GEOGRAFI & DEMOGRAFI",
   mainHeading: "Sebuah ruang seluas 1.692 Hektar.",
   descriptions: [
     "Desa Air Putih berada di Kecamatan Lubuk Batu Jaya, Kabupaten Indragiri Hulu, Provinsi Riau. Luas wilayah daratan mencapai 1.692 Ha yang terbagi menjadi pemukiman seluas 400 Ha dan pertanian/perkebunan kelapa sawit seluas 1.292 Ha.",

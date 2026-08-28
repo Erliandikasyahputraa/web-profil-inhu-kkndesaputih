@@ -19,6 +19,11 @@ export function Scene01Identity() {
       <div className="max-w-6xl mx-auto w-full relative z-10 px-6 pt-32 pb-24 md:py-32 flex flex-col justify-end md:justify-center h-full">
         
         <div className="w-full md:w-3/5 lg:w-1/2 flex flex-col gap-6 md:gap-8 mt-auto md:mt-0">
+          <div className="flex items-center gap-2 text-[10px] md:text-xs uppercase tracking-[0.2em] text-white/60 font-mono font-bold">
+            <span>§ 01</span>
+            <span className="w-6 h-px bg-white/30"></span>
+            <span>IDENTITAS DESA</span>
+          </div>
           <h1 className="font-serif text-3xl md:text-5xl lg:text-[4.5rem] leading-[1.1] tracking-tight text-white">
             Lebih dari<br />sekadar sebuah desa,<br />ini adalah rumah<br />sebuah kehidupan.
           </h1>

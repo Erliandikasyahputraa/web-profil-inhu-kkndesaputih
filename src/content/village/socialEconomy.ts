@@ -1,5 +1,5 @@
 export const villageSocialEconomy = {
-  sectionTitle: "03 — KEHIDUPAN & EKONOMI",
+  sectionTitle: "04 — SOSIAL, EKONOMI & MASYARAKAT",
   mainHeading: "Menghidupkan ruang bersama.",
   
   pendidikan: {

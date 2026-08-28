@@ -1,69 +1,160 @@
 import { Link } from 'react-router-dom';
 import { ROUTES } from '@/constants/routes';
+import { MapPin, Phone, Mail, Clock, ExternalLink } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="w-full bg-[#1A1A1A] pt-16 md:pt-32 pb-12 px-6 flex flex-col items-center overflow-hidden">
+    <footer className="w-full bg-[#1E3A2B] text-white pt-16 md:pt-20 pb-12 px-6 lg:px-12 flex flex-col items-center overflow-hidden border-t border-[#2A4E38]">
       
-      {/* Footer Navigation & Information */}
-      <div className="w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 md:gap-8 border-t border-white/10 pt-12 md:pt-24 relative z-20">
+      {/* 5-Column Navigation & Information Grid */}
+      <div className="w-full max-w-[1400px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 relative z-20">
         
-        <div className="md:col-span-1">
-          <Link to="/" className="text-white hover:opacity-70 transition-opacity">
-            <span className="font-serif text-lg md:text-xl uppercase tracking-[0.2em] font-medium">Desa Air Putih</span>
+        {/* Col 1: Brand & Description */}
+        <div className="sm:col-span-2 lg:col-span-3 flex flex-col items-start">
+          <Link to="/" className="flex items-center gap-3 mb-4 hover:opacity-90 transition-opacity">
+            <div className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center p-1.5 border border-white/20">
+              <img 
+                src="/images/logo/logo_inhu.png" 
+                alt="Logo Indragiri Hulu" 
+                className="w-full h-full object-contain"
+                onError={(e) => {
+                  (e.target as HTMLElement).style.display = 'none';
+                }}
+              />
+            </div>
+            <div className="flex flex-col">
+              <span className="font-serif text-lg font-bold tracking-wider uppercase">Desa Air Putih</span>
+              <span className="text-[10px] text-emerald-200/70 font-mono tracking-widest uppercase">Inhu · Riau</span>
+            </div>
           </Link>
-          <p className="text-[10px] text-white/50 mt-4 leading-relaxed max-w-xs uppercase tracking-widest">
-            Sebuah dokumenter interaktif<br />di tepi Indragiri.
+          
+          <p className="text-xs text-emerald-100/75 leading-relaxed font-sans mb-6 max-w-sm">
+            Desa yang agamis, sejahtera melalui pengentasan kemiskinan, pemerataan pembangunan, dan memajukan pendidikan.
           </p>
+
+          <div className="flex items-center gap-3 text-emerald-200">
+            <a 
+              href="https://instagram.com/kkn.airputih.26" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors text-white"
+              aria-label="Instagram KKN Desa Air Putih"
+            >
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+              </svg>
+            </a>
+            <a 
+              href="https://tiktok.com/@kkn_desa.air.putih" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors text-xs font-mono font-bold text-white"
+              aria-label="TikTok KKN Desa Air Putih"
+            >
+              TT
+            </a>
+          </div>
         </div>
 
-        <div className="md:col-span-1">
-          <h4 className="text-[9px] uppercase tracking-[0.2em] text-white/40 mb-6 font-bold">Indeks</h4>
-          <ul className="flex flex-col gap-4">
-            <li><Link to={ROUTES.HOME} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">Home</Link></li>
-            <li><Link to={ROUTES.PROFIL} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">Profil Desa</Link></li>
-            <li><Link to={ROUTES.PEMERINTAHAN} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">Pemerintahan</Link></li>
-            <li><Link to={ROUTES.KKN} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">KKN</Link></li>
-            <li><Link to={ROUTES.GALERI} className="text-[11px] uppercase tracking-widest text-white/80 hover:text-white transition-colors">Galeri</Link></li>
+        {/* Col 2: Menu Index */}
+        <div className="lg:col-span-2">
+          <h4 className="text-xs uppercase tracking-[0.2em] text-emerald-300 font-mono font-bold mb-4">
+            Menu
+          </h4>
+          <ul className="flex flex-col gap-2.5">
+            <li><Link to={ROUTES.HOME} className="text-xs text-emerald-100/80 hover:text-white transition-colors">Beranda</Link></li>
+            <li><Link to={ROUTES.PROFIL} className="text-xs text-emerald-100/80 hover:text-white transition-colors">Profil Desa</Link></li>
+            <li><Link to={ROUTES.PEMERINTAHAN} className="text-xs text-emerald-100/80 hover:text-white transition-colors">Pemerintahan</Link></li>
+            <li><Link to={ROUTES.GALERI} className="text-xs text-emerald-100/80 hover:text-white transition-colors">Galeri</Link></li>
+            <li><Link to={ROUTES.KKN} className="text-xs text-emerald-100/80 hover:text-white transition-colors">KKN 2026</Link></li>
           </ul>
         </div>
 
-        <div className="md:col-span-1">
-          <h4 className="text-[9px] uppercase tracking-[0.2em] text-white/40 mb-6 font-bold">Kontak</h4>
-          <ul className="flex flex-col gap-4 text-[11px] uppercase tracking-widest text-white/80 leading-relaxed">
-            <li>Jl. Lintas Air Putih No. 01</li>
-            <li>Lubuk Batu Jaya, INHU</li>
-            <li>(+62) 812-3456-7890</li>
-            <li>desaairputih26@gmail.com</li>
-          </ul>
-        </div>
-
-        <div className="md:col-span-1">
-          <h4 className="text-[9px] uppercase tracking-[0.2em] text-white/40 mb-6 font-bold">Terhubung</h4>
-          <ul className="flex flex-col gap-4 text-[11px] uppercase tracking-widest text-white/80">
-            <li>
-              <a href="https://instagram.com/kkn.airputih.26" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                Instagram
-              </a>
+        {/* Col 3: Kontak */}
+        <div className="lg:col-span-3">
+          <h4 className="text-xs uppercase tracking-[0.2em] text-emerald-300 font-mono font-bold mb-4">
+            Kontak
+          </h4>
+          <ul className="flex flex-col gap-3 text-xs text-emerald-100/80 font-sans">
+            <li className="flex items-start gap-2.5">
+              <MapPin className="w-4 h-4 text-emerald-300 shrink-0 mt-0.5" />
+              <span>Desa Air Putih, Kec. Lubuk Batu Jaya, Kab. Indragiri Hulu, Riau</span>
             </li>
-            <li>
-              <a href="https://tiktok.com/@kkn_desa.air.putih" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                TikTok
-              </a>
+            <li className="flex items-center gap-2.5">
+              <Phone className="w-4 h-4 text-emerald-300 shrink-0" />
+              <span>(+62) 812-3456-7890</span>
+            </li>
+            <li className="flex items-center gap-2.5">
+              <Mail className="w-4 h-4 text-emerald-300 shrink-0" />
+              <span>desaairputih26@gmail.com</span>
             </li>
           </ul>
+        </div>
+
+        {/* Col 4: Jam Layanan */}
+        <div className="lg:col-span-2">
+          <h4 className="text-xs uppercase tracking-[0.2em] text-emerald-300 font-mono font-bold mb-4">
+            Jam Layanan
+          </h4>
+          <div className="flex flex-col gap-3 text-xs text-emerald-100/80 font-sans">
+            <div className="flex items-start gap-2">
+              <Clock className="w-4 h-4 text-emerald-300 shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-white">Senin – Jumat</p>
+                <p className="text-emerald-200/70">08.00 – 16.00 WIB</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-2 pl-6">
+              <div>
+                <p className="font-semibold text-white">Sabtu</p>
+                <p className="text-emerald-200/70">08.00 – 12.00 WIB</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Col 5: Lokasi Map Card */}
+        <div className="lg:col-span-2 flex flex-col">
+          <h4 className="text-xs uppercase tracking-[0.2em] text-emerald-300 font-mono font-bold mb-4">
+            Lokasi
+          </h4>
+          <div className="w-full bg-[#172D21] border border-white/15 rounded-xl p-2 flex flex-col gap-2 shadow-sm">
+            <div className="w-full h-20 rounded-lg overflow-hidden relative bg-stone-800">
+              <img 
+                src="/images/profil/peta_administrasi.png" 
+                alt="Peta Desa Air Putih" 
+                className="w-full h-full object-cover opacity-80"
+                onError={(e) => {
+                  (e.target as HTMLElement).style.display = 'none';
+                }}
+              />
+            </div>
+            <a 
+              href="https://maps.google.com/?q=Desa+Air+Putih+Lubuk+Batu+Jaya" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-full py-1.5 px-2 bg-[#234A31] hover:bg-[#2C5C3D] text-white text-[10px] font-semibold rounded-lg text-center flex items-center justify-center gap-1 transition-colors"
+            >
+              <span>Buka Google Maps</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
         </div>
 
       </div>
 
-      {/* 4. Tiny copyright */}
-      <div className="w-full max-w-6xl mx-auto mt-16 md:mt-32 flex flex-col md:flex-row justify-between items-center gap-4 border-t border-white/5 pt-8 relative z-20">
-        <p className="text-[9px] text-white/30 uppercase tracking-widest">
-          &copy; 2026 Desa Air Putih.
+      {/* Bottom Copyright Bar */}
+      <div className="w-full max-w-[1400px] mx-auto mt-6 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px] text-emerald-200/60 font-sans">
+        <p>
+          &copy; 2026 Desa Air Putih. All rights reserved.
         </p>
-        <p className="text-[9px] text-white/30 uppercase tracking-widest text-center md:text-right">
-          Dirancang sebagai dokumenter digital.
-        </p>
+        <div className="flex items-center gap-4">
+          <Link to="/kebijakan-privasi" className="hover:text-white transition-colors">Kebijakan Privasi</Link>
+          <span>·</span>
+          <Link to="/syarat-ketentuan" className="hover:text-white transition-colors">Syarat & Ketentuan</Link>
+        </div>
       </div>
 
     </footer>

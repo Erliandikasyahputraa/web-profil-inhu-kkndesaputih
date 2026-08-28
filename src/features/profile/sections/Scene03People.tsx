@@ -10,9 +10,13 @@ export function Scene03People() {
     <Section variant="default" spacing="none" className="bg-[#EBE7E0] py-16 md:py-32 px-6">
       <div className="max-w-7xl mx-auto w-full">
         
-        <p className="text-[9px] uppercase tracking-[0.2em] text-stone-500 font-bold mb-10">
-          {villageSocialEconomy.sectionTitle}
-        </p>
+        <div className="flex items-center gap-2 mb-4">
+          <span className="font-mono text-xs font-bold text-stone-400">§ 04</span>
+          <span className="w-6 h-px bg-stone-300"></span>
+          <span className="text-[9px] uppercase tracking-[0.2em] text-stone-500 font-bold">
+            SOSIAL, EKONOMI & MASYARAKAT
+          </span>
+        </div>
         <h2 className="font-serif text-3xl md:text-5xl lg:text-[3.5rem] text-stone-900 leading-[1.2] mb-16 mix-blend-multiply">
           {villageSocialEconomy.mainHeading}
         </h2>
@@ -137,9 +141,13 @@ export function Scene03People() {
 
         {/* VISI & MISI */}
         <div className="w-full mt-32 pt-24 md:pt-32 border-t border-stone-300 flex flex-col items-center text-center">
-          <p className="text-[9px] uppercase tracking-[0.2em] text-stone-500 font-bold mb-10">
-            {villageVisionMission.sectionTitle}
-          </p>
+          <div className="flex items-center gap-2 mb-6">
+            <span className="font-mono text-xs font-bold text-stone-400">§ 05</span>
+            <span className="w-6 h-px bg-stone-300"></span>
+            <span className="text-[9px] uppercase tracking-[0.2em] text-stone-500 font-bold">
+              VISI & MISI DESA
+            </span>
+          </div>
           <h2 className="font-serif text-2xl md:text-4xl lg:text-[3rem] text-stone-900 leading-[1.3] max-w-4xl mx-auto mb-16 px-4">
             {villageVisionMission.visionStatement}
           </h2>

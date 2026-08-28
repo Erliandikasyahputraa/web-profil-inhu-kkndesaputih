@@ -1,15 +1,21 @@
-import { Scene01Identity } from './sections/Scene01Identity';
-import { Scene02Beginning } from './sections/Scene02Beginning';
-import { Scene03Geografi } from './sections/Scene03Geografi';
-import { Scene03People } from './sections/Scene03People';
+import { ProfileHero } from './sections/ProfileHero';
+import { ProfileVision } from './sections/ProfileVision';
+import { ProfileAbout } from './sections/ProfileAbout';
+import { ProfileHistory } from './sections/ProfileHistory';
+import { ProfileData } from './sections/ProfileData';
+import { ProfilePotensi } from './sections/ProfilePotensi';
+import { ProfileQuote } from './sections/ProfileQuote';
 
 export function ProfileComposition() {
   return (
-    <main className="bg-[#F8F6F3] min-h-[70vh] md:min-h-screen">
-      <Scene01Identity />
-      <Scene02Beginning />
-      <Scene03Geografi />
-      <Scene03People />
+    <main className="bg-[#FAF8F5] min-h-screen pt-20 md:pt-28 flex flex-col">
+      <ProfileHero />
+      <ProfileVision />
+      <ProfileAbout />
+      <ProfileHistory />
+      <ProfileData />
+      <ProfilePotensi />
+      <ProfileQuote />
     </main>
   );
 }

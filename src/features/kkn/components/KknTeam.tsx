@@ -1,99 +1,141 @@
-import { EditorialImage } from '@/components/ui';
+import { useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const TEAM_MEMBERS = [
   {
-    role: "DOSEN PEMBIMBING LAPANGAN",
-    members: [
-      { name: "Dr. Muslim, S.Ag., S.H., M.Hum", image: "/images/gallery/landscape/gallery_landscape_10.webp" }
-    ]
+    name: "Dr. Muslim, S.Ag., S.H., M.Hum",
+    role: "Dosen Pembimbing Lapangan",
+    image: "/images/kkn/kkn_team_dpl.jpg"
   },
   {
-    role: "KOORDINATOR DESA",
-    members: [
-      { name: "Rufai Asyafi’i", image: "/images/gallery/landscape/gallery_landscape_09.webp" }
-    ]
+    name: "Rufai Asyafi’i",
+    role: "Koordes Desa",
+    image: "/images/kkn/kkn_team_rufai.jpg"
   },
   {
-    role: "SEKRETARIS",
-    members: [
-      { name: "Putri Halimah Tusyadiah", image: "/images/gallery/landscape/gallery_landscape_04.webp" },
-      { name: "Toni Syariffudin", image: "/images/supporting/supporting_01.webp" }
-    ]
+    name: "Putri Halimah Tusyadiah",
+    role: "Sekretaris 1",
+    image: "/images/kkn/kkn_team_putri.jpg"
   },
   {
-    role: "BENDAHARA",
-    members: [
-      { name: "Inaayah Nazhifah", image: "/images/kkn/kkn_activity_03.webp" }
-    ]
+    name: "Toni Syariffudin",
+    role: "Sekretaris 2",
+    image: "/images/kkn/kkn_team_toni.jpg"
   },
   {
-    role: "HUBUNGAN MASYARAKAT",
-    members: [
-      { name: "Deffarul Syahroyza", image: "/images/kkn/kkn_activity_07.webp" },
-      { name: "Alya Fitri Herianti", image: "/images/profil/profil_content_07.webp" }
-    ]
+    name: "Inaayah Nazhifah",
+    role: "Bendahara",
+    image: "/images/kkn/kkn_team_inaayah.jpg"
   },
   {
-    role: "PERLENGKAPAN",
-    members: [
-      { name: "Aisyah Ahmad", image: "/images/kkn/kkn_activity_08.webp" }
-    ]
+    name: "Deffarul Syahroyza",
+    role: "Humas 1",
+    image: "/images/kkn/kkn_team_deffarul.jpg"
   },
   {
-    role: "MEDIA KOMUNIKASI",
-    members: [
-      { name: "Marsya Sofianti", image: "/images/profil/profil_content_08.webp" },
-      { name: "Silvia", image: "/images/profil/profil_content_09.webp" },
-      { name: "Elsa Yuni Rahmawati", image: "/images/profil/profil_content_06.webp" }
-    ]
+    name: "Alya Fitri Herianti",
+    role: "Humas 2",
+    image: "/images/kkn/kkn_team_alya.jpg"
+  },
+  {
+    name: "Aisyah Ahmad",
+    role: "Perlengkapan",
+    image: "/images/kkn/kkn_team_aisyah.jpg"
+  },
+  {
+    name: "Marsya Sofianti",
+    role: "Medkom 1",
+    image: "/images/kkn/kkn_team_marsya.jpg"
+  },
+  {
+    name: "Silvia",
+    role: "Medkom 2",
+    image: "/images/kkn/kkn_team_silvi.jpg"
+  },
+  {
+    name: "Elsa Yuni Rahmawati",
+    role: "Medkom 3",
+    image: "/images/kkn/kkn_team_elsa.jpg"
   }
 ];
 
 export function KknTeam() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const handleScroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 260;
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section className="w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 mb-20 md:mb-32">
-      <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-start">
-        <div className="w-full md:w-3/12 md:sticky md:top-32">
-          <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-stone-500 font-bold mb-1">
-            03
-          </p>
-          <p className="font-serif text-2xl text-stone-900">
-            TIM KKN
-          </p>
-        </div>
-        
-        <div className="w-full md:w-9/12 lg:w-9/12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-            {TEAM_MEMBERS.map((group, index) => (
-              <div key={index} className="flex flex-col">
-                <h4 className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-stone-400 font-bold mb-4 border-b border-stone-200 pb-2">
-                  {group.role}
-                </h4>
-                <div className="flex flex-col gap-6">
-                  {group.members.map((member, mIndex) => (
-                    <div key={mIndex} className="flex items-center gap-4">
-                      {/* Temporary Image Placeholder */}
-                      <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 bg-[#E8E1D7] flex items-center justify-center border border-stone-300 overflow-hidden relative">
-                        <EditorialImage 
-                          image={{ src: member.image, alt: member.name }} 
-                          preset="portrait"
-                          overlay="none"
-                          className="w-full h-full object-cover absolute inset-0"
-                        />
-                      </div>
-                      <div className="flex flex-col">
-                        <span className="font-serif text-lg md:text-xl text-stone-900 leading-snug">
-                          {member.name}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
+      
+      {/* Section Header with Navigation Controls */}
+      <div className="flex items-end justify-between mb-8 md:mb-12">
+        <div>
+          <div className="inline-flex items-center px-3 py-1 bg-[#234A31]/10 text-[#234A31] text-xs font-semibold rounded-full uppercase tracking-wider mb-3">
+            TIM KKN 2026
           </div>
+          <h2 className="font-serif text-3xl sm:text-4xl text-stone-900 font-bold">
+            Bersama Membangun Desa Air Putih
+          </h2>
+        </div>
+
+        {/* Navigation Arrows */}
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => handleScroll('left')}
+            className="w-10 h-10 rounded-full border border-stone-300 hover:border-stone-800 bg-white hover:bg-stone-50 text-stone-700 flex items-center justify-center transition-colors shadow-sm"
+            aria-label="Previous Member"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            onClick={() => handleScroll('right')}
+            className="w-10 h-10 rounded-full border border-stone-300 hover:border-stone-800 bg-white hover:bg-stone-50 text-stone-700 flex items-center justify-center transition-colors shadow-sm"
+            aria-label="Next Member"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
+
+      {/* Horizontal Rail of 11 Members */}
+      <div 
+        ref={scrollRef}
+        className="flex gap-4 md:gap-5 overflow-x-auto pb-6 pt-1 scrollbar-none snap-x snap-mandatory scroll-smooth -mx-4 px-4 md:mx-0 md:px-0"
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+      >
+        {TEAM_MEMBERS.map((member, idx) => (
+          <div 
+            key={idx}
+            className="bg-white border border-stone-200/90 rounded-2xl p-3 shadow-sm hover:shadow-md transition-all flex flex-col items-center text-center shrink-0 w-[160px] sm:w-[180px] md:w-[200px] snap-center group"
+          >
+            {/* Arched Portrait Container */}
+            <div className="w-full aspect-[4/5] rounded-xl overflow-hidden bg-[#EBE7E0] relative">
+              <img 
+                src={member.image} 
+                alt={member.name}
+                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+
+            {/* Member Details */}
+            <h3 className="font-serif text-xs sm:text-sm font-bold text-stone-900 mt-3 leading-snug line-clamp-2 px-1">
+              {member.name}
+            </h3>
+            <p className="text-[10px] sm:text-xs text-stone-500 font-sans mt-0.5 uppercase tracking-wide line-clamp-1">
+              {member.role}
+            </p>
+          </div>
+        ))}
+      </div>
+
     </section>
   );
 }

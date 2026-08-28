@@ -1,45 +1,204 @@
-
+import { Calendar, MapPin, Users, GraduationCap, ArrowRight, Sparkles } from 'lucide-react';
 import { kknDocumentation } from '@/content/kkn/documentation';
 
 export function KknHero() {
   const { hero } = kknDocumentation;
   
   return (
-    <section className="w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 mb-20 md:mb-32">
-      <div className="flex flex-col items-center text-center pt-8 md:pt-16 pb-12 md:pb-16">
-        <p className="text-[10px] md:text-xs uppercase tracking-[0.2em] text-stone-500 font-bold mb-6">
-          {hero.tagline}
-        </p>
-        <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-stone-900 mb-6 leading-tight">
-          {hero.title}
-        </h1>
-        <p className="font-serif text-xl md:text-2xl text-stone-800 italic mb-6 max-w-lg mx-auto">
-          {hero.quote}
-        </p>
-        <p className="text-stone-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto mb-10">
-          {hero.description}
-        </p>
+    <section className="w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 pt-4 md:pt-8 mb-20 md:mb-32">
+      
+      {/* DESKTOP & TABLET COMPOSITION */}
+      <div className="hidden md:grid md:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[580px] lg:min-h-[620px] relative">
         
-        <div className="flex flex-col gap-2 text-[10px] md:text-xs uppercase tracking-[0.15em] text-stone-600 w-full max-w-4xl border-t border-b border-stone-200 py-4">
-          <div className="flex flex-col md:flex-row justify-between w-full">
-            <span><strong>{hero.details[0].label}:</strong> {hero.details[0].value}</span>
-            <span><strong>{hero.details[1].label}:</strong> {hero.details[1].value}</span>
-            <span><strong>{hero.details[2].label}:</strong> {hero.details[2].value}</span>
+        {/* Left Column: Editorial Storytelling */}
+        <div className="md:col-span-6 lg:col-span-6 flex flex-col items-start z-10 pr-2 lg:pr-6">
+          
+          {/* Green Badge */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#234A31] text-white text-xs font-semibold rounded-full tracking-wide mb-6 shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>+ KKN TEMATIK 2026</span>
           </div>
-          <div className="flex flex-col md:flex-row justify-center md:gap-12 w-full mt-2">
-            <span><strong>{hero.details[3].label}:</strong> {hero.details[3].value}</span>
-            <span><strong>{hero.details[4].label}:</strong> {hero.details[4].value}</span>
+
+          {/* Editorial Display Heading */}
+          <h1 className="font-serif text-4xl lg:text-[3.6rem] xl:text-[4rem] text-stone-900 leading-[1.12] tracking-tight font-bold mb-6">
+            Mengabdi Dengan Hati,<br />
+            <span className="text-[#234A31]">Menginspirasi Dengan Aksi.</span>
+          </h1>
+          
+          {/* Subtitle / Description */}
+          <p className="text-stone-600 text-sm lg:text-base leading-relaxed max-w-lg mb-8 font-sans">
+            Kuliah Kerja Nyata (KKN) Mahasiswa UIN Sultan Syarif Kasim Riau di Desa Air Putih, Kec. Lubuk Batu Jaya, Kab. Indragiri Hulu.
+          </p>
+
+          {/* Floating Metadata Pill Bar */}
+          <div className="w-full bg-white/95 backdrop-blur-sm border border-stone-200/90 rounded-2xl p-4 shadow-sm mb-8">
+            <div className="grid grid-cols-4 gap-2 divide-x divide-stone-200">
+              <div className="flex items-center gap-2.5 px-2">
+                <div className="w-8 h-8 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
+                  <Calendar className="w-4 h-4" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[9px] uppercase tracking-wider text-stone-400 font-mono font-medium">Periode</span>
+                  <span className="text-xs font-semibold text-stone-800 truncate">Jul – Ags 2026</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2.5 px-2">
+                <div className="w-8 h-8 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
+                  <MapPin className="w-4 h-4" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[9px] uppercase tracking-wider text-stone-400 font-mono font-medium">Lokasi</span>
+                  <span className="text-xs font-semibold text-stone-800 truncate">Desa Air Putih</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2.5 px-2">
+                <div className="w-8 h-8 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
+                  <Users className="w-4 h-4" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[9px] uppercase tracking-wider text-stone-400 font-mono font-medium">Mahasiswa</span>
+                  <span className="text-xs font-semibold text-stone-800 truncate">10 Orang</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2.5 px-2">
+                <div className="w-8 h-8 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
+                  <GraduationCap className="w-4 h-4" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[9px] uppercase tracking-wider text-stone-400 font-mono font-medium">DPL</span>
+                  <span className="text-xs font-semibold text-stone-800 truncate">1 Orang</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Primary CTA */}
+          <a 
+            href="#tentang-kkn"
+            className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#234A31] hover:bg-[#1B3A27] text-white text-sm font-semibold rounded-full shadow-sm hover:shadow-md transition-all group"
+          >
+            <span>Tentang KKN</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </a>
+
+        </div>
+
+        {/* Right Column: Hero Photography with Organic Mask & Botanical Accent */}
+        <div className="md:col-span-6 lg:col-span-6 relative h-full flex items-center justify-center">
+          
+          {/* Botanical Line Illustration (SVG) */}
+          <div className="absolute -bottom-8 -left-12 w-36 h-36 pointer-events-none opacity-25 text-[#234A31] z-20">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full">
+              <path d="M20,90 Q40,50 80,20 M40,65 Q60,60 70,45 M30,78 Q50,80 65,70 M60,35 Q75,30 85,15" strokeLinecap="round" />
+              <path d="M45,60 C50,55 55,55 60,60 C55,65 50,65 45,60 Z" fill="currentColor" fillOpacity="0.3" />
+              <path d="M65,40 C70,35 75,35 80,40 C75,45 70,45 65,40 Z" fill="currentColor" fillOpacity="0.3" />
+            </svg>
+          </div>
+
+          {/* Image Container with Organic Rounded Edge */}
+          <div className="w-full h-[460px] lg:h-[520px] rounded-3xl overflow-hidden shadow-md relative bg-stone-200 border border-stone-200/80">
+            <img 
+              src={hero.image.src} 
+              alt={hero.image.alt} 
+              className="w-full h-full object-cover object-center scale-[1.02]"
+            />
+            {/* Subtle Gradient vignette on left/bottom for smooth visual integration */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* MOBILE COMPOSITION (Specifically designed for mobile screens 375px - 414px) */}
+      <div className="flex flex-col md:hidden gap-6">
+        
+        {/* Top: Hero Image in Rounded Container with Overlay Badge */}
+        <div className="w-full rounded-2xl overflow-hidden aspect-[4/3] relative shadow-md bg-stone-200 border border-stone-200">
+          <img 
+            src={hero.image.src} 
+            alt={hero.image.alt} 
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute top-3 left-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#234A31]/90 backdrop-blur-md text-white text-[10px] font-semibold rounded-full">
+              <Sparkles className="w-3 h-3 text-emerald-300" />
+              <span>KKN TEMATIK 2026</span>
+            </div>
           </div>
         </div>
+
+        {/* Middle: Title & Description */}
+        <div className="flex flex-col items-start px-1">
+          <h1 className="font-serif text-3xl text-stone-900 leading-tight font-bold mb-3">
+            Mengabdi Dengan Hati,<br />
+            <span className="text-[#234A31]">Menginspirasi Dengan Aksi.</span>
+          </h1>
+          <p className="text-stone-600 text-xs leading-relaxed font-sans mb-5">
+            Kuliah Kerja Nyata (KKN) Mahasiswa UIN Sultan Syarif Kasim Riau di Desa Air Putih, Kec. Lubuk Batu Jaya, Kab. Indragiri Hulu.
+          </p>
+
+          {/* Mobile Metadata Card Grid */}
+          <div className="w-full bg-white border border-stone-200 rounded-xl p-3.5 shadow-sm mb-5">
+            <div className="grid grid-cols-2 gap-3">
+              <div className="flex items-center gap-2">
+                <div className="w-7 h-7 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
+                  <Calendar className="w-3.5 h-3.5" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[8px] uppercase tracking-wider text-stone-400 font-mono">Periode</span>
+                  <span className="text-[11px] font-semibold text-stone-800">Jul – Ags 2026</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <div className="w-7 h-7 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
+                  <MapPin className="w-3.5 h-3.5" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[8px] uppercase tracking-wider text-stone-400 font-mono">Lokasi</span>
+                  <span className="text-[11px] font-semibold text-stone-800">Desa Air Putih</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <div className="w-7 h-7 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
+                  <Users className="w-3.5 h-3.5" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[8px] uppercase tracking-wider text-stone-400 font-mono">Mahasiswa</span>
+                  <span className="text-[11px] font-semibold text-stone-800">10 Orang</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <div className="w-7 h-7 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
+                  <GraduationCap className="w-3.5 h-3.5" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[8px] uppercase tracking-wider text-stone-400 font-mono">DPL</span>
+                  <span className="text-[11px] font-semibold text-stone-800">1 Orang</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Full-width CTA Button */}
+          <a 
+            href="#tentang-kkn"
+            className="w-full text-center py-3 bg-[#234A31] text-white text-xs font-semibold rounded-full shadow-sm flex items-center justify-center gap-2"
+          >
+            <span>Tentang KKN</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </a>
+
+        </div>
+
       </div>
-      
-      <div className="w-full relative bg-stone-200 overflow-hidden" style={{ aspectRatio: '16/9', maxHeight: '50vh' }}>
-        <img 
-          src={hero.image.src} 
-          alt={hero.image.alt} 
-          className="w-full h-[50vh] md:h-full object-cover"
-        />
-      </div>
+
     </section>
   );
 }
