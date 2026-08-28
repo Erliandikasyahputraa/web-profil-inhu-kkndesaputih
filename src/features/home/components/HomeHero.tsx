@@ -34,7 +34,7 @@ export function HomeHero() {
         </div>
 
         {/* Right Column: Hero Visual with Organic Curve & Botanical Line Art */}
-        <div className="md:col-span-6 lg:col-span-6 relative h-[300px] sm:h-[380px] md:h-[460px] flex items-center justify-center">
+        <div className="md:col-span-6 lg:col-span-6 relative flex items-center justify-center">
           
           {/* Subtle Botanical SVG Line Art */}
           <div className="absolute -top-6 -left-8 w-32 h-32 pointer-events-none opacity-25 text-[#234A31] z-20">
@@ -45,8 +45,8 @@ export function HomeHero() {
             </svg>
           </div>
 
-          {/* Hero Image Container */}
-          <div className="w-full h-full rounded-3xl overflow-hidden shadow-md relative bg-stone-200 border border-stone-200/90">
+          {/* Hero Image Container with Natural 3:2 Proportion */}
+          <div className="w-full aspect-[3/2] rounded-3xl overflow-hidden shadow-md relative bg-stone-200 border border-stone-200/90">
             <img 
               src="/images/home/home_hero_01.webp" 
               srcSet="/images/home/home_hero_01_sm.webp 768w, /images/home/home_hero_01.webp 1536w"
@@ -56,9 +56,9 @@ export function HomeHero() {
               height={1024}
               loading="eager"
               fetchPriority="high"
-              className="w-full h-full object-cover object-center scale-[1.02]"
+              className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent pointer-events-none" />
           </div>
 
         </div>

@@ -8,10 +8,10 @@ export function KknHero() {
     <section className="w-full max-w-[1400px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 pt-2 md:pt-4 mb-20 md:mb-32">
       
       {/* DESKTOP & TABLET COMPOSITION */}
-      <div className="hidden md:grid md:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[580px] lg:min-h-[620px] relative">
+      <div className="hidden md:grid md:grid-cols-12 gap-8 lg:gap-10 items-center relative">
         
         {/* Left Column: Editorial Storytelling */}
-        <div className="md:col-span-6 lg:col-span-6 flex flex-col items-start z-10 pr-2 lg:pr-6">
+        <div className="md:col-span-6 lg:col-span-5 flex flex-col items-start z-10 pr-2 lg:pr-4">
           
           {/* Official KKN Logo & Green Badge */}
           <div className="flex items-center gap-3.5 mb-6">
@@ -29,18 +29,18 @@ export function KknHero() {
           </div>
 
           {/* Editorial Display Heading */}
-          <h1 className="font-serif text-4xl lg:text-[3.6rem] xl:text-[4rem] text-stone-900 leading-[1.12] tracking-tight font-bold mb-6">
+          <h1 className="font-serif text-3xl lg:text-[3.2rem] xl:text-[3.6rem] text-stone-900 leading-[1.12] tracking-tight font-bold mb-5">
             Mengabdi Dengan Hati,<br />
             <span className="text-[#234A31]">Menginspirasi Dengan Aksi.</span>
           </h1>
           
           {/* Subtitle / Description */}
-          <p className="text-stone-600 text-sm lg:text-base leading-relaxed max-w-lg mb-8 font-sans">
+          <p className="text-stone-600 text-sm lg:text-base leading-relaxed max-w-lg mb-6 font-sans">
             Kuliah Kerja Nyata (KKN) Mahasiswa UIN Sultan Syarif Kasim Riau di Desa Air Putih, Kec. Lubuk Batu Jaya, Kab. Indragiri Hulu.
           </p>
 
           {/* Floating Metadata Pill Bar */}
-          <div className="w-full bg-white/95 backdrop-blur-sm border border-stone-200/90 rounded-2xl p-4 shadow-sm mb-8">
+          <div className="w-full bg-white/95 backdrop-blur-sm border border-stone-200/90 rounded-2xl p-3.5 shadow-sm mb-6">
             <div className="grid grid-cols-4 gap-2 divide-x divide-stone-200">
               <div className="flex items-center gap-2.5 px-2">
                 <div className="w-8 h-8 rounded-full bg-[#234A31]/10 text-[#234A31] flex items-center justify-center shrink-0">
@@ -87,7 +87,7 @@ export function KknHero() {
           {/* Primary CTA */}
           <a 
             href="#tentang-kkn"
-            className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#234A31] hover:bg-[#1B3A27] text-white text-sm font-semibold rounded-full shadow-sm hover:shadow-md transition-all group"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#234A31] hover:bg-[#1B3A27] text-white text-sm font-semibold rounded-full shadow-sm hover:shadow-md transition-all group"
           >
             <span>Tentang KKN</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -95,8 +95,8 @@ export function KknHero() {
 
         </div>
 
-        {/* Right Column: Hero Photography with Organic Mask & Botanical Accent */}
-        <div className="md:col-span-6 lg:col-span-6 relative h-full flex items-center justify-center">
+        {/* Right Column: Hero Photography with Natural 16:9 Proportion */}
+        <div className="md:col-span-6 lg:col-span-7 relative flex items-center justify-center">
           
           {/* Botanical Line Illustration (SVG) */}
           <div className="absolute -bottom-8 -left-12 w-36 h-36 pointer-events-none opacity-25 text-[#234A31] z-20">
@@ -107,21 +107,21 @@ export function KknHero() {
             </svg>
           </div>
 
-          {/* Image Container with Organic Rounded Edge */}
-          <div className="w-full h-[460px] lg:h-[520px] rounded-3xl overflow-hidden shadow-md relative bg-stone-200 border border-stone-200/80">
+          {/* Image Container with Natural 16:9 Aspect Ratio */}
+          <div className="w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-md relative bg-stone-200 border border-stone-200/80">
             <img 
               src={hero.image.src} 
               srcSet="/images/kkn/kkn_hero_sm.webp 768w, /images/kkn/kkn_hero.webp 1280w"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 60vw"
               alt={hero.image.alt} 
               width={1280}
               height={720}
               loading="eager"
               fetchPriority="high"
-              className="w-full h-full object-cover object-center scale-[1.02]"
+              className="w-full h-full object-cover object-center"
             />
-            {/* Subtle Gradient vignette on left/bottom for smooth visual integration */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+            {/* Subtle Gradient vignette on bottom for smooth visual integration */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-transparent pointer-events-none" />
           </div>
 
         </div>
@@ -131,8 +131,8 @@ export function KknHero() {
       {/* MOBILE COMPOSITION (Specifically designed for mobile screens 375px - 414px) */}
       <div className="flex flex-col md:hidden gap-6">
         
-        {/* Top: Hero Image in Rounded Container with Overlay Badge */}
-        <div className="w-full rounded-2xl overflow-hidden aspect-[4/3] relative shadow-md bg-stone-200 border border-stone-200">
+        {/* Top: Hero Image in Rounded Container with Natural 16:9 Aspect Ratio */}
+        <div className="w-full rounded-2xl overflow-hidden aspect-[16/9] relative shadow-md bg-stone-200 border border-stone-200">
           <img 
             src="/images/kkn/kkn_hero_sm.webp" 
             srcSet="/images/kkn/kkn_hero_sm.webp 768w, /images/kkn/kkn_hero.webp 1280w"
