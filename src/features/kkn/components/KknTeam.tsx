@@ -5,57 +5,57 @@ const TEAM_MEMBERS = [
   {
     name: "Dr. Muslim, S.Ag., S.H., M.Hum",
     role: "Dosen Pembimbing Lapangan",
-    image: "/images/kkn/kkn_team_dpl.jpg"
+    image: "/images/kkn/kkn_team_dpl.webp"
   },
   {
     name: "Rufai Asyafi’i",
     role: "Koordes Desa",
-    image: "/images/kkn/kkn_team_rufai.jpg"
+    image: "/images/kkn/kkn_team_rufai.webp"
   },
   {
     name: "Putri Halimah Tusyadiah",
     role: "Sekretaris 1",
-    image: "/images/kkn/kkn_team_putri.jpg"
+    image: "/images/kkn/kkn_team_putri.webp"
   },
   {
     name: "Toni Syariffudin",
     role: "Sekretaris 2",
-    image: "/images/kkn/kkn_team_toni.jpg"
+    image: "/images/kkn/kkn_team_toni.webp"
   },
   {
     name: "Inaayah Nazhifah",
     role: "Bendahara",
-    image: "/images/kkn/kkn_team_inaayah.jpg"
+    image: "/images/kkn/kkn_team_inaayah.webp"
   },
   {
     name: "Deffarul Syahroyza",
     role: "Humas 1",
-    image: "/images/kkn/kkn_team_deffarul.jpg"
+    image: "/images/kkn/kkn_team_deffarul.webp"
   },
   {
     name: "Alya Fitri Herianti",
     role: "Humas 2",
-    image: "/images/kkn/kkn_team_alya.jpg"
+    image: "/images/kkn/kkn_team_alya.webp"
   },
   {
     name: "Aisyah Ahmad",
     role: "Perlengkapan",
-    image: "/images/kkn/kkn_team_aisyah.jpg"
+    image: "/images/kkn/kkn_team_aisyah.webp"
   },
   {
     name: "Marsya Sofianti",
     role: "Medkom 1",
-    image: "/images/kkn/kkn_team_marsya.jpg"
+    image: "/images/kkn/kkn_team_marsya.webp"
   },
   {
     name: "Silvia",
     role: "Medkom 2",
-    image: "/images/kkn/kkn_team_silvi.jpg"
+    image: "/images/kkn/kkn_team_silvi.webp"
   },
   {
     name: "Elsa Yuni Rahmawati",
     role: "Medkom 3",
-    image: "/images/kkn/kkn_team_elsa.jpg"
+    image: "/images/kkn/kkn_team_elsa.webp"
   }
 ];
 

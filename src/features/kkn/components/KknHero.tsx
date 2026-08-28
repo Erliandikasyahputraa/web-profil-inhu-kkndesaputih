@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Users, GraduationCap, ArrowRight, Sparkles } from 'lucide-react';
+import { Calendar, MapPin, Users, GraduationCap, ArrowRight } from 'lucide-react';
 import { kknDocumentation } from '@/content/kkn/documentation';
 
 export function KknHero() {
@@ -13,10 +13,19 @@ export function KknHero() {
         {/* Left Column: Editorial Storytelling */}
         <div className="md:col-span-6 lg:col-span-6 flex flex-col items-start z-10 pr-2 lg:pr-6">
           
-          {/* Green Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#234A31] text-white text-xs font-semibold rounded-full tracking-wide mb-6 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span>+ KKN TEMATIK 2026</span>
+          {/* Official KKN Logo & Green Badge */}
+          <div className="flex items-center gap-3.5 mb-6">
+            <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#234A31] shadow-sm bg-white p-0.5 shrink-0">
+              <img 
+                src="/images/kkn/logo_kkn_airputih.webp" 
+                alt="Logo Resmi KKN Tematik Desa Air Putih 2026" 
+                className="w-full h-full object-contain rounded-full"
+              />
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#234A31] text-white text-xs font-semibold rounded-full tracking-wide shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>KKN TEMATIK 2026</span>
+            </div>
           </div>
 
           {/* Editorial Display Heading */}
@@ -103,6 +112,8 @@ export function KknHero() {
             <img 
               src={hero.image.src} 
               alt={hero.image.alt} 
+              loading="eager"
+              fetchPriority="high"
               className="w-full h-full object-cover object-center scale-[1.02]"
             />
             {/* Subtle Gradient vignette on left/bottom for smooth visual integration */}
@@ -121,11 +132,19 @@ export function KknHero() {
           <img 
             src={hero.image.src} 
             alt={hero.image.alt} 
+            loading="eager"
+            fetchPriority="high"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute top-3 left-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#234A31]/90 backdrop-blur-md text-white text-[10px] font-semibold rounded-full">
-              <Sparkles className="w-3 h-3 text-emerald-300" />
+            <div className="inline-flex items-center gap-2 pl-1 pr-3 py-1 bg-[#234A31]/95 backdrop-blur-md text-white text-[10px] font-semibold rounded-full border border-white/20 shadow-md">
+              <div className="w-5 h-5 rounded-full overflow-hidden bg-white shrink-0">
+                <img 
+                  src="/images/kkn/logo_kkn_airputih.webp" 
+                  alt="Logo KKN" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <span>KKN TEMATIK 2026</span>
             </div>
           </div>

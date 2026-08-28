@@ -57,8 +57,10 @@ export function Scene03Geografi() {
             </h3>
             <div className="w-full bg-[#EBE7E0] p-4 md:p-8 flex items-center justify-center border border-stone-200">
               <img 
-                src="/images/profil/peta_administrasi.png" 
+                src="/images/profil/peta_administrasi.webp" 
                 alt="Peta Administrasi Desa Air Putih" 
+                loading="lazy"
+                decoding="async"
                 className="w-full max-w-4xl h-auto object-contain"
               />
             </div>

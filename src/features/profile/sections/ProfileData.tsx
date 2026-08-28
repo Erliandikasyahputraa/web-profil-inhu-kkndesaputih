@@ -149,8 +149,10 @@ export function ProfileData() {
 
         <div className="w-full bg-[#EBE7E0] rounded-2xl overflow-hidden border border-stone-200 p-2 sm:p-4 flex items-center justify-center">
           <img 
-            src="/images/profil/peta_administrasi.png" 
+            src="/images/profil/peta_administrasi.webp" 
             alt="Peta Administrasi Desa Air Putih" 
+            loading="lazy"
+            decoding="async"
             className="w-full max-w-4xl h-auto object-contain rounded-lg shadow-sm"
           />
         </div>

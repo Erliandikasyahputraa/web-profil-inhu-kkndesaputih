@@ -5,35 +5,35 @@ const POTENSI_LIST = [
     icon: Sprout,
     title: "Pertanian",
     description: "Sektor utama dengan komoditas kelapa sawit, palawija, dan aneka tanaman pekarangan mandiri.",
-    image: "/images/kkn/kkn_activity_03.webp",
+    image: "/images/profil/potensi_pertanian.webp",
     alt: "Pertanian Desa Air Putih"
   },
   {
     icon: Trees,
     title: "Perkebunan",
     description: "Pengelolaan kebun kelapa sawit seluas 1.292 Ha dan karet sebagai penopang ekonomi keluarga.",
-    image: "/images/background/background_01.webp",
+    image: "/images/profil/potensi_perkebunan.webp",
     alt: "Perkebunan Desa Air Putih"
   },
   {
     icon: Fish,
     title: "Perikanan",
     description: "Pemanfaatan kolam ikan air tawar keluarga untuk ketahanan pangan dan nilai tambah ekonomi.",
-    image: "/images/home/bersamawarga10.webp",
-    alt: "Perikanan & Aktivitas Warga"
+    image: "/images/profil/potensi_perikanan.webp",
+    alt: "Perikanan Air Tawar Desa Air Putih"
   },
   {
     icon: Landmark,
     title: "Pariwisata Alam",
     description: "Keasrian lanskap alam pedesaan dan suasana guyub yang menghadirkan ketenangan bagi pendatang.",
-    image: "/images/gallery/landscape/gallery_landscape_09.webp",
+    image: "/images/profil/potensi_pariwisata.webp",
     alt: "Pariwisata Alam Desa Air Putih"
   },
   {
     icon: Users,
     title: "Gotong Royong",
     description: "Nilai luhur kebersamaan, toleransi, dan kerja bakti yang menjadi kekuatan penggerak pembangunan.",
-    image: "/images/kkn/kkn_activity_07.webp",
+    image: "/images/profil/potensi_gotong_royong.webp",
     alt: "Gotong Royong Warga Desa"
   }
 ];

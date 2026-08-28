@@ -1,5 +1,6 @@
 export { HomeComposition } from './HomeComposition';
-export { HeroSection } from './sections/Hero';
-export { IdentitasDesa } from './sections/IdentitasDesa';
-export { HistorySection } from './sections/History';
-export { KehidupanDesaSection } from './sections/KehidupanDesa';
+export { HomeHero } from './components/HomeHero';
+export { HomeStats } from './components/HomeStats';
+export { HomeAbout } from './components/HomeAbout';
+export { HomeQuickAccess } from './components/HomeQuickAccess';
+export { HomeClosing } from './components/HomeClosing';

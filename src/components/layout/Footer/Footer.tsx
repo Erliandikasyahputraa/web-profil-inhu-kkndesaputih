@@ -12,24 +12,21 @@ export function Footer() {
         {/* Col 1: Brand & Description */}
         <div className="sm:col-span-2 lg:col-span-3 flex flex-col items-start">
           <Link to="/" className="flex items-center gap-3 mb-4 hover:opacity-90 transition-opacity">
-            <div className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center p-1.5 border border-white/20">
+            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center p-1.5 border border-white/20 shrink-0">
               <img 
-                src="/images/logo/logo_inhu.png" 
-                alt="Logo Indragiri Hulu" 
+                src="/logo_inhu.png" 
+                alt="Lambang Kabupaten Indragiri Hulu" 
                 className="w-full h-full object-contain"
-                onError={(e) => {
-                  (e.target as HTMLElement).style.display = 'none';
-                }}
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-lg font-bold tracking-wider uppercase">Desa Air Putih</span>
-              <span className="text-[10px] text-emerald-200/70 font-mono tracking-widest uppercase">Inhu · Riau</span>
+              <span className="font-serif text-lg font-bold tracking-wider uppercase leading-tight">Desa Air Putih</span>
+              <span className="text-[10px] text-emerald-200/80 font-mono tracking-widest uppercase">Kab. Indragiri Hulu · Riau</span>
             </div>
           </Link>
           
-          <p className="text-xs text-emerald-100/75 leading-relaxed font-sans mb-6 max-w-sm">
-            Desa yang agamis, sejahtera melalui pengentasan kemiskinan, pemerataan pembangunan, dan memajukan pendidikan.
+          <p className="text-xs text-emerald-100/80 leading-relaxed font-sans mb-6 max-w-sm">
+            Website resmi Pemerintah Desa Air Putih. Ruang informasi, pelayanan publik, dokumentasi sejarah, dan keterbukaan transparansi desa.
           </p>
 
           <div className="flex items-center gap-3 text-emerald-200">
