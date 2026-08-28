@@ -124,8 +124,12 @@ export function Footer() {
           <div className="w-full bg-[#172D21] border border-white/15 rounded-xl p-2 flex flex-col gap-2 shadow-sm">
             <div className="w-full h-20 rounded-lg overflow-hidden relative bg-stone-800">
               <img 
-                src="/images/profil/peta_administrasi.png" 
+                src="/images/profil/peta_thumb.webp" 
                 alt="Peta Desa Air Putih" 
+                width={350}
+                height={80}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover opacity-80"
                 onError={(e) => {
                   (e.target as HTMLElement).style.display = 'none';
