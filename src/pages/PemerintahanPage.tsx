@@ -37,8 +37,8 @@ const PRINCIPLES = [
 ];
 
 const OPERATIONAL_HOURS = [
-  { days: 'Senin – Kamis', time: '08.00 – 15.00 WIB', isClosed: false },
-  { days: 'Jumat', time: '08.00 – 11.30 WIB', isClosed: false },
+  { days: 'Senin – Kamis', time: '08.00 – 16.00 WIB', isClosed: false },
+  { days: 'Jumat', time: '08.00 – 16.00 WIB', isClosed: false },
   { days: 'Sabtu – Minggu', time: 'Libur', isClosed: true },
 ];
 

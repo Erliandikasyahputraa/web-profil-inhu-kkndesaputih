@@ -13,8 +13,8 @@ export const villageSocialEconomy = {
       { label: "Buta Huruf", value: "9 orang" }
     ],
     lembaga: [
-      { label: "TK/PAUD", value: "2 buah" },
-      { label: "SD", value: "3 buah" },
+      { label: "TK/PAUD", value: "3 buah" },
+      { label: "SD", value: "2 buah" },
       { label: "SLTP/SMP", value: "1 buah" },
       { label: "SLTA/SMA", value: "1 buah" },
       { label: "MDA", value: "1 buah" },
@@ -61,7 +61,7 @@ export const villageSocialEconomy = {
   },
   
   pertanianPerikanan: {
-    title: "Pertanian & Perikanan",
+    title: "Pertanian & Ekonomi Produksi",
     pertanian: [
       { label: "Sawit", value: "1.292 Ha" },
       { label: "Karet", value: "20 Ha" },
@@ -71,8 +71,9 @@ export const villageSocialEconomy = {
       { label: "Padi / Jagung / Tebu / Kakao / Kopi", value: "0 Ha" }
     ],
     perikanan: [
-      { label: "Kolam Ikan", value: "3 Ha" },
-      { label: "Tambak udang / Lain-lain", value: "Data tidak tersedia", isMissing: true }
+      { label: "Jamur Tiram", value: "Sentra Budidaya Mandiri" },
+      { label: "UMKM Lokal", value: "Olahan Pangan & Produk Kreatif" },
+      { label: "Koperasi Unit Desa", value: "Layanan Simpan Pinjam & Distribusi" }
     ]
   },
   

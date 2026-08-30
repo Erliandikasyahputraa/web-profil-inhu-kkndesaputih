@@ -109,8 +109,8 @@ export function Footer() {
             </div>
             <div className="flex items-start gap-2 pl-6">
               <div>
-                <p className="font-semibold text-white">Sabtu</p>
-                <p className="text-emerald-200/70">08.00 – 12.00 WIB</p>
+                <p className="font-semibold text-white">Sabtu – Minggu</p>
+                <p className="text-emerald-200/50">Libur (Tutup)</p>
               </div>
             </div>
           </div>

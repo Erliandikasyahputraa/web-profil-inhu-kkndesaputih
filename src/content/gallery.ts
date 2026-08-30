@@ -272,5 +272,32 @@ export const GALLERY_PHOTOS: Photo[] = [
     "category": "Masyarakat",
     "date": "2026",
     "orientation": "landscape"
+  },
+  {
+    "id": "30",
+    "src": "/images/profil/potensi_ekonomi.webp",
+    "alt": "Koperasi Unit Desa (KUD) Air Putih",
+    "caption": "Koperasi Unit Desa (KUD) sebagai pilar ekonomi dan distribusi usaha warga.",
+    "category": "Masyarakat",
+    "date": "2026",
+    "orientation": "landscape"
+  },
+  {
+    "id": "31",
+    "src": "/images/profil/jamur_tiram.webp",
+    "alt": "Budidaya Jamur Tiram Segar Desa Air Putih",
+    "caption": "Hasil panen budidaya jamur tiram segar dari kelompok tani UMKM desa.",
+    "category": "Kegiatan",
+    "date": "2026",
+    "orientation": "portrait"
+  },
+  {
+    "id": "32",
+    "src": "/images/profil/poster_jamur.webp",
+    "alt": "Label Kemasan & Branding Jamur Tiram UMKM Desa Air Putih",
+    "caption": "Inovasi branding kemasan resmi untuk produk jamur tiram lokal desa.",
+    "category": "Kegiatan",
+    "date": "2026",
+    "orientation": "square"
   }
 ];

@@ -86,10 +86,10 @@ export function Scene03People() {
                 <li key={`tani-${i}`} className="flex justify-between border-b border-stone-300/50 pb-2"><span>{item.label}</span> <span className="font-medium">{item.value}</span></li>
               ))}
               
-              <li className="flex justify-between pt-4 text-xs uppercase tracking-wider text-stone-500">Perikanan</li>
+              <li className="flex justify-between pt-4 text-xs uppercase tracking-wider text-stone-500">Ekonomi & Produksi Desa</li>
               {villageSocialEconomy.pertanianPerikanan.perikanan.map((item, i) => (
-                <li key={`ikan-${i}`} className={`flex justify-between border-b border-stone-300/50 pb-2 ${item.isMissing ? 'text-stone-500 italic' : ''}`}>
-                  <span>{item.label}</span> <span className={item.isMissing ? '' : 'font-medium'}>{item.value}</span>
+                <li key={`ikan-${i}`} className="flex justify-between border-b border-stone-300/50 pb-2">
+                  <span>{item.label}</span> <span className="font-medium">{item.value}</span>
                 </li>
               ))}
             </ul>

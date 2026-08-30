@@ -56,11 +56,11 @@ export function ProfileData() {
               </div>
               <div className="py-2.5 flex justify-between">
                 <dt className="text-stone-500 font-sans">Fasilitas Sekolah</dt>
-                <dd className="font-semibold text-stone-900">2 TK, 3 SD, 1 SMP, 1 SMA</dd>
+                <dd className="font-semibold text-stone-900">3 TK, 2 SD, 1 SMP, 1 SMA</dd>
               </div>
               <div className="py-2.5 flex justify-between">
                 <dt className="text-stone-500 font-sans">Sektor Unggulan</dt>
-                <dd className="font-semibold text-[#234A31]">Sawit, Karet & Perikanan</dd>
+                <dd className="font-semibold text-[#234A31]">Sawit, Karet & Ekonomi Produksi (UMKM/KUD)</dd>
               </div>
             </dl>
           </div>
