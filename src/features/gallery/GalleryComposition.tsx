@@ -76,7 +76,7 @@ export function GalleryComposition() {
             </div>
 
             <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-stone-900 leading-[1.15] font-bold mb-5 relative z-10">
-              Beberapa potret kehidupan, ruang, aktivitas, dan kebersamaan.
+              Potret Kehidupan & Dokumentasi <span className="text-[#234A31]">Desa Air Putih.</span>
             </h1>
 
             <p className="text-stone-600 text-sm md:text-base leading-relaxed max-w-lg font-sans relative z-10">

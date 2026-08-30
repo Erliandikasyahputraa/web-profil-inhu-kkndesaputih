@@ -81,8 +81,12 @@ export function PemerintahanPage() {
   return (
     <>
       <PageMetadata 
-        title="Pemerintahan & Pelayanan Publik | Desa Air Putih" 
-        description="Tata kelola pemerintahan Desa Air Putih, struktur organisasi perangkat desa, riwayat kepala desa, dan pusat layanan administrasi warga." 
+        title="Pemerintahan Desa Air Putih | Pelayanan Publik & Tata Kelola" 
+        description="Pusat informasi tata kelola Pemerintah Desa Air Putih, Kec. Lubuk Batu Jaya, Indragiri Hulu. Struktur organisasi perangkat desa, riwayat kepala desa, jam pelayanan, dan kontak layanan administrasi kependudukan." 
+        canonicalPath="/pemerintahan"
+        breadcrumbs={[{ name: "Pemerintahan", path: "/pemerintahan" }]}
+        keywords="Pemerintahan Desa Air Putih, Pemerintah Desa Air Putih, Pelayanan Desa Air Putih, Pelayanan Administrasi Desa Air Putih, Kantor Desa Air Putih, Kepala Desa Air Putih, Struktur Pemerintahan Desa Air Putih, Lubuk Batu Jaya"
+        image="/images/pemerintahan/struktur_organisasi.webp"
       />
       
       <main className="flex-1 flex flex-col bg-[#FAF8F5] min-h-screen pt-14 md:pt-16">
@@ -100,9 +104,9 @@ export function PemerintahanPage() {
               </div>
 
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-[3.8rem] xl:text-[4.2rem] text-stone-900 leading-[1.12] tracking-tight font-bold mb-6">
-                Penggerak<br />
-                Roda Desa &<br />
-                <span className="text-[#234A31]">Pelayanan Publik.</span>
+                Pemerintahan &<br />
+                Pelayanan Publik<br />
+                <span className="text-[#234A31]">Desa Air Putih.</span>
               </h1>
 
               <p className="text-stone-600 text-sm md:text-base leading-relaxed max-w-lg mb-8 font-sans">

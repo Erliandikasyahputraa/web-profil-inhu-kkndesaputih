@@ -30,8 +30,8 @@ export function KknHero() {
 
           {/* Editorial Display Heading */}
           <h1 className="font-serif text-3xl lg:text-[3.2rem] xl:text-[3.6rem] text-stone-900 leading-[1.12] tracking-tight font-bold mb-5">
-            Mengabdi Dengan Hati,<br />
-            <span className="text-[#234A31]">Menginspirasi Dengan Aksi.</span>
+            KKN Tematik 2026<br />
+            <span className="text-[#234A31]">Desa Air Putih.</span>
           </h1>
           
           {/* Subtitle / Description */}
@@ -179,8 +179,8 @@ export function KknHero() {
         {/* Middle: Title & Description */}
         <div className="flex flex-col items-start px-1">
           <h1 className="font-serif text-3xl text-stone-900 leading-tight font-bold mb-3">
-            Mengabdi Dengan Hati,<br />
-            <span className="text-[#234A31]">Menginspirasi Dengan Aksi.</span>
+            KKN Tematik 2026<br />
+            <span className="text-[#234A31]">Desa Air Putih.</span>
           </h1>
           <p className="text-stone-600 text-xs leading-relaxed font-sans mb-5">
             Kuliah Kerja Nyata (KKN) Mahasiswa UIN Sultan Syarif Kasim Riau di Desa Air Putih, Kec. Lubuk Batu Jaya, Kab. Indragiri Hulu.

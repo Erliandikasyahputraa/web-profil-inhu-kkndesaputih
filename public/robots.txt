@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://desaairputih.id/sitemap.xml
+Sitemap: https://desaairputih.my.id/sitemap.xml
