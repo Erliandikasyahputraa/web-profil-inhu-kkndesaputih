@@ -13,7 +13,7 @@ Sebuah dokumenter interaktif tentang Desa Air Putih, Indragiri Hulu. Menelusuri 
 - riau
 
 ## Website
-https://desaairputih.id/
+https://desaairputih.my.id/
 
 ## About Section
 Desa Air Putih Digital Experience

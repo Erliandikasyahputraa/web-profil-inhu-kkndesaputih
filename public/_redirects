@@ -1,1 +1,6 @@
-/*    /index.html   200
+# 1. Permanent 301 Domain Redirect from Legacy Netlify Subdomain to Official Custom Domain
+https://kkn-desa-airputih.netlify.app/* https://desaairputih.my.id/:splat 301!
+http://kkn-desa-airputih.netlify.app/* https://desaairputih.my.id/:splat 301!
+
+# 2. SPA Client-Side Routing Fallback
+/* /index.html 200

@@ -28,6 +28,18 @@
     Cache-Control = "public, max-age=0, must-revalidate"
 
 [[redirects]]
+  from = "https://kkn-desa-airputih.netlify.app/*"
+  to = "https://desaairputih.my.id/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://kkn-desa-airputih.netlify.app/*"
+  to = "https://desaairputih.my.id/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
