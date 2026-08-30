@@ -55,15 +55,22 @@ const CONTACT_PERSONS = [
     role: "Kasi Pelayanan",
     name: "Rusli",
     phone: "+62 813-8351-1356",
-    waUrl: "https://wa.me/6281383511356",
+    waUrl: "https://wa.me/6281383511356?text=Halo%20Pak%20Rusli,%20saya%20ingin%20mengurus%20layanan%20administrasi%20Desa%20Air%20Putih",
     desc: "Pelayanan administrasi kependudukan & surat pengantar desa"
   },
   {
     role: "Kasi Pemerintahan",
     name: "Abdul Muttaqin, S.T",
     phone: "+62 823-8736-0261",
-    waUrl: "https://wa.me/6282387360261",
+    waUrl: "https://wa.me/6282387360261?text=Halo%20Pak%20Abdul%20Muttaqin,%20saya%20ingin%20berkonsultasi%20mengenai%20administrasi%20pemerintahan%20Desa%20Air%20Putih",
     desc: "Konsultasi tata kelola, ketertiban & administrasi pemerintahan"
+  },
+  {
+    role: "BUMDes & UMKM Jamur Tiram",
+    name: "BUMDes \"Tunas Mandiri\" / Poktan Andalan",
+    phone: "+62 852-7222-1898",
+    waUrl: "https://wa.me/6285272221898?text=Halo%20Admin%20BUMDes%20Air%20Putih,%20saya%20ingin%20memesan%20Jamur%20Tiram%20Andalan",
+    desc: "Pemesanan Jamur Tiram segar, kemitraan usaha & produk UMKM desa"
   }
 ];
 
@@ -320,22 +327,23 @@ export function PemerintahanPage() {
               </span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {CONTACT_PERSONS.map((cp, idx) => (
                 <div 
                   key={idx} 
-                  className="bg-white rounded-xl p-4 border border-stone-200/80 shadow-xs flex flex-col justify-between gap-3 hover:border-[#234A31]/40 transition-colors"
+                  className="bg-white rounded-2xl p-4 sm:p-5 border border-stone-200/90 shadow-xs flex flex-col justify-between gap-3.5 hover:border-[#234A31]/40 hover:shadow-sm transition-all"
                 >
                   <div>
-                    <div className="flex items-center justify-between gap-2 mb-1">
-                      <span className="text-[10px] uppercase font-mono tracking-wider font-bold text-[#234A31] bg-[#234A31]/10 px-2 py-0.5 rounded">
+                    <div className="flex items-center justify-between gap-2 mb-2">
+                      <span className="text-[10px] uppercase font-mono tracking-wider font-bold text-[#234A31] bg-[#234A31]/10 px-2.5 py-0.5 rounded-full">
                         {cp.role}
                       </span>
+                      <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                     </div>
                     <h4 className="font-serif text-base font-bold text-stone-900 leading-tight">
                       {cp.name}
                     </h4>
-                    <p className="text-xs text-stone-500 font-sans mt-0.5">
+                    <p className="text-xs text-stone-500 font-sans mt-1 leading-relaxed">
                       {cp.desc}
                     </p>
                   </div>
@@ -344,11 +352,15 @@ export function PemerintahanPage() {
                     href={cp.waUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-4 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-semibold rounded-xl shadow-xs transition-all hover:shadow group"
+                    className="inline-flex items-center justify-between w-full py-2.5 px-4 bg-gradient-to-r from-[#25D366] to-[#1EBE5D] hover:from-[#20bd5a] hover:to-[#19a550] text-white text-xs font-bold rounded-xl shadow-xs hover:shadow transition-all group"
                   >
-                    <MessageCircle className="w-4 h-4 fill-current" />
-                    <span>Chat WhatsApp: {cp.phone}</span>
-                    <span className="group-hover:translate-x-0.5 transition-transform">↗</span>
+                    <div className="flex items-center gap-2">
+                      <MessageCircle className="w-4 h-4 fill-current" />
+                      <span>{cp.phone}</span>
+                    </div>
+                    <span className="text-[11px] font-semibold flex items-center gap-1 opacity-90 group-hover:opacity-100">
+                      Chat <span className="group-hover:translate-x-0.5 transition-transform">↗</span>
+                    </span>
                   </a>
                 </div>
               ))}
