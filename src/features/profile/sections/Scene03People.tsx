@@ -77,18 +77,18 @@ export function Scene03People() {
             </ul>
           </div>
 
-          {/* PERTANIAN & PERIKANAN */}
+          {/* PERTANIAN & EKONOMI PRODUKSI */}
           <div className="flex flex-col">
-            <h3 className="font-serif text-2xl text-stone-900 mb-6 border-b border-stone-300 pb-2">{villageSocialEconomy.pertanianPerikanan.title}</h3>
+            <h3 className="font-serif text-2xl text-stone-900 mb-6 border-b border-stone-300 pb-2">{villageSocialEconomy.pertanianEkonomi.title}</h3>
             <ul className="flex flex-col gap-3 text-stone-800 text-sm md:text-base">
               <li className="flex justify-between pt-2 text-xs uppercase tracking-wider text-stone-500">Pertanian / Perkebunan</li>
-              {villageSocialEconomy.pertanianPerikanan.pertanian.map((item, i) => (
+              {villageSocialEconomy.pertanianEkonomi.pertanian.map((item, i) => (
                 <li key={`tani-${i}`} className="flex justify-between border-b border-stone-300/50 pb-2"><span>{item.label}</span> <span className="font-medium">{item.value}</span></li>
               ))}
               
               <li className="flex justify-between pt-4 text-xs uppercase tracking-wider text-stone-500">Ekonomi & Produksi Desa</li>
-              {villageSocialEconomy.pertanianPerikanan.perikanan.map((item, i) => (
-                <li key={`ikan-${i}`} className="flex justify-between border-b border-stone-300/50 pb-2">
+              {villageSocialEconomy.pertanianEkonomi.ekonomiProduksi.map((item, i) => (
+                <li key={`ekonomi-${i}`} className="flex justify-between border-b border-stone-300/50 pb-2">
                   <span>{item.label}</span> <span className="font-medium">{item.value}</span>
                 </li>
               ))}

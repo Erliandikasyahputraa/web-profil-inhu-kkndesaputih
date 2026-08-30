@@ -61,7 +61,7 @@ export const villageSocialEconomy = {
     ]
   },
   
-  pertanianPerikanan: {
+  pertanianEkonomi: {
     title: "Pertanian & Ekonomi Produksi",
     pertanian: [
       { label: "Sawit", value: "1.292 Ha" },
@@ -70,7 +70,7 @@ export const villageSocialEconomy = {
       { label: "Kelapa / Singkong", value: "2 Ha / 2 Ha" },
       { label: "Padi / Jagung / Tebu / Kakao / Kopi", value: "0 Ha" }
     ],
-    perikanan: [
+    ekonomiProduksi: [
       { label: "Jamur Tiram", value: "Sentra Budidaya Mandiri" },
       { label: "UMKM Lokal", value: "Olahan Pangan & Produk Kreatif" },
       { label: "Koperasi Unit Desa", value: "Layanan Simpan Pinjam & Distribusi" }

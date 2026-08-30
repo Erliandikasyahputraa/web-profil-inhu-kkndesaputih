@@ -48,16 +48,16 @@ export const potentialsPlantation = {
   }
 };
 
-export const potentialsFishery = {
-  kicker: '04. Perikanan',
-  heading: 'Budidaya Air Tawar',
+export const potentialsEconomy = {
+  kicker: '04. Ekonomi & Produksi',
+  heading: 'Jamur Tiram & UMKM Desa',
   paragraphs: [
-    'Aliran sungai dan sumber air yang jernih dimanfaatkan dengan bijak untuk budidaya perikanan air tawar, seperti ikan nila dan lele.',
-    'Sektor ini terus berkembang, tidak hanya memenuhi kebutuhan protein keluarga, tetapi juga menjadi komoditas ekonomi yang bernilai tinggi di pasar lokal.'
+    'Sektor ekonomi dan produksi Desa Air Putih digerakkan oleh budidaya jamur tiram, UMKM olahan mandiri, dan Koperasi Unit Desa.',
+    'Sektor ini terus berkembang menghadirkan kemandirian ekonomi serta membuka lapangan usaha produktif bagi masyarakat desa.'
   ],
   image: {
-    src: 'https://images.unsplash.com/photo-1518151853637-ad10a6a0e68e?q=80&w=2835&auto=format&fit=crop',
-    alt: 'Kolam budidaya ikan air tawar',
+    src: '/images/profil/jamur_tiram.webp',
+    alt: 'Budidaya Jamur Tiram Segar Desa Air Putih',
   }
 };
 

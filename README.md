@@ -1,128 +1,92 @@
-# Desa Air Putih — Digital Experience
+# Desa Air Putih
 
-Sebuah website profil digital untuk **Desa Air Putih**, Kecamatan Lubuk Batu Jaya, Kabupaten Indragiri Hulu, Riau.
+Website ini dibuat sebagai pintu digital untuk Desa Air Putih — bukan sekadar tempat menaruh profil desa, tapi ruang kecil untuk memperkenalkan wilayah, pemerintahan, masyarakat, dan cerita yang ada di dalamnya.
 
-Website ini dibuat bukan sekadar untuk menaruh data desa ke dalam halaman panjang yang membosankan. Tujuannya lebih sederhana: membuat siapa saja bisa mengenal desa dengan nyaman—melihat tata kelola pemerintahannya, menemukan informasi pelayanan publik, menikmati galeri kegiatan warga, dan membaca dinamika kehidupan di Desa Air Putih tanpa merasa sedang membuka dokumen administrasi yang kaku.
-
----
-
-## Halaman & Struktur
-
-Website ini terbagi ke dalam lima ruang utama yang saling terhubung:
-
-- **Beranda (`/`)**  
-  Pintu masuk utama yang menyajikan ringkasan singkat desa: sambutan, statistik pokok wilayah, akses cepat ke halaman lain, serta potret pembuka suasana desa.
-
-- **Profil Desa (`/profil`)**  
-  Menyajikan identitas lengkap Desa Air Putih: sejarah pendirian sejak era transmigrasi 1993, kondisi geografi dan demografi 5 dusun, peta kartografi wilayah, serta potensi desa mulai dari perkebunan sawit, pertanian, hingga tradisi gotong royong warga.
-
-- **Pemerintahan (`/pemerintahan`)**  
-  Memuat informasi tata kelola desa, pedoman akses layanan administrasi bagi warga, bagan struktur organisasi perangkat desa, hingga riwayat kepemimpinan 10 Kepala Desa dari masa ke masa.
-
-- **Galeri Fotografi (`/galeri`)**  
-  Dinding potret dokumenter berformat *editorial photo wall* yang merekam kehangatan warga, kegiatan gotong royong, olahraga sore, serta lanskap asri pedesaan lengkap dengan penampil interaktif (*lightbox*).
-
-- **Dokumentasi KKN (`/kkn`)**  
-  Ruang arsip pengabdian mahasiswa KKN Tematik 2026: fokus program kerja, bidang kegiatan, profil anggota tim, dan akses langsung ke dokumen laporan.
+Terletak di Kecamatan Lubuk Batu Jaya, Kabupaten Indragiri Hulu, Riau, Desa Air Putih punya ritme hidup yang tenang di antara hamparan kebun kelapa sawit, kehangatan warga di empat dusun, dan semangat gotong royong yang terus dijaga. Website ini dibangun untuk merangkum semua itu ke dalam sebuah pengalaman web yang nyaman diakses, rapi di mata, dan tetap ringan di perangkat apa pun.
 
 ---
 
-## Arah Desain & Visual
+## Apa Saja yang Ada di Dalamnya?
 
-Visual website ini sengaja diarahkan ke nuansa **editorial documentary** yang hangat dan manusiawi, bukan template pemerintahan generik pada umumnya:
+Website ini dirancang ke dalam 5 bagian utama yang saling melengkapi:
 
-- **Palet Warna Alami**: Dominasi latar krem hangat (*warm ivory*) dipadukan dengan aksen hijau hutan (*deep forest green*) dan sentuhan terakota lembut yang mencerminkan keteduhan alam pedesaan.
-- **Tipografi Berkarakter**: Kombinasi huruf serif klasik untuk judul dan tajuk utama agar terasa berwibawa dan bersahabat, disandingkan dengan sans-serif modern yang nyaman dibaca pada teks panjang.
-- **Fotografi sebagai Narasi**: Foto-foto autentik kehidupan desa menjadi elemen pencerita utama, bukan sekadar pelengkap visual.
+1. **Beranda (`/`)**  
+   Pintu masuk utama. Berisi rangkuman cepat tentang desa: sambutan pembuka, statistik pokok wilayah (luas 1.692 Ha, 4.185 jiwa, 1.260 KK, 4 dusun, 20 RT / 8 RW), akses cepat ke layanan, serta potret pembuka kehidupan desa.
 
----
+2. **Profil Desa (`/profil`)**  
+   Mengenal identitas dan perjalanan desa lebih dekat. Mulai dari sejarah pemekaran desa sejak era transmigrasi 1993, peta kartografi resmi, data demografi 4 dusun (Dusun I, II, III, IV), fasilitas pendidikan (3 TK, 2 SD, 1 SMP, 1 SMA, 1 Pondok Pesantren), hingga potensi utama seperti perkebunan sawit dan sentra budidaya jamur tiram warga.
 
-## Responsivitas & Kenyamanan Perangkat
+3. **Pemerintahan (`/pemerintahan`)**  
+   Pusat informasi tata kelola dan transparansi. Menyajikan bagan struktur organisasi perangkat desa interaktif, riwayat kepemimpinan 10 Kepala Desa dari masa ke masa, panduan layanan administrasi warga (KTP/KK, SKU, SKTM, akta kelahiran/kematian, dll), jam operasional kantor desa (Senin–Jumat 08.00–16.00 WIB), serta kontak layanan langsung melalui WhatsApp.
 
-Tata letak dirancang adaptif dan telah diuji secara teliti di berbagai resolusi layar:
+4. **Galeri Dokumentasi (`/galeri`)**  
+   Dinding arsip visual berformat *editorial photo wall*. Berisi 32 foto kurasi yang merekam momen kebersamaan, gotong royong, turnamen olahraga warga, dan lanskap asri pedesaan, lengkap dengan penampil detail interaktif (*lightbox*).
 
-- **Mobile Ringkas (320px – 430px)**: Navigasi menu yang rapi, tombol yang ramah sentuhan, dan susunan kartu yang tidak meluap ke samping (*no horizontal overflow*).
-- **Mobile Landscape & Tablet (568px – 1194px)**: Transisi kolom yang proporsional sehingga hierarki teks dan gambar tetap seimbang.
-- **Desktop & Layar Lebar (1024px – 1920px)**: Batasan lebar kontainer yang terjaga agar panjang baris kalimat tetap nyaman di mata.
-
----
-
-## Performa & Optimasi Gambar
-
-Karena fotografi memegang peranan penting dalam pengalaman visual website ini, seluruh aset gambar dioptimalkan agar website tetap ringan diakses melalui jaringan seluler:
-
-- **Format Modern WebP**: Seluruh foto mentah beresolusi kamera tinggi dikonversi ke WebP dengan penyesuaian dimensi yang pas untuk layar web.
-- **Pengurangan Ukuran Drastis**: Total berat aset raster berkurang dari **193.85 MB** menjadi **11.05 MB** (penghematan bandwidth mencapai **94.3%**) tanpa mengorbankan ketajaman foto.
-- **Pemuatan Cerdas**: Gambar utama (*hero banner*) dimuat lebih awal (*eager & high fetch priority*), sementara galeri dan kartu di bagian bawah dimuat secara bertahap (*lazy loading*).
+5. **KKN Tematik 2026 (`/kkn`)**  
+   Ruang dokumentasi pengabdian mahasiswa Kuliah Kerja Nyata (KKN) Tematik 2026 UIN Sultan Syarif Kasim Riau di Desa Air Putih. Mencakup laporan program kerja digitalisasi desa, edukasi masyarakat, profil tim mahasiswa, dan akses dokumen arsip.
 
 ---
 
-## Navigasi & Perpindahan Halaman
+## Pendekatan Desain & Visual
 
-Sebagai *Single Page Application* (SPA), website ini dilengkapi pengelolaan scroll terpusat:
+Sejak awal, website ini sengaja tidak menggunakan gaya website pemerintahan yang kaku atau generik. Kami memilih pendekatan **editorial documentary**:
 
-- Setiap kali berpindah ke halaman baru melalui navbar, kartu, atau tautan internal, tampilan akan selalu otomatis mulai dari bagian paling atas (*top*).
-- Tautan jangkar (*hash anchor*) seperti `#struktur-organisasi` atau `#tentang-kkn` tetap menggulir mulus langsung ke bagian yang dituju.
-- Tombol navigasi riwayat browser (*Back / Forward*) tetap bekerja normal.
+- **Palet Warna Alami**: Perpaduan latar *warm ivory* (`#FAF8F5`), hijau hutan teduh (`#234A31`), dan aksen terakota lembut yang terinspirasi dari alam pedesaan.
+- **Tipografi Seimbang**: Kombinasi font serif klasik (*Outfit / Serif*) untuk tajuk utama agar terasa berkarakter dan hangat, disandingkan dengan sans-serif modern (*Inter*) untuk kenyamanan membaca teks panjang.
+- **Visual yang Bernapas**: Foto-foto autentik ditempatkan secara proporsional dengan aspek rasio natural (3:2 dan 16:9), tanpa cropping berlebihan pada foto penting seperti stiker produk atau bagan struktur.
+
+---
+
+## Performa & Optimasi Mobile
+
+Sebagian besar warga dan pengunjung mengakses website lewat ponsel cerdas dengan koneksi seluler. Oleh karena itu, performa menjadi perhatian utama:
+
+- **Format Modern WebP**: Seluruh foto mentah berukuran besar dikonversi ke WebP dengan kompresi terukur dan varian responsif (`srcset` untuk layar ponsel dan desktop).
+- **Pemuatan Bertahap (*Lazy Loading*)**: Gambar di luar layar pertama dimuat hanya saat pengguna menggulir mendekatinya, menjaga beban awal jaringan tetap sangat hemat.
+- **Scroll Restoration Pintar**: Berpindah halaman via tautan internal atau navbar otomatis mengembalikan posisi baca ke paling atas (*top of page*), sementara tautan jangkar (*hash link*) tetap menggulir mulus ke target.
+- **Desain Adaptif**: Telah diuji dari layar ponsel ultra-ringkas (320px) hingga layar monitor lebar (1920px) bebas dari kendala *horizontal overflow*.
+
+---
+
+## Domain & SEO
+
+- **Domain Utama (Resmi)**: [https://desaairputih.my.id](https://desaairputih.my.id)
+- **Domain Hosting**: [https://kkn-desa-airputih.netlify.app](https://kkn-desa-airputih.netlify.app) *(terkonfigurasi 301 Permanent Redirect ke domain utama)*
+- **SEO & Entity**: Dioptimalkan secara semantik untuk mesin pencari (Google, Bing, dan AI Answer Engines) dengan metadata canonical, sitemap XML, robots.txt, Open Graph, Twitter Cards, dan structured data JSON-LD (`GovernmentOrganization`, `WebSite`, `WebPage`, `BreadcrumbList`).
 
 ---
 
 ## Teknologi yang Digunakan
 
-Website ini dibangun menggunakan stack modern:
-
-- **React 19** & **TypeScript** — Struktur komponen dan keamanan tipe data.
-- **Vite** — Build tool dan server pengembangan yang cepat.
-- **React Router DOM v7** — Manajemen rute dan navigasi halaman.
-- **Tailwind CSS v4** — Sistem desain utilitas dan styling antarmuka.
-- **Lucide React** — Set ikon antarmuka yang bersih dan konsisten.
-- **Framer Motion** — Animasi mikro yang halus dan tidak berlebihan.
-
----
-
-## Struktur Folder
-
-```text
-src/
-├── components/          # Komponen bersama (Navbar, Footer, UI primitives, ScrollToTop)
-├── content/             # Sumber data teks & path aset (Single Source of Truth)
-│   ├── homepage/        # Data konten beranda
-│   ├── village/         # Data profil, geografi, dan sejarah desa
-│   ├── governance/      # Data aparatur dan layanan pemerintahan
-│   ├── gallery.ts       # Koleksi foto galeri desa
-│   └── kkn/             # Data program dan dokumentasi KKN
-├── features/            # Modul komponen spesifik per halaman
-│   ├── home/            # Komponen halaman Beranda
-│   ├── profile/         # Komponen halaman Profil Desa
-│   ├── gallery/         # Komponen galeri & lightbox
-│   └── kkn/             # Komponen dokumentasi KKN
-├── layout/              # Template pembungkus utama (RootLayout)
-├── pages/               # Halaman utama aplikasi
-└── constants/           # Konstanta rute dan konfigurasi
-```
+- **React 19** & **TypeScript** — Struktur komponen deklaratif dan *type-safety*.
+- **Vite** — Build tool ultra-cepat untuk pengembangan dan produksi.
+- **React Router DOM v7** — Navigasi SPA dengan pemuatan halaman modular (*lazy-loaded chunks*).
+- **Tailwind CSS v4** — Utility-first styling dan token desain yang konsisten.
+- **Lucide React** — Set ikon antarmuka yang bersih dan modern.
+- **React Helmet Async** — Pengelolaan metadata `<head>` dinamis per rute.
 
 ---
 
 ## Menjalankan Proyek Secara Lokal
 
-Pastikan Node.js (versi 18+) dan `pnpm` sudah terpasang di komputer Anda:
+Pastikan Anda telah memasang **Node.js** (v18+) dan **pnpm**:
 
 ```bash
 # 1. Pasang dependensi
 pnpm install
 
-# 2. Jalankan server lokal
+# 2. Jalankan server pengembangan lokal
 pnpm dev
 
-# 3. Build untuk produksi
+# 3. Build bundel produksi
 pnpm run build
 
-# 4. Preview hasil build
+# 4. Preview hasil build produksi
 pnpm run preview
 ```
 
 ---
 
-## Integritas Data & Catatan Konten
+## Catatan & Integritas Data
 
-Seluruh data sejarah, kependudukan, batas wilayah, struktur aparatur, dan dokumentasi KKN dalam repositori ini bersumber dari dokumen resmi desa serta arsip kegiatan mahasiswa KKN Tematik 2026 di Desa Air Putih.
+Semua data statistik kependudukan, pembagian wilayah, aparatur desa, dan dokumentasi KKN dalam repositori ini bersumber dari dokumen resmi Pemerintah Desa Air Putih serta arsip pengabdian mahasiswa KKN Tematik 2026 UIN Suska Riau.
