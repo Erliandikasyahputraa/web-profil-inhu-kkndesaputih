@@ -111,7 +111,7 @@ export function ProfileHero() {
             <div className="flex flex-col">
               <span className="text-[10px] uppercase tracking-wider text-stone-400 font-mono font-medium">Pembagian Rukun</span>
               <div className="flex items-baseline gap-1">
-                <span className="font-serif text-xl sm:text-2xl font-bold text-stone-900">28</span>
+                <span className="font-serif text-xl sm:text-2xl font-bold text-stone-900">20</span>
                 <span className="text-xs text-stone-500 font-sans">RT / 8 RW</span>
               </div>
             </div>

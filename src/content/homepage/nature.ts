@@ -14,7 +14,7 @@ export const natureContent = {
     },
     {
       id: 'n2',
-      text: 'Perkebunan kelapa sawit dan karet membentang sejauh mata memandang, menjadi tulang punggung perekonomian desa sekaligus pengingat bahwa merawat alam sama dengan merawat masa depan anak cucu.'
+      text: 'Perkebunan kelapa sawit membentang sejauh mata memandang, menjadi tulang punggung perekonomian desa sekaligus pengingat bahwa merawat alam sama dengan merawat masa depan anak cucu.'
     }
   ],
   stats: [

@@ -2,10 +2,10 @@ import { MapPin, Building2, Map, ShieldCheck } from 'lucide-react';
 import { villageDemographics } from '@/content/village/demographics';
 
 const DUSUN_DATA = [
-  { name: "Dusun I Air Putih", population: "1.235" },
-  { name: "Dusun II Mekar Jaya", population: "1.012" },
-  { name: "Dusun III Suka Maju", population: "1.045" },
-  { name: "Dusun IV Karya Bakti", population: "893" },
+  { name: "Dusun I", population: "1.235" },
+  { name: "Dusun II", population: "1.012" },
+  { name: "Dusun III", population: "1.045" },
+  { name: "Dusun IV", population: "893" },
 ];
 
 export function ProfileData() {
@@ -52,15 +52,15 @@ export function ProfileData() {
               </div>
               <div className="py-2.5 flex justify-between">
                 <dt className="text-stone-500 font-sans">Dusun / RT / RW</dt>
-                <dd className="font-semibold text-stone-900">4 Dusun / 8 RW / 28 RT</dd>
+                <dd className="font-semibold text-stone-900">4 Dusun / 8 RW / 20 RT</dd>
               </div>
               <div className="py-2.5 flex justify-between">
                 <dt className="text-stone-500 font-sans">Fasilitas Sekolah</dt>
-                <dd className="font-semibold text-stone-900">3 TK, 2 SD, 1 SMP, 1 SMA</dd>
+                <dd className="font-semibold text-stone-900">3 TK, 2 SD, 1 SMP, 1 SMA, 1 Ponpes</dd>
               </div>
               <div className="py-2.5 flex justify-between">
                 <dt className="text-stone-500 font-sans">Sektor Unggulan</dt>
-                <dd className="font-semibold text-[#234A31]">Sawit, Karet & Ekonomi Produksi (UMKM/KUD)</dd>
+                <dd className="font-semibold text-[#234A31]">Sawit & Ekonomi Produksi (UMKM/KUD)</dd>
               </div>
             </dl>
           </div>

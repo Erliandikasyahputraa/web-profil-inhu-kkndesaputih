@@ -47,7 +47,8 @@ const MAIN_SERVICES = [
   'Surat Keterangan Domisili',
   'Surat Keterangan Usaha (SKU)',
   'Surat Keterangan Tidak Mampu (SKTM)',
-  'Pengurusan Akta Kelahiran & Kematian'
+  'Pengurusan Akta Kelahiran & Kematian',
+  'Serta Layanan Administrasi Lain-Lain'
 ];
 
 const CONTACT_PERSONS = [

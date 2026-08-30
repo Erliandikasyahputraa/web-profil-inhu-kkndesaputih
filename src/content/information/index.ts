@@ -95,7 +95,7 @@ export const informationContact = {
   details: [
     { label: 'Alamat', value: 'Jl. Lintas Air Putih No. 01, Kecamatan Lubuk Batu Jaya, Kabupaten Indragiri Hulu, Riau 29351' },
     { label: 'Jam Kerja', value: 'Senin - Jumat, 08.00 - 16.00 WIB' },
-    { label: 'Telepon', value: '(+62) 812-3456-7890' },
-    { label: 'Email', value: 'info@airputih.desa.id' }
+    { label: 'Telepon', value: '+62 823-8736-0261 (Abdul Muttaqin)' },
+    { label: 'Email', value: 'jayaairputih@gmail.com' }
   ]
 };

@@ -17,6 +17,7 @@ export const villageSocialEconomy = {
       { label: "SD", value: "2 buah" },
       { label: "SLTP/SMP", value: "1 buah" },
       { label: "SLTA/SMA", value: "1 buah" },
+      { label: "Pondok Pesantren", value: "1 buah" },
       { label: "MDA", value: "1 buah" },
       { label: "PDTA", value: "2 buah" }
     ]
@@ -64,8 +65,7 @@ export const villageSocialEconomy = {
     title: "Pertanian & Ekonomi Produksi",
     pertanian: [
       { label: "Sawit", value: "1.292 Ha" },
-      { label: "Karet", value: "20 Ha" },
-      { label: "Palawija", value: "7 Ha" },
+      { label: "Palawija & Pekarangan", value: "15 Ha" },
       { label: "Lain-Lain", value: "6 Ha" },
       { label: "Kelapa / Singkong", value: "2 Ha / 2 Ha" },
       { label: "Padi / Jagung / Tebu / Kakao / Kopi", value: "0 Ha" }
@@ -111,10 +111,10 @@ export const villageSocialEconomy = {
   pembagianWilayah: {
     title: "Pembagian Wilayah",
     dusun: [
-      { label: "Dusun I", value: "2 RW · 6 RT" },
+      { label: "Dusun I", value: "2 RW · 5 RT" },
       { label: "Dusun II", value: "2 RW · 5 RT" },
       { label: "Dusun III", value: "2 RW · 5 RT" },
-      { label: "Dusun IV", value: "2 RW · 4 RT" }
+      { label: "Dusun IV", value: "2 RW · 5 RT" }
     ]
   }
 };

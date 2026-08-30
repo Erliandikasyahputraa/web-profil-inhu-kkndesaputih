@@ -37,14 +37,14 @@ export const potentialsAgriculture = {
 
 export const potentialsPlantation = {
   kicker: '03. Perkebunan',
-  heading: 'Kopi dan Karet',
+  heading: 'Kelapa Sawit',
   paragraphs: [
-    'Di dataran yang lebih tinggi, aroma kopi robusta dan hamparan pohon karet mendominasi lanskap. Komoditas ini merupakan motor penggerak utama perekonomian mayoritas warga.',
-    'Karet dipanen dengan kesabaran setiap pagi, sementara kopi diproses secara perlahan untuk menghasilkan cita rasa khas yang membanggakan.'
+    'Hamparan perkebunan kelapa sawit seluas 1.292 hektar menjadi tulang punggung utama perekonomian masyarakat Desa Air Putih.',
+    'Dikelola dengan tekun dan berkelanjutan, sektor perkebunan ini menghadirkan kesejahteraan nyata bagi keluarga desa.'
   ],
   image: {
     src: 'https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?q=80&w=2874&auto=format&fit=crop',
-    alt: 'Biji kopi yang sedang dijemur',
+    alt: 'Perkebunan kelapa sawit',
   }
 };
 

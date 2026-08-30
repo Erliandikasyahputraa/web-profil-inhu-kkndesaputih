@@ -17,7 +17,7 @@ export function KehidupanDesaSection() {
                 Alam, pekerjaan, dan kebersamaan menjadi bagian dari kehidupan sehari-hari.
               </h3>
               <p className="text-sm md:text-base text-stone-700 leading-[1.7] mb-6">
-                Mayoritas masyarakat kami hidup dari harmoni dengan alam. Dari perkebunan karet hingga aktivitas di sungai, setiap keseharian adalah sebuah upaya untuk menjaga keseimbangan.
+                Mayoritas masyarakat kami hidup dari harmoni dengan alam. Dari hamparan perkebunan kelapa sawit hingga keramahan antarwarga, setiap keseharian adalah sebuah upaya untuk menjaga keseimbangan.
               </p>
               <p className="text-sm md:text-base text-stone-700 leading-[1.7]">
                 Gotong royong bukanlah sekadar slogan, melainkan detak jantung yang menyatukan setiap keluarga di Desa Air Putih.

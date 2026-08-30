@@ -11,7 +11,7 @@ const POTENSI_LIST = [
   {
     icon: Trees,
     title: "Perkebunan",
-    description: "Pengelolaan kebun kelapa sawit seluas 1.292 Ha dan karet sebagai penopang ekonomi keluarga.",
+    description: "Pengelolaan kebun kelapa sawit seluas 1.292 Ha sebagai penopang utama ekonomi keluarga.",
     image: "/images/profil/potensi_perkebunan.webp",
     alt: "Perkebunan Desa Air Putih"
   },

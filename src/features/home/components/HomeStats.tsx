@@ -23,7 +23,7 @@ const STATS = [
   },
   {
     icon: Layers,
-    value: "28 RT / 8 RW",
+    value: "20 RT / 8 RW",
     label: "Pembagian Rukun"
   }
 ];

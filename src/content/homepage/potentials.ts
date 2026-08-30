@@ -6,7 +6,7 @@ export const potentialsContent = {
   items: [
     {
       id: 'pot-1',
-      title: 'Perkebunan Kelapa Sawit & Karet',
+      title: 'Perkebunan Kelapa Sawit',
       description: 'Menjadi penyangga utama ekonomi keluarga, perkebunan rakyat ini dikelola dengan memadukan kearifan lokal dan kebutuhan industri modern. Keberlanjutan alam dan produktivitas berjalan beriringan.',
       image: { src: '/images/home/beranda_04.webp', alt: 'Aktivitas perkebunan dan alam' },
       stats: [

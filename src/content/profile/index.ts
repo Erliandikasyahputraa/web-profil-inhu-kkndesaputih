@@ -25,7 +25,7 @@ export const profileContent = {
   scene03: {
     kicker: "MANUSIA",
     title: "Napas Desa",
-    story: "Setiap pagi dimulai dengan suara yang sama: derak perahu di tepian sungai, langkah para penderes karet menembus embun, dan tawa anak-anak berlarian ke sekolah. Di sini, kehidupan tidak diukur dari seberapa cepat waktu berlalu, melainkan dari seberapa dalam senyum yang dibagikan antar tetangga.",
+    story: "Setiap pagi dimulai dengan suara yang sama: derak perahu di tepian sungai, langkah para petani sawit menembus embun, dan tawa anak-anak berlarian ke sekolah. Di sini, kehidupan tidak diukur dari seberapa cepat waktu berlalu, melainkan dari seberapa dalam senyum yang dibagikan antar tetangga.",
     images: [
       { src: "/images/profil/profil_story_03.webp", alt: "Keluarga berkumpul di pagi hari" },
       { src: "/images/gallery/landscape/gallery_landscape_02.webp", alt: "Warga berbincang hangat" },
