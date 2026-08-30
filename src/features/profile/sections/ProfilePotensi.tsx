@@ -1,4 +1,4 @@
-import { Sprout, Trees, Store, Landmark, Users, Sparkles, CheckCircle2, MessageCircle, Phone, ArrowUpRight } from 'lucide-react';
+import { Sprout, Trees, Store, Users, Sparkles, CheckCircle2, MessageCircle, Phone, ArrowUpRight } from 'lucide-react';
 
 const POTENSI_LIST = [
   {
@@ -21,13 +21,6 @@ const POTENSI_LIST = [
     description: "Jamur tiram, UMKM, dan Koperasi Unit Desa (KUD) sebagai penggerak kemandirian usaha desa.",
     image: "/images/profil/potensi_ekonomi.webp",
     alt: "Ekonomi dan Produksi Desa Air Putih - Koperasi Unit Desa"
-  },
-  {
-    icon: Landmark,
-    title: "Pariwisata Alam",
-    description: "Keasrian lanskap alam pedesaan dan suasana guyub yang menghadirkan ketenangan bagi pendatang.",
-    image: "/images/profil/potensi_pariwisata.webp",
-    alt: "Pariwisata Alam Desa Air Putih"
   },
   {
     icon: Users,
@@ -54,8 +47,8 @@ export function ProfilePotensi() {
         Pilar Kemandirian & Kehidupan Desa
       </h2>
 
-      {/* 5-Column Editorial Cards (Desktop: 5 Columns, Mobile: 2-Column / Scroll) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-5 mb-10">
+      {/* 4-Column Editorial Cards (Desktop: 4 Columns, Mobile: 2-Column / Scroll) */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 mb-10">
         {POTENSI_LIST.map((item, idx) => {
           const IconComp = item.icon;
           return (

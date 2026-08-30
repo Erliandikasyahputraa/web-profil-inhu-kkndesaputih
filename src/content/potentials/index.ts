@@ -74,19 +74,6 @@ export const potentialsMSME = {
   }
 };
 
-export const potentialsTourism = {
-  kicker: '06. Pariwisata',
-  heading: 'Merawat Pesona',
-  paragraphs: [
-    'Potensi pariwisata perlahan mulai digali, dengan fokus pada ekowisata yang menghormati keseimbangan alam. Air terjun tersembunyi dan jalur lintas alam menawarkan ketenangan bagi siapa saja yang datang.',
-    'Konsep pariwisata yang diusung adalah pariwisata berkelanjutan, di mana kelestarian alam menjadi syarat mutlak.'
-  ],
-  image: {
-    src: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?q=80&w=2948&auto=format&fit=crop',
-    alt: 'Pesona alam dan air terjun',
-  }
-};
-
 export const potentialsStats = {
   kicker: '07. Dalam Angka',
   heading: 'Mengukur Abundansi',
